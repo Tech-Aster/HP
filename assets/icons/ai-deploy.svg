@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title">
+  <title>AI投入サポート アイコン</title>
+  <rect x="6" y="10" width="52" height="36" rx="4" fill="#e3f2fd"/>
+  <path d="M16 32h32" stroke="#0052cc" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="28" r="6" fill="#0052cc"/>
+</svg>

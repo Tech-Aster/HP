@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="組み込み系・オープン系・金融通信など、多角的なソリューションで事業成長をサポート。AI開発支援、SES、受託開発なら信頼できるTechAsterにお任せください。">
+    <meta name="keywords" content="AI開発支援, SES, 受託開発, 組み込み開発, システム開発, 通信機器, 金融システム">
+
+    <meta property="og:title" content="TechAster - AI開発支援・SES・受託開発のパートナー">
+    <meta property="og:description" content="組み込み系・オープン系・金融通信など、多角的なソリューションで事業成長をサポート">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techaster.com/">
+
+    <title>TechAster - AI開発支援・SES・受託開発のパートナー</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
+
+    <!-- スクロール進行バー -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ========== ヘッダー ========== -->
+    <header class="header" id="header">
+        <nav class="navbar container" role="navigation" aria-label="グローバルナビゲーション">
+            <div class="navbar__logo">
+                <a href="#home" class="logo-link" aria-label="TechAster トップへ">
+                    <!-- ヘキサゴン＋3ノードネットワーク logo mark -->
+                    <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="lgNav" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00D4FF"/>
+                                <stop offset="1" stop-color="#6366F1"/>
+                            </linearGradient>
+                            <radialGradient id="lgCore" cx="50%" cy="50%" r="50%">
+                                <stop stop-color="#00D4FF"/>
+                                <stop offset="1" stop-color="#4F8EF7"/>
+                            </radialGradient>
+                            <filter id="lgGlow">
+                                <feGaussianBlur stdDeviation="1.5" result="b"/>
+                                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                        <!-- 外側ヘキサゴン（グラデーション枠） -->
+                        <path d="M18 2 L32 10 L32 26 L18 34 L4 26 L4 10 Z"
+                              stroke="url(#lgNav)" stroke-width="1.2" fill="url(#lgNav)" fill-opacity="0.06"/>
+                        <!-- 3本のアーム（三角形頂点へ） -->
+                        <line x1="18" y1="18" x2="18" y2="5"  stroke="url(#lgNav)" stroke-width="2" stroke-linecap="round" filter="url(#lgGlow)"/>
+                        <line x1="18" y1="18" x2="29.4" y2="24.5" stroke="url(#lgNav)" stroke-width="2" stroke-linecap="round" filter="url(#lgGlow)"/>
+                        <line x1="18" y1="18" x2="6.6"  y2="24.5" stroke="url(#lgNav)" stroke-width="2" stroke-linecap="round" filter="url(#lgGlow)"/>
+                        <!-- 頂点ノード -->
+                        <circle cx="18"   cy="5"    r="2.2" fill="url(#lgNav)" filter="url(#lgGlow)"/>
+                        <circle cx="29.4" cy="24.5" r="2.2" fill="url(#lgNav)" filter="url(#lgGlow)"/>
+                        <circle cx="6.6"  cy="24.5" r="2.2" fill="url(#lgNav)" filter="url(#lgGlow)"/>
+                        <!-- 中央コア -->
+                        <circle cx="18" cy="18" r="5.5" fill="url(#lgCore)" opacity="0.25"/>
+                        <circle cx="18" cy="18" r="3.5" fill="url(#lgCore)"/>
+                        <circle cx="18" cy="18" r="1.8" fill="white" opacity="0.95"/>
+                    </svg>
+                    <span class="logo-text">
+                        <span class="logo-text__thin">TECH</span><span class="logo-text__separator">·</span><span class="logo-text__bold">ASTER</span>
+                    </span>
+                </a>
+            </div>
+
+            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false"
+                aria-label="ナビゲーションを開く">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+
+            <ul class="navbar__menu" id="primaryNav" role="list">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#ai-services">AIサービス</a></li>
+                <li><a href="#about">会社紹介</a></li>
+                <li><a href="#services">事業内容</a></li>
+                <li><a href="#industries">対応業界</a></li>
+                <li><a href="#case-studies">実績</a></li>
+                <li><a href="#why-us">選ぶ理由</a></li>
+                <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ========== 01. Hero Section ========== -->
+        <section id="home" class="hero-section" aria-labelledby="heroTitle">
+            <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+            <div class="hero-section__bg-orbs" aria-hidden="true">
+                <div class="orb orb--1"></div>
+                <div class="orb orb--2"></div>
+                <div class="orb orb--3"></div>
+            </div>
+
+            <div class="container hero-section__inner">
+                <div class="hero-section__content">
+                    <div class="hero-section__badge">
+                        <span class="badge-dot" aria-hidden="true"></span>
+                        AIで未来を加速するITパートナー
+                    </div>
+                    <h1 class="hero-section__title" id="heroTitle">
+                        <span class="title-line">技術と価値の融合で</span>
+                        <span class="title-line title-line--gradient" id="typewriterTarget">未来をつくる</span>
+                    </h1>
+                    <p class="hero-section__subtitle">
+                        組み込み系・オープン系・金融通信など、多角的なソリューションで<br>
+                        貴社の事業成長を全力でサポートします
+                    </p>
+                    <div class="hero-section__cta">
+                        <a href="#contact" class="button button--primary button--glow">
+                            <span>無料相談する</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#case-studies" class="button button--ghost">
+                            実績を見る
+                        </a>
+                    </div>
+
+                    <div class="hero-section__trust">
+                        <div class="trust-item">
+                            <span class="trust-num" data-target="150">0</span>
+                            <span class="trust-label">導入企業</span>
+                        </div>
+                        <div class="trust-divider" aria-hidden="true"></div>
+                        <div class="trust-item">
+                            <span class="trust-num" data-target="98">0</span>
+                            <span class="trust-label">顧客満足率%</span>
+                        </div>
+                        <div class="trust-divider" aria-hidden="true"></div>
+                        <div class="trust-item">
+                            <span class="trust-num" data-target="10">0</span>
+                            <span class="trust-label">年以上の実績</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-section__visual" aria-hidden="true">
+                    <div class="hero-card hero-card--main">
+                        <div class="hero-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="12" fill="url(#g1)"/>
+                                <path d="M12 20h4l3-8 4 16 3-8h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="g1" x1="0" y1="0" x2="40" y2="40">
+                                        <stop stop-color="#00D4FF"/>
+                                        <stop offset="1" stop-color="#4F8EF7"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="hero-card__text">
+                            <span class="hero-card__label">AI導入支援</span>
+                            <span class="hero-card__value">PoC〜本番まで</span>
+                        </div>
+                        <div class="hero-card__badge hero-card__badge--green">稼働中</div>
+                    </div>
+
+                    <div class="hero-card hero-card--secondary">
+                        <div class="hero-card__stat">
+                            <span class="stat-value">+86%</span>
+                            <span class="stat-label">業務効率化</span>
+                        </div>
+                        <div class="hero-card__chart" aria-hidden="true">
+                            <div class="chart-bar" style="--h:40%"></div>
+                            <div class="chart-bar" style="--h:65%"></div>
+                            <div class="chart-bar" style="--h:55%"></div>
+                            <div class="chart-bar chart-bar--active" style="--h:86%"></div>
+                        </div>
+                    </div>
+
+                    <div class="hero-card hero-card--tertiary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FFD700"/>
+                        </svg>
+                        <span>顧客満足度 No.1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-section__scroll" aria-label="下にスクロール">
+                <div class="scroll-indicator">
+                    <span class="scroll-dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 統計バー ========== -->
+        <section class="stats-section" aria-label="実績統計">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card fade-in">
+                        <div class="stat-card__num">
+                            <span class="counter" data-target="500">0</span>+
+                        </div>
+                        <div class="stat-card__label">完了プロジェクト数</div>
+                        <div class="stat-card__bar"><div class="stat-card__fill" style="--w:85%"></div></div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-card__num">
+                            <span class="counter" data-target="150">0</span>+
+                        </div>
+                        <div class="stat-card__label">取引企業数</div>
+                        <div class="stat-card__bar"><div class="stat-card__fill" style="--w:70%"></div></div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-card__num">
+                            <span class="counter" data-target="10">0</span>年+
+                        </div>
+                        <div class="stat-card__label">業界実績</div>
+                        <div class="stat-card__bar"><div class="stat-card__fill" style="--w:60%"></div></div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-card__num">
+                            <span class="counter" data-target="98">0</span>%
+                        </div>
+                        <div class="stat-card__label">顧客満足率</div>
+                        <div class="stat-card__bar"><div class="stat-card__fill" style="--w:98%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 02. AI関連サービス ========== -->
+        <section id="ai-services" class="ai-services-section" aria-labelledby="aiServicesTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">AI Services</span>
+                    <h2 class="section-title" id="aiServicesTitle">AI関連サービス</h2>
+                    <p class="section-subtitle">最先端AI技術であなたのビジネスを次のステージへ</p>
+                </div>
+                <div class="ai-services-grid">
+                    <div class="ai-card fade-in" style="--delay:0.1s">
+                        <div class="ai-card__icon-wrap" style="--icon-color:#00D4FF">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M16 4C9.37 4 4 9.37 4 16s5.37 12 12 12 12-5.37 12-12S22.63 4 16 4zm0 2c5.52 0 10 4.48 10 10S21.52 26 16 26 6 21.52 6 16 10.48 6 16 6zm-1 4v7l6 3.5-1 1.73L13 18V10h2z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ai-card__title">AI投入サポート</h3>
+                        <p class="ai-card__desc">AI導入の企画・PoC支援。現行システムの適合性評価と、最適な導入ロードマップを作成します。</p>
+                        <ul class="ai-card__list">
+                            <li>導入可否評価（現状分析）</li>
+                            <li>PoC設計・実行</li>
+                            <li>導入効果の定量化</li>
+                        </ul>
+                        <a href="#contact" class="ai-card__link">相談する <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="ai-card fade-in" style="--delay:0.2s">
+                        <div class="ai-card__icon-wrap" style="--icon-color:#4F8EF7">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M8 24V16l8-4 8 4v8l-8 4-8-4zm8-20l10 5v2l-10-5L6 11V9l10-5z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ai-card__title">AIでの案件開発</h3>
+                        <p class="ai-card__desc">要件定義からモデル開発・評価・運用まで一貫して対応。データパイプライン設計も行います。</p>
+                        <ul class="ai-card__list">
+                            <li>データ設計・前処理</li>
+                            <li>モデル開発・評価</li>
+                            <li>運用・保守支援</li>
+                        </ul>
+                        <a href="#contact" class="ai-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="ai-card fade-in" style="--delay:0.3s">
+                        <div class="ai-card__icon-wrap" style="--icon-color:#A855F7">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M16 2L4 8v8c0 7.4 5.1 14.3 12 16 6.9-1.7 12-8.6 12-16V8L16 2zm0 14h-4v-4h4V10l6 6-6 6v-6z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ai-card__title">AIソリューション提供</h3>
+                        <p class="ai-card__desc">既製のAIモジュールやカスタムソリューションを提供。業務に合わせた最短導入パスを提案します。</p>
+                        <ul class="ai-card__list">
+                            <li>画像認識・自然言語処理</li>
+                            <li>業務向けカスタムモジュール</li>
+                            <li>SaaS連携・API化</li>
+                        </ul>
+                        <a href="#contact" class="ai-card__link">導入相談 <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="ai-card fade-in" style="--delay:0.4s">
+                        <div class="ai-card__icon-wrap" style="--icon-color:#F59E0B">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <path d="M28 8H4a2 2 0 00-2 2v14a2 2 0 002 2h24a2 2 0 002-2V10a2 2 0 00-2-2zm-14 2h4v4h-4v-4zm6 0h6v4h-6v-4zM4 10h6v4H4v-4zm0 6h10v8H4v-8zm12 8v-8h12v8H16z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ai-card__title">AIトレンド配信</h3>
+                        <p class="ai-card__desc">最新のAI技術情報や導入事例を定期配信。貴社の技術判断に役立つインサイトをお届けします。</p>
+                        <ul class="ai-card__list">
+                            <li>技術ニュースレター配信</li>
+                            <li>事例・ベンチマーク共有</li>
+                            <li>社内向け勉強会・ワークショップ</li>
+                        </ul>
+                        <a href="#contact" class="ai-card__link">購読・問い合わせ <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 03. 会社紹介 ========== -->
+        <section id="about" class="about-section" aria-labelledby="aboutTitle">
+            <div class="container">
+                <div class="about-section__grid">
+                    <div class="about-section__visual fade-in" aria-hidden="true">
+                        <div class="about-visual-wrap">
+
+                            <!-- 背景：SVGサーキットパターン -->
+                            <div class="about-vis__bg">
+                                <svg width="100%" height="100%" viewBox="0 0 440 480" preserveAspectRatio="xMidYMid slice" fill="none">
+                                    <defs>
+                                        <linearGradient id="avBg" x1="0" y1="0" x2="440" y2="480" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#071228"/>
+                                            <stop offset="0.5" stop-color="#0D1B42"/>
+                                            <stop offset="1" stop-color="#071228"/>
+                                        </linearGradient>
+                                        <radialGradient id="avGlow1" cx="70%" cy="20%" r="50%">
+                                            <stop stop-color="#00D4FF" stop-opacity="0.18"/>
+                                            <stop offset="1" stop-color="#00D4FF" stop-opacity="0"/>
+                                        </radialGradient>
+                                        <radialGradient id="avGlow2" cx="20%" cy="80%" r="50%">
+                                            <stop stop-color="#4F8EF7" stop-opacity="0.15"/>
+                                            <stop offset="1" stop-color="#4F8EF7" stop-opacity="0"/>
+                                        </radialGradient>
+                                    </defs>
+
+                                    <!-- ベース -->
+                                    <rect width="440" height="480" fill="url(#avBg)"/>
+                                    <rect width="440" height="480" fill="url(#avGlow1)"/>
+                                    <rect width="440" height="480" fill="url(#avGlow2)"/>
+
+                                    <!-- グリッドライン -->
+                                    <g stroke="#4F8EF7" stroke-opacity="0.07" stroke-width="1">
+                                        <line x1="0" y1="80"  x2="440" y2="80"/>
+                                        <line x1="0" y1="160" x2="440" y2="160"/>
+                                        <line x1="0" y1="240" x2="440" y2="240"/>
+                                        <line x1="0" y1="320" x2="440" y2="320"/>
+                                        <line x1="0" y1="400" x2="440" y2="400"/>
+                                        <line x1="80"  y1="0" x2="80"  y2="480"/>
+                                        <line x1="160" y1="0" x2="160" y2="480"/>
+                                        <line x1="220" y1="0" x2="220" y2="480"/>
+                                        <line x1="300" y1="0" x2="300" y2="480"/>
+                                        <line x1="380" y1="0" x2="380" y2="480"/>
+                                    </g>
+
+                                    <!-- サーキットトレース -->
+                                    <g stroke="#00D4FF" stroke-opacity="0.18" stroke-width="1.5" fill="none">
+                                        <polyline points="30,40 80,40 80,120 160,120 160,80 220,80"/>
+                                        <polyline points="300,40 380,40 380,120 440,120"/>
+                                        <polyline points="0,200 80,200 80,280 160,280 160,200 220,200"/>
+                                        <polyline points="300,240 380,240 380,160 440,160"/>
+                                        <polyline points="30,360 80,360 80,440 160,440"/>
+                                        <polyline points="300,400 380,400 380,320 440,320"/>
+                                    </g>
+                                    <g stroke="#4F8EF7" stroke-opacity="0.15" stroke-width="1" fill="none">
+                                        <polyline points="160,360 220,360 220,440 300,440 300,360 380,360"/>
+                                        <polyline points="160,0 160,40 220,40 220,0"/>
+                                    </g>
+
+                                    <!-- ノード（交点の丸） -->
+                                    <g fill="#00D4FF" fill-opacity="0.5">
+                                        <circle cx="80"  cy="40"  r="3"/>
+                                        <circle cx="80"  cy="120" r="3"/>
+                                        <circle cx="160" cy="120" r="3"/>
+                                        <circle cx="160" cy="80"  r="3"/>
+                                        <circle cx="220" cy="80"  r="3"/>
+                                        <circle cx="380" cy="40"  r="3"/>
+                                        <circle cx="380" cy="120" r="3"/>
+                                        <circle cx="80"  cy="200" r="3"/>
+                                        <circle cx="80"  cy="280" r="3"/>
+                                        <circle cx="160" cy="280" r="3"/>
+                                        <circle cx="160" cy="200" r="3"/>
+                                        <circle cx="220" cy="200" r="3"/>
+                                        <circle cx="380" cy="240" r="3"/>
+                                        <circle cx="380" cy="160" r="3"/>
+                                        <circle cx="80"  cy="360" r="3"/>
+                                        <circle cx="80"  cy="440" r="3"/>
+                                        <circle cx="160" cy="440" r="3"/>
+                                        <circle cx="220" cy="360" r="3"/>
+                                        <circle cx="220" cy="440" r="3"/>
+                                        <circle cx="300" cy="440" r="3"/>
+                                        <circle cx="300" cy="360" r="3"/>
+                                        <circle cx="380" cy="360" r="3"/>
+                                        <circle cx="380" cy="400" r="3"/>
+                                        <circle cx="380" cy="320" r="3"/>
+                                    </g>
+
+                                    <!-- アクセントノード（大） -->
+                                    <g fill="#4F8EF7" fill-opacity="0.35">
+                                        <circle cx="220" cy="240" r="6"/>
+                                        <circle cx="160" cy="40"  r="4"/>
+                                        <circle cx="300" cy="200" r="4"/>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <!-- 中央アスタリスクロゴ -->
+                            <div class="about-vis__logo-center">
+                                <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+                                    <defs>
+                                        <linearGradient id="avLogo" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#00D4FF"/>
+                                            <stop offset="1" stop-color="#4F8EF7"/>
+                                        </linearGradient>
+                                        <filter id="avGlow">
+                                            <feGaussianBlur stdDeviation="3" result="blur"/>
+                                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                        </filter>
+                                    </defs>
+                                    <circle cx="36" cy="36" r="34" stroke="url(#avLogo)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
+                                    <line x1="36" y1="8"  x2="36" y2="64" stroke="url(#avLogo)" stroke-width="3.5" stroke-linecap="round" filter="url(#avGlow)"/>
+                                    <line x1="8"  y1="36" x2="64" y2="36" stroke="url(#avLogo)" stroke-width="3.5" stroke-linecap="round" filter="url(#avGlow)"/>
+                                    <line x1="15" y1="15" x2="57" y2="57" stroke="url(#avLogo)" stroke-width="3.5" stroke-linecap="round" filter="url(#avGlow)"/>
+                                    <line x1="57" y1="15" x2="15" y2="57" stroke="url(#avLogo)" stroke-width="3.5" stroke-linecap="round" filter="url(#avGlow)"/>
+                                    <circle cx="36" cy="36" r="9" fill="url(#avLogo)" opacity="0.3"/>
+                                    <circle cx="36" cy="36" r="5" fill="url(#avLogo)"/>
+                                    <circle cx="36" cy="36" r="2.5" fill="white"/>
+                                </svg>
+                                <p class="about-vis__logo-name">TechAster</p>
+                            </div>
+
+                            <!-- 特徴グリッド 2×2 -->
+                            <div class="about-vis__features">
+                                <div class="av-feat" style="--fc:#00D4FF">
+                                    <div class="av-feat__icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M11 2l2.5 5.1 5.6.8-4 3.9.95 5.6L11 14.7l-5 2.7.95-5.6L3 7.9l5.6-.8L11 2z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <span class="av-feat__num">10年+</span>
+                                    <span class="av-feat__label">業界実績</span>
+                                </div>
+                                <div class="av-feat" style="--fc:#4F8EF7">
+                                    <div class="av-feat__icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M3 11l5 5 11-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <span class="av-feat__num">500+</span>
+                                    <span class="av-feat__label">完了案件</span>
+                                </div>
+                                <div class="av-feat" style="--fc:#A855F7">
+                                    <div class="av-feat__icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.8"/>
+                                            <path d="M11 2c0 0 4 4 4 9s-4 9-4 9M2 11h18" stroke="currentColor" stroke-width="1.8"/>
+                                        </svg>
+                                    </div>
+                                    <span class="av-feat__num">5業界</span>
+                                    <span class="av-feat__label">多業界対応</span>
+                                </div>
+                                <div class="av-feat" style="--fc:#10B981">
+                                    <div class="av-feat__icon">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M11 2L2 6.5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12v-6L11 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                            <path d="M7 11l3 3 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <span class="av-feat__num">98%</span>
+                                    <span class="av-feat__label">顧客満足率</span>
+                                </div>
+                            </div>
+
+                            <!-- ボトムタグライン -->
+                            <div class="about-vis__tagline">
+                                <span class="about-vis__tagline-dot"></span>
+                                技術と価値の融合で未来をつくる
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="about-section__content fade-in">
+                        <div class="section-header section-header--left">
+                            <span class="section-tag">About Us</span>
+                            <h2 class="section-title section-title--left" id="aboutTitle">弊社特徴</h2>
+                        </div>
+                        <p class="about-lead">
+                            「技術と価値」の融合を通じて、お客様の課題解決と事業成長を支援します。専門性の高い技術チームと顧客密着の提案で、実現可能なソリューションを提供します。
+                        </p>
+                        <div class="about-strengths">
+                            <div class="strength-item">
+                                <div class="strength-item__icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#00D4FF"/>
+                                    </svg>
+                                </div>
+                                <div class="strength-item__body">
+                                    <h3 class="strength-item__title">深い専門性</h3>
+                                    <p class="strength-item__text">組み込み系・オープン系・金融通信など、それぞれに特化した知見で課題に対応します。</p>
+                                </div>
+                            </div>
+                            <div class="strength-item">
+                                <div class="strength-item__icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm8 4l2 2 4-4" stroke="#4F8EF7" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="strength-item__body">
+                                    <h3 class="strength-item__title">顧客密着の提案力</h3>
+                                    <p class="strength-item__text">要件に即した現実的かつ効果的な導入計画を共に設計します。</p>
+                                </div>
+                            </div>
+                            <div class="strength-item">
+                                <div class="strength-item__icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                    </svg>
+                                </div>
+                                <div class="strength-item__body">
+                                    <h3 class="strength-item__title">継続的な支援体制</h3>
+                                    <p class="strength-item__text">導入後も運用・改善まで一貫して支援し、長期的な価値提供を行います。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="button button--primary">詳しく相談する</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 04. 事業内容 ========== -->
+        <section id="services" class="services-section" aria-labelledby="servicesTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">Services</span>
+                    <h2 class="section-title" id="servicesTitle">事業内容</h2>
+                    <p class="section-subtitle">幅広い技術領域で、あらゆるビジネス課題を解決します</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card fade-in" style="--delay:0.1s; --accent:#00D4FF">
+                        <div class="service-card__top">
+                            <div class="service-card__icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect width="48" height="48" rx="14" fill="url(#sg1)"/>
+                                    <path d="M16 24h4l3-8 4 16 3-8h4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <linearGradient id="sg1" x1="0" y1="0" x2="48" y2="48">
+                                            <stop stop-color="#00D4FF"/>
+                                            <stop offset="1" stop-color="#4F8EF7"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title">AI開発支援業務</h3>
+                        </div>
+                        <p class="service-card__desc">
+                            最新のAI技術を活用した開発支援、データ分析、機械学習モデル構築まで、貴社のAI導入をトータルでサポートします。
+                        </p>
+                        <ul class="service-card__list">
+                            <li>機械学習モデル開発</li>
+                            <li>ディープラーニング活用</li>
+                            <li>データクレンジング</li>
+                            <li>AI実装コンサル</li>
+                        </ul>
+                        <a href="#contact" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="service-card service-card--featured fade-in" style="--delay:0.2s; --accent:#4F8EF7">
+                        <div class="service-card__top">
+                            <div class="service-card__icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect width="48" height="48" rx="14" fill="url(#sg2)"/>
+                                    <circle cx="24" cy="18" r="6" stroke="white" stroke-width="2.5"/>
+                                    <path d="M12 38c0-6.63 5.37-12 12-12s12 5.37 12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                    <defs>
+                                        <linearGradient id="sg2" x1="0" y1="0" x2="48" y2="48">
+                                            <stop stop-color="#4F8EF7"/>
+                                            <stop offset="1" stop-color="#A855F7"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title">SES業務</h3>
+                        </div>
+                        <p class="service-card__desc">
+                            即戦力となる高度な技術人材を提供します。充実した教育・バックアップ体制で、貴社の技術支援に全力で取り組みます。
+                        </p>
+                        <ul class="service-card__list">
+                            <li>システムエンジニア派遣</li>
+                            <li>インフラエンジニア</li>
+                            <li>QA/テストエンジニア</li>
+                            <li>海外バイリンガルIT人材</li>
+                        </ul>
+                        <a href="#contact" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="service-card fade-in" style="--delay:0.3s; --accent:#A855F7">
+                        <div class="service-card__top">
+                            <div class="service-card__icon" aria-hidden="true">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect width="48" height="48" rx="14" fill="url(#sg3)"/>
+                                    <rect x="12" y="14" width="24" height="20" rx="3" stroke="white" stroke-width="2.5"/>
+                                    <path d="M18 24h12M18 29h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                    <defs>
+                                        <linearGradient id="sg3" x1="0" y1="0" x2="48" y2="48">
+                                            <stop stop-color="#A855F7"/>
+                                            <stop offset="1" stop-color="#EC4899"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title">受託開発業務</h3>
+                        </div>
+                        <p class="service-card__desc">
+                            ワンストップでの一貫した開発業務対応が可能。保守・運用を含めた長期的なサポートにも柔軟に対応します。
+                        </p>
+                        <ul class="service-card__list">
+                            <li>組み込みソフト開発</li>
+                            <li>Webアプリケーション開発</li>
+                            <li>スマートフォンアプリ開発</li>
+                            <li>システム移行支援</li>
+                        </ul>
+                        <a href="#contact" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 05. 対応業界 ========== -->
+        <section id="industries" class="industries-section" aria-labelledby="industriesTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">Industries</span>
+                    <h2 class="section-title" id="industriesTitle">対応業界</h2>
+                    <p class="section-subtitle">あらゆる業界の技術課題に対応します</p>
+                </div>
+                <div class="industries-grid">
+                    <!-- 組み込み系：マイクロチップ（ピン付きCPU） -->
+                    <div class="industry-card fade-in" style="--delay:0.1s">
+                        <div class="industry-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <rect x="11" y="11" width="14" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
+                                <!-- 左ピン -->
+                                <path d="M7 15h4M7 18h4M7 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <!-- 右ピン -->
+                                <path d="M25 15h4M25 18h4M25 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <!-- 上ピン -->
+                                <path d="M15 7v4M18 7v4M21 7v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <!-- 下ピン -->
+                                <path d="M15 25v4M18 25v4M21 25v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <!-- 内部コア -->
+                                <rect x="15" y="15" width="6" height="6" rx="1" fill="currentColor" opacity="0.35"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-card__title">組み込み系</h3>
+                        <p class="industry-card__text">産業機器・通信機器・医療機器など、マイコン制御・RTOS環境での開発実績</p>
+                    </div>
+
+                    <!-- オープン系：コードブラケット </> -->
+                    <div class="industry-card fade-in" style="--delay:0.2s">
+                        <div class="industry-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M14 10L5 18l9 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 10l9 8-9 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="22" y1="7" x2="14" y2="29" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-card__title">オープン系</h3>
+                        <p class="industry-card__text">Webアプリケーション・スマートフォンアプリ・クラウドシステムなど、モダン技術での開発</p>
+                    </div>
+
+                    <!-- 金融・通信：銀行の柱（ペディメント+列） -->
+                    <div class="industry-card fade-in" style="--delay:0.3s">
+                        <div class="industry-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M4 32h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M4 17h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M18 5L4 17h28L18 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M8 17v15M13 17v15M18 17v15M23 17v15M28 17v15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-card__title">金融・通信</h3>
+                        <p class="industry-card__text">大規模ミッションクリティカルなシステム移行・ネットワーク機器開発など、高い信頼性が必要な分野</p>
+                    </div>
+
+                    <!-- 製造・エネルギー：歯車（ギア） -->
+                    <div class="industry-card fade-in" style="--delay:0.4s">
+                        <div class="industry-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <circle cx="18" cy="18" r="5" stroke="currentColor" stroke-width="1.8"/>
+                                <!-- 8方向スポーク（歯車風） -->
+                                <path d="M18 4v6M18 26v6M4 18h6M26 18h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                                <path d="M9.1 9.1l4.2 4.2M22.7 22.7l4.2 4.2M26.9 9.1l-4.2 4.2M13.3 22.7l-4.2 4.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-card__title">製造・エネルギー</h3>
+                        <p class="industry-card__text">ものづくり現場での技術支援・ロボティクス・再生可能エネルギーなど産業領域での人材紹介</p>
+                    </div>
+
+                    <!-- その他分野：3×3アプリグリッド（多業界対応） -->
+                    <div class="industry-card fade-in" style="--delay:0.5s">
+                        <div class="industry-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <rect x="4"  y="4"  width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="14" y="4"  width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="24" y="4"  width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="4"  y="14" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="14" y="14" width="8" height="8" rx="2" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="24" y="14" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="4"  y="24" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="14" y="24" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                                <rect x="24" y="24" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-card__title">その他分野</h3>
+                        <p class="industry-card__text">医療・教育・流通など、あらゆる業界での技術ソリューションに対応</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 06. 実績紹介 ========== -->
+        <section id="case-studies" class="case-studies-section" aria-labelledby="caseStudiesTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">Case Studies</span>
+                    <h2 class="section-title" id="caseStudiesTitle">実績紹介</h2>
+                    <p class="section-subtitle">お客様とともに達成してきた成果をご紹介します</p>
+                </div>
+
+                <div class="case-filter fade-in" role="tablist" aria-label="実績カテゴリフィルター">
+                    <button class="filter-btn filter-btn--active" data-filter="all" role="tab" aria-selected="true">すべて</button>
+                    <button class="filter-btn" data-filter="通信・IT開発" role="tab" aria-selected="false">通信・IT</button>
+                    <button class="filter-btn" data-filter="組み込み系" role="tab" aria-selected="false">組み込み</button>
+                    <button class="filter-btn" data-filter="受託開発" role="tab" aria-selected="false">受託開発</button>
+                    <button class="filter-btn" data-filter="金融・通信" role="tab" aria-selected="false">金融・通信</button>
+                    <button class="filter-btn" data-filter="SES・人材紹介" role="tab" aria-selected="false">SES</button>
+                </div>
+
+                <div class="case-studies-grid">
+                    <article class="case-card fade-in" data-category="通信・IT開発">
+                        <div class="case-card__header" style="--card-color:#00D4FF">
+                            <span class="case-card__badge">通信・IT開発</span>
+                            <div class="case-card__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M4 16h4l3-8 4 16 3-8h4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="case-card__body">
+                            <h3 class="case-card__title">大手通信キャリア向けコアネットワーク機器開発</h3>
+                            <p class="case-card__client">大手通信キャリア（A社）</p>
+                            <p class="case-card__desc">コアネットワーク領域の設計・検証・リプレース作業に対応。ダウンタイム0時間での移行を実現。</p>
+                            <div class="case-card__results">
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    ダウンタイム 0時間
+                                </div>
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    通信速度 1.5倍向上
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card fade-in" data-category="組み込み系" style="--delay:0.1s">
+                        <div class="case-card__header" style="--card-color:#4F8EF7">
+                            <span class="case-card__badge">組み込み系</span>
+                            <div class="case-card__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <rect x="6" y="6" width="20" height="20" rx="4" stroke="white" stroke-width="2"/>
+                                    <circle cx="16" cy="16" r="4" fill="white" fill-opacity="0.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="case-card__body">
+                            <h3 class="case-card__title">医療用ディスプレイ制御システム開発</h3>
+                            <p class="case-card__client">医療機器メーカー（B社）</p>
+                            <p class="case-card__desc">高精度医療ディスプレイ制御ロジックを実装。マルチディスプレイ管理とセンサー信号処理を最適化。</p>
+                            <div class="case-card__results">
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    処理速度 30%向上
+                                </div>
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    全国50施設導入
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card fade-in" data-category="受託開発" style="--delay:0.2s">
+                        <div class="case-card__header" style="--card-color:#A855F7">
+                            <span class="case-card__badge">受託開発</span>
+                            <div class="case-card__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <rect x="4" y="8" width="24" height="16" rx="3" stroke="white" stroke-width="2"/>
+                                    <path d="M10 14h12M10 18h8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="case-card__body">
+                            <h3 class="case-card__title">ECサイト構築・運用支援</h3>
+                            <p class="case-card__client">アパレルメーカー（C社）</p>
+                            <p class="case-card__desc">既存EC基盤の改善と高速化を実施。フロントエンドUI/UX最適化・バックエンドAPI再設計を対応。</p>
+                            <div class="case-card__results">
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    読込 50%改善
+                                </div>
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    売上 25%向上
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card fade-in" data-category="金融・通信" style="--delay:0.3s">
+                        <div class="case-card__header" style="--card-color:#F59E0B">
+                            <span class="case-card__badge">金融・通信</span>
+                            <div class="case-card__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M16 4l12 8v8l-12 8L4 20v-8l12-8z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="case-card__body">
+                            <h3 class="case-card__title">郵政関連システムの大規模移行プロジェクト</h3>
+                            <p class="case-card__client">郵政関連企業（D社）</p>
+                            <p class="case-card__desc">レガシーシステムからの大規模移行を実施。移行計画・データマイグレーション・テストを10ヶ月で完了。</p>
+                            <div class="case-card__results">
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    スケジュール通り完了
+                                </div>
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    トラブル 0件
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-card fade-in" data-category="SES・人材紹介" style="--delay:0.4s">
+                        <div class="case-card__header" style="--card-color:#10B981">
+                            <span class="case-card__badge">SES・人材紹介</span>
+                            <div class="case-card__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <circle cx="16" cy="12" r="5" stroke="white" stroke-width="2"/>
+                                    <path d="M6 28c0-5.52 4.48-10 10-10s10 4.48 10 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="case-card__body">
+                            <h3 class="case-card__title">海外バイリンガルIT人材の日本招聘・オンボーディング</h3>
+                            <p class="case-card__client">金融機関（E社）</p>
+                            <p class="case-card__desc">AI/データ分析エンジニアの採用支援。ビザ取得・入社前研修・オンボーディングを4ヶ月で完了。</p>
+                            <div class="case-card__results">
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    3名採用成功
+                                </div>
+                                <div class="result-pill">
+                                    <span class="result-pill__icon" aria-hidden="true">✓</span>
+                                    継続雇用率 100%
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 07. 選ぶ理由 ========== -->
+        <section id="why-us" class="why-us-section" aria-labelledby="whyUsTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-tag">Why TechAster</span>
+                    <h2 class="section-title" id="whyUsTitle">TechAsterを選ぶ理由</h2>
+                    <p class="section-subtitle">私たちが選ばれる5つの強み</p>
+                </div>
+                <div class="why-us-grid">
+                    <!-- 01 専門性の深さ：CPUチップ（深い技術知識＝コア） -->
+                    <div class="why-card fade-in" style="--delay:0.1s">
+                        <div class="why-card__number" aria-hidden="true">01</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                                <path d="M5 11h3M5 14h3M5 17h3M20 11h3M20 14h3M20 17h3M11 5v3M14 5v3M17 5v3M11 20v3M14 20v3M17 20v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                <rect x="12" y="12" width="4" height="4" rx="0.8" fill="currentColor" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">専門性の深さ</h3>
+                        <p class="why-card__text">組み込み・クラウド・データ領域それぞれに精通した技術チームが対応します。</p>
+                    </div>
+
+                    <!-- 02 柔軟な対応力：稲妻ボルト（スピード・俊敏性） -->
+                    <div class="why-card fade-in" style="--delay:0.2s">
+                        <div class="why-card__number" aria-hidden="true">02</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M17 3L7 15h7l-3 10 13-15h-8l4-7z" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">柔軟な対応力</h3>
+                        <p class="why-card__text">変化する要件にも迅速に適応できる小回りの利く体制を整えています。</p>
+                    </div>
+
+                    <!-- 03 長期パートナーシップ：握手（連携・信頼） -->
+                    <div class="why-card fade-in" style="--delay:0.3s">
+                        <div class="why-card__number" aria-hidden="true">03</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M2 18l4-4 4 2 4-4 4 2 4-4 4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 10l5 5M25 10l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M8 15l5-5 4 3 4-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="14" cy="18" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">長期パートナーシップ</h3>
+                        <p class="why-card__text">導入から運用・改善まで、継続的に価値を届ける伴走支援を行います。</p>
+                    </div>
+
+                    <!-- 04 品質保証：シールド＋チェックマーク -->
+                    <div class="why-card fade-in" style="--delay:0.4s">
+                        <div class="why-card__number" aria-hidden="true">04</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M14 2L3 7v7c0 6.1 4.7 11.8 11 13.4C20.3 25.8 25 20.1 25 14V7L14 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M9 14l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">品質保証</h3>
+                        <p class="why-card__text">テスト設計・品質管理を重視し、リリース後の安定稼働を支えます。</p>
+                    </div>
+
+                    <!-- 05 充実したサポート：ヘッドセット（サポート窓口） -->
+                    <div class="why-card fade-in" style="--delay:0.5s">
+                        <div class="why-card__number" aria-hidden="true">05</div>
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <!-- ヘッドバンド -->
+                                <path d="M6 14C6 9.58 9.58 6 14 6s8 3.58 8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                                <!-- 左イヤーカップ -->
+                                <rect x="3" y="13" width="4" height="7" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                <!-- 右イヤーカップ -->
+                                <rect x="21" y="13" width="4" height="7" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                <!-- コード+マイク -->
+                                <path d="M25 20c0 2.76-2.24 5-5 5h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                                <circle cx="15" cy="25" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">充実したサポート</h3>
+                        <p class="why-card__text">保守・運用・教育まで包含した一貫したサポートを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA バナー ========== -->
+        <section class="cta-banner" aria-labelledby="ctaBannerTitle">
+            <div class="container">
+                <div class="cta-banner__inner fade-in">
+                    <div class="cta-banner__text">
+                        <h2 class="cta-banner__title" id="ctaBannerTitle">まずは無料でご相談ください</h2>
+                        <p class="cta-banner__subtitle">AI開発支援・SES・受託開発のプロフェッショナルが、貴社の課題を解決します</p>
+                    </div>
+                    <div class="cta-banner__actions">
+                        <a href="#contact" class="button button--primary button--glow">今すぐ相談する</a>
+                        <a href="tel:050-1105-1982" class="cta-phone">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <path d="M16.5 12.8l-3-2.8-1.3 1.3a14.3 14.3 0 01-5.4-5.4L8.1 4.6 5.2 1.5A14.4 14.4 0 001.5 9 14.4 14.4 0 009 16.5a14.4 14.4 0 007.5-3.7z" fill="currentColor"/>
+                            </svg>
+                            050-1105-1982
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 08. お問い合わせ ========== -->
+        <section id="contact" class="contact-section" aria-labelledby="contactTitle">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <div class="section-header section-header--left">
+                            <span class="section-tag">Contact</span>
+                            <h2 class="section-title section-title--left" id="contactTitle">お問い合わせ</h2>
+                        </div>
+                        <p class="contact-info__lead">
+                            AI開発支援、SES、受託開発について、まずはお気軽にご相談ください。専門チームが迅速にご対応いたします。
+                        </p>
+
+                        <div class="contact-info__items">
+                            <div class="contact-info-item">
+                                <div class="contact-info-item__icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                        <path d="M20.5 16.1l-3.8-3.5-1.6 1.6a18 18 0 01-6.8-6.8l1.6-1.7L6.4 1.5A18.2 18.2 0 001.5 11 18.2 18.2 0 0011 20.5a18.2 18.2 0 009.5-4.4z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-info-item__label">電話番号</p>
+                                    <a href="tel:050-1105-1982" class="contact-info-item__value">050-1105-1982</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-item__icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                        <rect x="2" y="4" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M2 7l9 6 9-6" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-info-item__label">メールアドレス</p>
+                                    <a href="mailto:info@techaster.com" class="contact-info-item__value">info@techaster.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-item__icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                        <circle cx="11" cy="9" r="4" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M3 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-info-item__label">営業時間</p>
+                                    <p class="contact-info-item__value">平日 9:00〜18:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-response">
+                            <div class="contact-response__icon" aria-hidden="true">⚡</div>
+                            <p class="contact-response__text">通常<strong>1営業日以内</strong>にご回答いたします</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap fade-in" style="--delay:0.2s">
+                        <form id="contactForm" class="contact-form" novalidate
+                            action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="company-name" class="form-label">企業名 <span class="form-required" aria-label="必須">*</span></label>
+                                    <input type="text" id="company-name" name="company_name" class="form-input" required
+                                        aria-required="true" placeholder="株式会社TechAster">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label">ご担当者名 <span class="form-required" aria-label="必須">*</span></label>
+                                    <input type="text" id="contact-name" name="contact_name" class="form-input" required
+                                        aria-required="true" placeholder="山田 太郎">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">メールアドレス <span class="form-required" aria-label="必須">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" required
+                                        aria-required="true" placeholder="info@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">電話番号</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="03-0000-0000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service-type" class="form-label">ご関心のあるサービス <span class="form-required" aria-label="必須">*</span></label>
+                                <select id="service-type" name="service_type" class="form-select" required
+                                    aria-required="true">
+                                    <option value="">選択してください</option>
+                                    <option value="ai-support">AI開発支援業務</option>
+                                    <option value="ses">SES業務</option>
+                                    <option value="development">受託開発業務</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">お問い合わせ内容 <span class="form-required" aria-label="必須">*</span></label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" required
+                                    aria-required="true" placeholder="ご相談内容をご記入ください"></textarea>
+                            </div>
+
+                            <div class="form-group form-group--checkbox">
+                                <input type="checkbox" id="privacy-agree" name="privacy_agree" required
+                                    aria-required="true">
+                                <label for="privacy-agree" class="form-label-checkbox">
+                                    <a href="#privacy" class="link">プライバシーポリシー</a>に同意します
+                                </label>
+                            </div>
+
+                            <button type="submit" class="button button--primary button--full">
+                                送信する
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                    <path d="M2 8l11-5-5 11-1.5-4.5L2 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <div id="form-message" class="form-message" role="alert" aria-live="polite" hidden></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== フッター ========== -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container footer__grid">
+                <div class="footer__brand">
+                    <a href="#home" class="footer__logo" aria-label="TechAster トップへ">
+                        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="lgFoot" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00D4FF"/>
+                                    <stop offset="1" stop-color="#6366F1"/>
+                                </linearGradient>
+                                <radialGradient id="lgFCore" cx="50%" cy="50%" r="50%">
+                                    <stop stop-color="#00D4FF"/>
+                                    <stop offset="1" stop-color="#4F8EF7"/>
+                                </radialGradient>
+                            </defs>
+                            <path d="M18 2 L32 10 L32 26 L18 34 L4 26 L4 10 Z"
+                                  stroke="url(#lgFoot)" stroke-width="1.2" fill="url(#lgFoot)" fill-opacity="0.06"/>
+                            <line x1="18" y1="18" x2="18"   y2="5"    stroke="url(#lgFoot)" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="18" y1="18" x2="29.4" y2="24.5" stroke="url(#lgFoot)" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="18" y1="18" x2="6.6"  y2="24.5" stroke="url(#lgFoot)" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="18"   cy="5"    r="2.2" fill="url(#lgFoot)"/>
+                            <circle cx="29.4" cy="24.5" r="2.2" fill="url(#lgFoot)"/>
+                            <circle cx="6.6"  cy="24.5" r="2.2" fill="url(#lgFoot)"/>
+                            <circle cx="18" cy="18" r="5.5" fill="url(#lgFCore)" opacity="0.25"/>
+                            <circle cx="18" cy="18" r="3.5" fill="url(#lgFCore)"/>
+                            <circle cx="18" cy="18" r="1.8" fill="white" opacity="0.95"/>
+                        </svg>
+                        <span class="logo-text">
+                            <span class="logo-text__thin">TECH</span><span class="logo-text__separator">·</span><span class="logo-text__bold">ASTER</span>
+                        </span>
+                    </a>
+                    <p class="footer__tagline">「技術と価値」の融合による未来の創出を理念に、多角的なソリューションで事業成長をサポートします。</p>
+                    <div class="footer__social" aria-label="ソーシャルメディア">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 8v5M5 5v.5M8 13V9.5C8 8.7 8.7 8 9.5 8h0c.8 0 1.5.7 1.5 1.5V13M8 8v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter/X">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M2 2h5l3 4.5L14 2h2L11 8l5 8h-5l-3-4.5L4 16H2l5-8L2 2z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__nav-group">
+                    <h4 class="footer__nav-title">サービス</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#ai-services">AI関連サービス</a></li>
+                        <li><a href="#services">AI開発支援</a></li>
+                        <li><a href="#services">SES業務</a></li>
+                        <li><a href="#services">受託開発</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav-group">
+                    <h4 class="footer__nav-title">会社情報</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#about">弊社特徴</a></li>
+                        <li><a href="#industries">対応業界</a></li>
+                        <li><a href="#case-studies">実績紹介</a></li>
+                        <li><a href="#why-us">選ぶ理由</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav-group">
+                    <h4 class="footer__nav-title">お問い合わせ</h4>
+                    <address class="footer__contact-info">
+                        <p>
+                            <a href="tel:050-1105-1982">050-1105-1982</a>
+                        </p>
+                        <p>
+                            <a href="mailto:info@techaster.com">info@techaster.com</a>
+                        </p>
+                        <p class="footer__hours">平日 9:00〜18:00</p>
+                    </address>
+                    <a href="#contact" class="button button--primary" style="margin-top: 1rem; font-size: 0.85rem; padding: 10px 20px;">無料相談する</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p class="footer__copyright">© 2026 TechAster Inc. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#privacy">プライバシーポリシー</a>
+                    <a href="#terms">利用規約</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- フローティングCTAボタン -->
+    <a href="#contact" class="floating-cta" id="floatingCta" aria-label="お問い合わせ">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M2 3h18a1 1 0 011 1v12a1 1 0 01-1 1H6l-4 4V4a1 1 0 011-1z" fill="currentColor"/>
+        </svg>
+        <span>相談する</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
