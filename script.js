@@ -1,88 +1,6 @@
 // ========== TechAster LP — script.js ==========
 
-// ========== 1. パーティクルCanvas ==========
-function initParticles() {
-    const canvas = document.getElementById('heroCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    let animId;
-
-    function resize() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-    }
-
-    class Particle {
-        constructor() { this.reset(); }
-        reset() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.4;
-            this.vy = (Math.random() - 0.5) * 0.4;
-            this.r = Math.random() * 1.8 + 0.4;
-            this.alpha = Math.random() * 0.5 + 0.1;
-            this.color = Math.random() > 0.5 ? '0, 212, 255' : '79, 142, 247';
-        }
-        update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-        }
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
-            ctx.fill();
-        }
-    }
-
-    function initParticleList() {
-        particles = [];
-        const count = Math.min(Math.floor((canvas.width * canvas.height) / 8000), 120);
-        for (let i = 0; i < count; i++) particles.push(new Particle());
-    }
-
-    function drawConnections() {
-        const maxDist = 130;
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < maxDist) {
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(79, 142, 247, ${0.12 * (1 - dist / maxDist)})`;
-                    ctx.lineWidth = 0.8;
-                    ctx.stroke();
-                }
-            }
-        }
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        drawConnections();
-        particles.forEach(p => { p.update(); p.draw(); });
-        animId = requestAnimationFrame(animate);
-    }
-
-    resize();
-    initParticleList();
-    animate();
-
-    const resizeObs = new ResizeObserver(() => {
-        cancelAnimationFrame(animId);
-        resize();
-        initParticleList();
-        animate();
-    });
-    resizeObs.observe(canvas.parentElement);
-}
-
-// ========== 2. スクロール進行バー ==========
+// ========== 1. スクロール進行バー ==========
 function initScrollProgress() {
     const bar = document.getElementById('scrollProgress');
     if (!bar) return;
@@ -92,7 +10,7 @@ function initScrollProgress() {
     }, { passive: true });
 }
 
-// ========== 3. ヘッダースクロール ==========
+// ========== 2. ヘッダースクロール ==========
 function initHeader() {
     const header = document.getElementById('header');
     if (!header) return;
@@ -101,7 +19,7 @@ function initHeader() {
     }, { passive: true });
 }
 
-// ========== 4. アクティブナビ ==========
+// ========== 3. アクティブナビ ==========
 function initActiveNav() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.navbar__menu a[href^="#"]');
@@ -121,7 +39,7 @@ function initActiveNav() {
     sections.forEach(s => obs.observe(s));
 }
 
-// ========== 5. フェードインObserver ==========
+// ========== 4. フェードインObserver ==========
 function initFadeIn() {
     const obs = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -135,7 +53,7 @@ function initFadeIn() {
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 }
 
-// ========== 6. カウンターアニメーション ==========
+// ========== 5. カウンターアニメーション ==========
 function animateCounter(el) {
     const target = parseInt(el.dataset.target, 10);
     if (isNaN(target)) return;
@@ -164,7 +82,7 @@ function initCounters() {
     document.querySelectorAll('.stats-section, .hero-section__trust').forEach(el => obs.observe(el));
 }
 
-// ========== 7. ハンバーガーメニュー ==========
+// ========== 6. ハンバーガーメニュー ==========
 function initMobileNav() {
     const toggle = document.getElementById('navToggle');
     const navbar = document.querySelector('.navbar');
@@ -195,7 +113,7 @@ function initMobileNav() {
     });
 }
 
-// ========== 8. スムーススクロール ==========
+// ========== 7. スムーススクロール ==========
 function initSmoothScroll() {
     const OFFSET = 80;
     document.addEventListener('click', e => {
@@ -213,7 +131,7 @@ function initSmoothScroll() {
     });
 }
 
-// ========== 9. ケーススタディフィルター ==========
+// ========== 8. ケーススタディフィルター ==========
 function initCaseFilter() {
     const buttons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.case-card');
@@ -238,7 +156,7 @@ function initCaseFilter() {
     });
 }
 
-// ========== 10. フローティングCTAボタン ==========
+// ========== 9. フローティングCTAボタン ==========
 function initFloatingCta() {
     const cta = document.getElementById('floatingCta');
     if (!cta) return;
@@ -247,7 +165,7 @@ function initFloatingCta() {
     }, { passive: true });
 }
 
-// ========== 11. フォーム処理 ==========
+// ========== 10. フォーム処理 ==========
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -298,7 +216,7 @@ function initForm() {
     if (form) form.addEventListener('submit', handleFormSubmit);
 }
 
-// ========== 12. 統計バーアニメーション ==========
+// ========== 11. 統計バーアニメーション ==========
 function initStatBars() {
     const obs = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -310,9 +228,8 @@ function initStatBars() {
     document.querySelectorAll('.stat-card').forEach(el => obs.observe(el));
 }
 
-// ========== 13. 初期化 ==========
+// ========== 12. 初期化 ==========
 document.addEventListener('DOMContentLoaded', () => {
-    initParticles();
     initScrollProgress();
     initHeader();
     initActiveNav();
