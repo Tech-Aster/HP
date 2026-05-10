@@ -166,6 +166,10 @@ function initFloatingCta() {
 }
 
 // ========== 10. フォーム処理 ==========
+const MONTHLY_LIMIT = 40;
+const FORM_COUNT_KEY = 'ta_form_count';
+let formLoadTime = 0;
+
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -184,10 +188,39 @@ function showFormMessage(msg, type) {
     setTimeout(() => { el.hidden = true; }, 6000);
 }
 
+function getMonthlyRecord() {
+    try {
+        const stored = JSON.parse(localStorage.getItem(FORM_COUNT_KEY) || '{}');
+        const ym = new Date().toISOString().slice(0, 7);
+        return stored.month === ym ? stored : { month: ym, count: 0 };
+    } catch {
+        return { month: new Date().toISOString().slice(0, 7), count: 0 };
+    }
+}
+
+function incrementMonthlyCount() {
+    const rec = getMonthlyRecord();
+    rec.count++;
+    try { localStorage.setItem(FORM_COUNT_KEY, JSON.stringify(rec)); } catch {}
+}
+
 async function handleFormSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
+
+    // ① ハニーポット：ボットが不可視フィールドを埋めたら無視
+    if (data.get('_gotcha')) return;
+
+    // ② 速度チェック：表示から3秒未満の送信はボットと判断
+    if (Date.now() - formLoadTime < 3000) return;
+
+    // ③ 月次送信上限チェック
+    const monthlyRecord = getMonthlyRecord();
+    if (monthlyRecord.count >= MONTHLY_LIMIT) {
+        showFormMessage(`今月の送信受付件数（${MONTHLY_LIMIT}件）に達しました。お手数ですが info@techaster.com へ直接ご連絡ください。`, 'error');
+        return;
+    }
 
     if (!validateEmail(data.get('email') || '')) {
         showFormMessage('有効なメールアドレスを入力してください。', 'error');
@@ -201,19 +234,33 @@ async function handleFormSubmit(e) {
     const btn = form.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = true; btn.textContent = '送信中...'; }
 
-    await new Promise(r => setTimeout(r, 800));
-
-    showFormMessage('お問い合わせを受け付けました。担当者より1営業日以内にご連絡いたします。', 'success');
-    form.reset();
-    const msgEl = document.getElementById('form-message');
-    if (msgEl) msgEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-    if (btn) { btn.disabled = false; btn.innerHTML = '送信する <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8l11-5-5 11-1.5-4.5L2 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'; }
+    try {
+        const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+            incrementMonthlyCount();
+            showFormMessage('お問い合わせを受け付けました。担当者より1営業日以内にご連絡いたします。', 'success');
+            form.reset();
+            const msgEl = document.getElementById('form-message');
+            if (msgEl) msgEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+            showFormMessage('送信に失敗しました。お手数ですが info@techaster.com へ直接ご連絡ください。', 'error');
+        }
+    } catch {
+        showFormMessage('送信に失敗しました。お手数ですが info@techaster.com へ直接ご連絡ください。', 'error');
+    } finally {
+        if (btn) { btn.disabled = false; btn.innerHTML = '送信する <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8l11-5-5 11-1.5-4.5L2 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'; }
+    }
 }
 
 function initForm() {
     const form = document.getElementById('contactForm');
-    if (form) form.addEventListener('submit', handleFormSubmit);
+    if (!form) return;
+    formLoadTime = Date.now();
+    form.addEventListener('submit', handleFormSubmit);
 }
 
 // ========== 11. 統計バーアニメーション ==========

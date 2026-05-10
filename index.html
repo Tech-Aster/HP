@@ -758,7 +758,7 @@
 
                     <div class="contact-form-wrap fade-in" style="--delay:0.2s">
                         <form id="contactForm" class="contact-form" novalidate
-                            action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST">
+                            action="https://formspree.io/f/xojrprek" method="POST">
 
                             <div class="form-row">
                                 <div class="form-group">
@@ -809,6 +809,9 @@
                                     <a href="#privacy" class="link">プライバシーポリシー</a>に同意します
                                 </label>
                             </div>
+
+                            <!-- ハニーポット：人間には見えないボット検知フィールド -->
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
                             <button type="submit" class="btn btn--dark btn--full">
                                 送信する
