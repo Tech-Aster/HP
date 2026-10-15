@@ -722,6 +722,15 @@ address {
     color: var(--color-text-secondary);
 }
 
+.stats-note {
+    margin-top: var(--sp-6);
+    text-align: center;
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.02em;
+}
+
 /* ========== 11. AI Services Section（黒） ========== */
 .ai-services-section {
     background: var(--color-black);
