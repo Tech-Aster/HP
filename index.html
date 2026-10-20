@@ -4,13 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI開発支援・SES・受託開発のTechAster。組み込み系・オープン系・金融通信など多角的な技術領域で、貴社の課題に本気で向き合います。">
-    <meta name="keywords" content="AI開発支援, SES, 受託開発, 組み込み開発, システム開発, 通信機器, 金融システム">
-    <meta property="og:title" content="TechAster - AI開発支援・SES・受託開発のパートナー">
-    <meta property="og:description" content="AI時代を、正面から突破する。技術力と誠実な伴走で貴社の事業を前進させます。">
+    <meta name="description" content="株式会社テックアスターは、通信・ITインフラ分野の技術支援（SES）、Web・アプリの受託開発、AI活用支援に取り組む横浜の会社です。">
+    <meta property="og:title" content="株式会社テックアスター">
+    <meta property="og:description" content="通信・インフラの運用から、アプリ開発、AI活用まで。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.techaster.com/">
-    <title>TechAster - AI開発支援・SES・受託開発のパートナー</title>
+    <title>株式会社テックアスター | SES・IT技術支援 / Web・アプリ受託開発 / AI活用支援</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,22 +17,30 @@
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet">
 
+    <link rel="canonical" href="https://www.techaster.com/">
+    <meta property="og:image" content="https://www.techaster.com/assets/icons/techaster_horizontal_white-bg.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"株式会社テックアスター","url":"https://www.techaster.com/","logo":"https://www.techaster.com/assets/icons/techaster_horizontal_white-bg.png","telephone":"+81-50-1808-8785","email":"info@techaster.com","address":{"@type":"PostalAddress","postalCode":"220-0004","addressRegion":"神奈川県","addressLocality":"横浜市西区","streetAddress":"北幸二丁目10番48号 むつみビル3階","addressCountry":"JP"}}
+    </script>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="assets/icons/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">本文へスキップ</a>
-    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
     <!-- ========== ヘッダー ========== -->
     <header class="header" id="header">
         <nav class="navbar container" role="navigation" aria-label="グローバルナビゲーション">
             <div class="navbar__logo">
-                <a href="#home" class="logo-link" aria-label="TechAster トップへ">
-                    <img class="logo-image logo-image--dark" src="assets/icons/techaster_horizontal_black-bg.png"
-                        alt="TechAster logo">
-                    <img class="logo-image logo-image--light" src="assets/icons/techaster_horizontal_white-bg.png"
-                        alt="TechAster logo">
+                <a href="#home" class="logo-link" aria-label="株式会社テックアスター トップへ">
+                    <img class="logo-image logo-image--dark" src="assets/icons/techaster_horizontal_for-dark-bg_transparent.png"
+                        alt="TECHASTER">
+                    <img class="logo-image logo-image--light" src="assets/icons/techaster_horizontal_for-light-bg_transparent.png"
+                        alt="TECHASTER">
                 </a>
             </div>
 
@@ -43,13 +50,12 @@
             </button>
 
             <ul class="navbar__menu" id="primaryNav" role="list">
-                <li><a href="#home">テックアスター</a></li>
-                <li><a href="#ai-services">AIサービス</a></li>
-                <li><a href="#about">会社紹介</a></li>
-                <li><a href="#services">事業内容</a></li>
-                <li><a href="#industries">対応業界</a></li>
-                <li><a href="#case-studies">実績</a></li>
-                <li><a href="#why-us">選ぶ理由</a></li>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#ses">SES・IT技術支援</a></li>
+                <li><a href="#web">Web・アプリ受託開発</a></li>
+                <li><a href="#ai">AI活用支援</a></li>
+                <li><a href="#recruit">採用情報</a></li>
+                        <li><a href="#company">会社概要</a></li>
                 <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -57,699 +63,411 @@
 
     <main id="main-content">
 
-        <!-- ========== 01. Hero Section（黒） ========== -->
+
+        <!-- ========== Hero（黒） ========== -->
         <section id="home" class="hero-section" aria-labelledby="heroTitle">
             <div class="container hero-section__inner">
 
                 <div class="hero-section__content fade-in">
-                    <span class="hero-section__overline" aria-hidden="true">WE BUILD WHAT AI CAN'T REPLACE.</span>
+                    <span class="hero-section__overline">株式会社テックアスター</span>
                     <h1 class="hero-section__title" id="heroTitle">
-                        <span class="title-line">AI時代を、</span>
-                        <span class="title-line title-line--accent">正面から突破する。</span>
+                        <span class="title-line">通信・インフラの運用から、</span>
+                        <span class="title-line title-line--accent">アプリ開発、AI活用まで。</span>
                     </h1>
                     <p class="hero-section__subtitle">
-                        技術革新のスピードに追われる時代に、確かな技術力と誠実な伴走で貴社の事業を前進させます。<br>
-                        AI活用支援・SES・受託開発で、課題に本気で向き合います。
+                        株式会社テックアスターは、通信・ITインフラ分野の技術支援を中心に、Web・アプリの受託開発、AIの業務活用に取り組んでいます。代表者は、IT・通信分野で20年以上の経験があります。<br>
+                        当社は代表者と協業パートナー(個人事業主)で構成しており、実作業は、代表者または案件に合った協業パートナーが担当します。
                     </p>
                     <div class="hero-section__cta">
-                        <a href="#contact" class="btn btn--primary">まず相談する</a>
-                        <a href="#case-studies" class="btn btn--outline-white">実績を見る</a>
+                        <a href="#contact" class="btn btn--primary">お問い合わせ</a>
+                        <a href="#services" class="btn btn--outline-white">サービスを見る</a>
                     </div>
                 </div>
 
-                <!-- 右カラム：エディトリアル数値ブロック -->
-                <div class="hero-section__trust fade-in" style="--delay:0.2s" aria-label="実績数字">
-                    <div class="trust-item">
-                        <div class="trust-num-wrap">
-                            <span class="trust-num" data-target="30">0</span>
-                            <span class="trust-suffix">+</span>
-                        </div>
-                        <span class="trust-label">Completed Projects</span>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-num-wrap">
-                            <span class="trust-num" data-target="10">0</span>
-                            <span class="trust-suffix">+</span>
-                        </div>
-                        <span class="trust-label">Companies Served</span>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-num-wrap">
-                            <span class="trust-num" data-target="90">0</span>
-                            <span class="trust-suffix">%+</span>
-                        </div>
-                        <span class="trust-label">Satisfaction Rate</span>
-                    </div>
+                <div class="hero-scope fade-in" style="--delay:0.2s">
+                    <p class="hero-scope__label">サービス</p>
+                    <ul class="hero-scope__list">
+                        <li><a href="#ses"><span>01</span>SES・IT技術支援</a></li>
+                        <li><a href="#web"><span>02</span>Web・アプリ受託開発</a></li>
+                        <li><a href="#ai"><span>03</span>AI活用支援</a></li>
+                    </ul>
                 </div>
 
-            </div>
-
-            <div class="hero-section__scroll" aria-label="下にスクロール">
-                <div class="scroll-indicator">
-                    <span class="scroll-dot"></span>
-                </div>
             </div>
         </section>
 
-        <!-- ========== 統計バー（白） ========== -->
-        <section class="stats-section" aria-label="実績統計">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item fade-in">
-                        <div class="stat-item__num">
-                            <span class="counter" data-target="30">0</span><span class="stat-suffix">+</span>
-                        </div>
-                        <div class="stat-item__label">完了プロジェクト数</div>
-                    </div>
-                    <div class="stat-item fade-in" style="--delay:0.1s">
-                        <div class="stat-item__num">
-                            <span class="counter" data-target="10">0</span><span class="stat-suffix">+</span>
-                        </div>
-                        <div class="stat-item__label">取引企業数</div>
-                    </div>
-                    <div class="stat-item fade-in" style="--delay:0.2s">
-                        <div class="stat-item__num">
-                            <span class="counter" data-target="15">0</span><span class="stat-suffix">年+</span>
-                        </div>
-                        <div class="stat-item__label">業界実績</div>
-                    </div>
-                    <div class="stat-item fade-in" style="--delay:0.3s">
-                        <div class="stat-item__num">
-                            <span class="counter" data-target="90">0</span><span class="stat-suffix">%+</span>
-                        </div>
-                        <div class="stat-item__label">顧客満足率</div>
-                    </div>
-                </div>
-                <p class="stats-note">※法人実績に加え、協力パートナーを含む総合実績ベースです。</p>
-            </div>
-        </section>
-
-        <!-- ========== 02. AI関連サービス（黒） ========== -->
-        <section id="ai-services" class="ai-services-section" aria-labelledby="aiServicesTitle">
-            <div class="container">
-                <div class="section-header section-header--center fade-in">
-                    <span class="section-overline">AI Services</span>
-                    <h2 class="section-title" id="aiServicesTitle">AIを「使った」で<br>終わらせないために。</h2>
-                    <p class="section-subtitle">
-                        検討段階から本番稼働まで、目的を持ったAI活用をご支援します。実績もありますが、サービス内容はニーズに応じて柔軟に設計し、必要に応じて一緒に課題解決を進めていく形です。</p>
-                </div>
-                <div class="ai-services-grid">
-
-                    <div class="ai-card fade-in" style="--delay:0.1s">
-                        <span class="ai-card__num" aria-hidden="true">01</span>
-                        <div class="ai-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" />
-                                <path d="M14 7v7l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="ai-card__title">AI投入サポート</h3>
-                        <p class="ai-card__desc">「そもそもうちでAIは使えるのか」という最初の問いに、誠実に答えます。導入可否の評価から始め、PoC設計・実行まで段階的に進めます。</p>
-                        <ul class="ai-card__list">
-                            <li>導入可否評価（現状分析）</li>
-                            <li>PoC設計・実行支援</li>
-                            <li>導入効果の定量化</li>
-                        </ul>
-                        <a href="#contact" class="ai-card__link">相談する <span aria-hidden="true">→</span></a>
-                    </div>
-
-                    <div class="ai-card fade-in" style="--delay:0.2s">
-                        <span class="ai-card__num" aria-hidden="true">02</span>
-                        <div class="ai-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor"
-                                    stroke-width="1.8" />
-                                <path d="M9 14h10M14 9v10" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="ai-card__title">AI関連案件開発</h3>
-                        <p class="ai-card__desc">
-                            AI関連案件の実務経験を踏まえ、データ設計・検証・運用までを幅広く支援します。なお、提供形態はご要望に応じて柔軟に整理し、必要に応じて一緒に課題解決に取り組めます。</p>
-                        <ul class="ai-card__list">
-                            <li>導入検討・要件整理</li>
-                            <li>データ設計・検証支援</li>
-                            <li>運用・改善の伴走</li>
-                        </ul>
-                        <a href="#contact" class="ai-card__link">詳しく見る <span aria-hidden="true">→</span></a>
-                    </div>
-
-                    <div class="ai-card fade-in" style="--delay:0.3s">
-                        <span class="ai-card__num" aria-hidden="true">03</span>
-                        <div class="ai-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <path d="M14 3L4 8v7c0 6 4.5 11.6 10 13 5.5-1.4 10-7 10-13V8L14 3z"
-                                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                                <path d="M9 14l3.5 3.5 6.5-7" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="ai-card__title">AIソリューション検討</h3>
-                        <p class="ai-card__desc">
-                            既製AIモジュールや業務特化のアプローチを前提に、ニーズに合う形を一緒に整理していきます。すべてが既存サービス化済みというわけではなく、必要に応じて個別課題へ積極的に合わせて提案します。
-                        </p>
-                        <ul class="ai-card__list">
-                            <li>業務課題の整理</li>
-                            <li>導入可否の検討</li>
-                            <li>個別最適化の提案</li>
-                        </ul>
-                        <a href="#contact" class="ai-card__link">導入相談 <span aria-hidden="true">→</span></a>
-                    </div>
-
-                    <div class="ai-card fade-in" style="--delay:0.4s">
-                        <span class="ai-card__num" aria-hidden="true">04</span>
-                        <div class="ai-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <path d="M4 7h20M4 14h20M4 21h12" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="ai-card__title">AI関連e-Learning教材</h3>
-                        <p class="ai-card__desc">
-                            最新のAI動向を、現場目線で分かりやすく伝える教材の提供を計画中です。今は検討段階ですが、需要があれば、学習設計や社内向けの展開形態まで一緒に考えていけます。</p>
-                        <ul class="ai-card__list">
-                            <li>教材企画・構成案</li>
-                            <li>AI基礎・導入事例整理</li>
-                            <li>社内向け学習設計</li>
-                        </ul>
-                        <a href="#contact" class="ai-card__link">検討相談 <span aria-hidden="true">→</span></a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== 03. 会社紹介（白） ========== -->
-        <section id="about" class="about-section" aria-labelledby="aboutTitle">
-            <div class="container">
-                <div class="about-section__grid">
-
-                    <!-- 左：エディトリアルビジュアルブロック -->
-                    <div class="about-editorial fade-in" aria-hidden="true">
-                        <span class="about-editorial__overline">OUR PHILOSOPHY</span>
-                        <blockquote class="about-editorial__quote">
-                            AIの「A」は、<br>
-                            人の形をしている。<br>
-                            だから私たちは、<br>
-                            技術より人を見る。
-                        </blockquote>
-                        <div class="about-editorial__stats" aria-hidden="true">
-                            <div>
-                                <span class="ae-stat__num">専門性</span>
-                                <span class="ae-stat__label">技術力</span>
-                            </div>
-                            <div>
-                                <span class="ae-stat__num">提案力</span>
-                                <span class="ae-stat__label">価値創出</span>
-                            </div>
-                            <div>
-                                <span class="ae-stat__num">責任感</span>
-                                <span class="ae-stat__label">伴走</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 右：テキストコンテンツ -->
-                    <div class="about-content fade-in" style="--delay:0.15s">
-                        <div class="section-header">
-                            <span class="section-overline">About TechAster</span>
-                            <h2 class="section-title" id="aboutTitle">私たちが向き合うのは、<br>技術ではなく成果です。</h2>
-                        </div>
-                        <p class="about-lead">
-                            「技術と価値の融合」を理念に掲げ、AI開発支援から組み込み・金融通信分野まで、幅広い技術領域で実績を積んできました。単に要件をこなすのではなく、貴社のビジネスゴールを共有し、本当に意味のある成果を届けることにこだわっています。
-                        </p>
-                        <div class="about-strengths">
-                            <div class="strength-item">
-                                <div class="strength-item__icon" aria-hidden="true">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M10 2l2.2 4.5 5 .7-3.6 3.5 1 5-4.6-2.4L5.4 15.7l1-5L2.8 7.2l5-.7L10 2z"
-                                            fill="currentColor" />
-                                    </svg>
-                                </div>
-                                <div class="strength-item__body">
-                                    <h3 class="strength-item__title">深い専門性</h3>
-                                    <p class="strength-item__text">各技術領域に精通したエンジニアが直接担当し、現場に根差した知見で課題に対して的確に向き合います。
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="strength-item">
-                                <div class="strength-item__icon" aria-hidden="true">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M18 10c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8 8 3.6 8 8zM10 6v4l3 1.5"
-                                            stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="strength-item__body">
-                                    <h3 class="strength-item__title">顧客密着の提案力</h3>
-                                    <p class="strength-item__text">「これで本当に解決するか」を常に問いながら、現実的かつ効果的な計画を共に設計し、選択肢を明確にします。
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="strength-item">
-                                <div class="strength-item__icon" aria-hidden="true">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M10 2L2 6v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V6L10 2z"
-                                            stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-                                        <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.8"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="strength-item__body">
-                                    <h3 class="strength-item__title">責任ある支援体制</h3>
-                                    <p class="strength-item__text">導入後の運用・改善まで、必要な時に必要な支援を継続し、責任を持って伴走し続けます。</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn--dark">詳しく相談する</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== 04. 事業内容（薄灰） ========== -->
+        <!-- ========== サービス概要（白） ========== -->
         <section id="services" class="services-section" aria-labelledby="servicesTitle">
             <div class="container">
                 <div class="section-header section-header--center fade-in">
-                    <span class="section-overline">Services</span>
-                    <h2 class="section-title" id="servicesTitle">主な領域と注力分野で、<br>貴社の技術課題に応えます。</h2>
-                    <p class="section-subtitle">AI開発から人材支援・受託開発まで、多角的な技術力で事業を下支えします。</p>
+                    <span class="section-overline">サービス</span>
+                    <h2 class="section-title" id="servicesTitle">支援分野</h2>
                 </div>
                 <div class="services-grid">
 
                     <div class="service-card fade-in" style="--delay:0.1s">
                         <span class="service-card__num" aria-hidden="true">01</span>
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                <path
-                                    d="M11 2l3.5 7.1 7.8 1.1-5.6 5.5 1.3 7.7-6.8-3.6-7 3.6 1.3-7.7L0 10.2l7.8-1.1L11 2z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">AI開発支援業務</h3>
+                        <h3 class="service-card__title">SES・IT技術支援</h3>
                         <p class="service-card__desc">
-                            まだ「検討中」のままで終わらせないために。PoCから本番稼働まで、一貫して責任を持って対応します。「動くAI」を、貴社の現場に届けます。
+                            通信・ITインフラを中心に、設計・構築から運用・保守まで対応します。契約は準委任契約が中心です。
                         </p>
                         <ul class="service-card__list">
-                            <li>機械学習モデル開発</li>
-                            <li>ディープラーニング活用</li>
-                            <li>データクレンジング・パイプライン</li>
-                            <li>AI実装コンサルティング</li>
+                            <li>サーバー・ITインフラ</li>
+                            <li>ネットワーク・通信</li>
+                            <li>クラウド</li>
+                            <li>ソフトウェア開発(組み込み・業務システムなど)</li>
+                            <li>運用・保守・監視</li>
+                            <li>PM・PMO・PL支援</li>
                         </ul>
-                        <a href="#contact" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                        <a href="#ses" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
                     </div>
 
                     <div class="service-card fade-in" style="--delay:0.2s">
                         <span class="service-card__num" aria-hidden="true">02</span>
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                <circle cx="11" cy="8" r="4" stroke="currentColor" stroke-width="1.6" />
-                                <path d="M3 19c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" />
-                                <path d="M16 10l1.5 1.5L20 9" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">SES業務</h3>
+                        <h3 class="service-card__title">Web・アプリ受託開発</h3>
                         <p class="service-card__desc">
-                            必要な技術力を、必要なタイミングで。即戦力エンジニアの確保から、チームの底上げまで支援します。充実したバックアップ体制で、長期にわたり全力で取り組みます。
+                            企業サイト、Webシステム、アプリの開発を受けています。小規模な案件や、納期を優先したい案件も対象です。
                         </p>
                         <ul class="service-card__list">
-                            <li>システムエンジニア派遣</li>
-                            <li>インフラエンジニア</li>
-                            <li>QA/テストエンジニア</li>
-                            <li>海外バイリンガルIT人材</li>
+                            <li>Webシステム・アプリの受託開発</li>
+                            <li>企業ホームページ・ランディングページの制作</li>
+                            <li>ECサイトの構築・改修</li>
                         </ul>
-                        <a href="#contact" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                        <a href="#web" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
                     </div>
 
                     <div class="service-card fade-in" style="--delay:0.3s">
                         <span class="service-card__num" aria-hidden="true">03</span>
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                <rect x="2" y="3" width="18" height="16" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <path d="M7 9h8M7 13h5" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">受託開発業務</h3>
+                        <h3 class="service-card__title">AI活用支援</h3>
                         <p class="service-card__desc">
-                            要件定義から保守・運用まで、ワンストップで対応。長期的な視点で貴社の開発を支えます。「完成して終わり」ではなく、稼働し続けるシステムを共に育てます。
+                            現場でAIを業務に使いながら、テスト設計などへの活用を検証しています。AI関連の案件には、協力・挑戦する姿勢で取り組みます。
                         </p>
                         <ul class="service-card__list">
-                            <li>組み込みソフト開発</li>
-                            <li>Webアプリケーション開発</li>
-                            <li>スマートフォンアプリ開発</li>
-                            <li>システム移行支援</li>
+                            <li>AIツールの業務活用</li>
+                            <li>テスト設計でのAI活用の検証</li>
+                            <li>AI関連の案件への協力</li>
                         </ul>
-                        <a href="#contact" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
+                        <a href="#ai" class="service-card__link">詳しく見る <span aria-hidden="true">→</span></a>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- ========== 05. 対応業界（黒） ========== -->
-        <section id="industries" class="industries-section" aria-labelledby="industriesTitle">
+        <!-- ========== SES・IT技術支援（薄灰） ========== -->
+        <section id="ses" class="detail-section detail-section--gray" aria-labelledby="sesTitle">
             <div class="container">
-                <div class="section-header section-header--center fade-in">
-                    <span class="section-overline">Industries</span>
-                    <h2 class="section-title" id="industriesTitle">幅広い業界で、<br>深い実績があります。</h2>
-                    <p class="section-subtitle">特定の業界に偏ることなく、多様な現場で培った技術知見があります。</p>
+                <div class="section-header fade-in">
+                    <span class="section-overline">SES・IT技術支援</span>
+                    <h2 class="section-title" id="sesTitle">通信・ITインフラの設計から運用まで。</h2>
+                    <p class="detail-lead">
+                        通信ネットワークの設計・検証・リプレースと、システム移行の経験が中心です。サーバーやクラウドの運用・保守、ソフトウェア開発のテストにも対応しています。契約は準委任契約が中心で、業務内容、期間、必要なスキルを確認したうえで、体制とお見積りをお出しします。
+                    </p>
                 </div>
-                <div class="industries-grid">
 
-                    <div class="industry-card fade-in" style="--delay:0.1s">
-                        <div class="industry-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <rect x="11" y="11" width="14" height="14" rx="2.5" stroke="currentColor"
-                                    stroke-width="1.8" />
-                                <path d="M7 15h4M7 18h4M7 21h4" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                                <path d="M25 15h4M25 18h4M25 21h4" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                                <path d="M15 7v4M18 7v4M21 7v4" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                                <path d="M15 25v4M18 25v4M21 25v4" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                                <rect x="15" y="15" width="6" height="6" rx="1" fill="currentColor" opacity="0.35" />
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">組み込み系</h3>
-                        <p class="industry-card__text">産業機器・通信機器・医療機器など、マイコン制御・RTOS環境での開発実績</p>
+                <h3 class="detail-subtitle fade-in">対応領域</h3>
+                <div class="detail-grid detail-grid--3">
+                    <div class="detail-card fade-in">
+                        <h4 class="detail-card__title">ITインフラ・サーバー</h4>
+                        <ul class="detail-list">
+                            <li>サーバーの設計・構築・運用・保守</li>
+                            <li>オンプレミス環境の運用・更改</li>
+                            <li>仮想化基盤の構築・運用</li>
+                        </ul>
                     </div>
-
-                    <div class="industry-card fade-in" style="--delay:0.2s">
-                        <div class="industry-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <path d="M14 10L5 18l9 8" stroke="currentColor" stroke-width="2.2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M22 10l9 8-9 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <line x1="22" y1="7" x2="14" y2="29" stroke="currentColor" stroke-width="2.2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">オープン系</h3>
-                        <p class="industry-card__text">Webアプリケーション・スマートフォンアプリ・クラウドシステムなど、モダン技術での開発</p>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <h4 class="detail-card__title">ネットワーク・通信</h4>
+                        <ul class="detail-list">
+                            <li>ネットワークの設計・構築・検証</li>
+                            <li>ネットワーク機器のリプレース</li>
+                            <li>運用・保守・監視</li>
+                            <li>障害対応、構成変更</li>
+                        </ul>
                     </div>
-
-                    <div class="industry-card fade-in" style="--delay:0.3s">
-                        <div class="industry-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <path d="M4 32h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                                <path d="M4 17h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                                <path d="M18 5L4 17h28L18 5z" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linejoin="round" />
-                                <path d="M8 17v15M13 17v15M18 17v15M23 17v15M28 17v15" stroke="currentColor"
-                                    stroke-width="1.8" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">金融・通信</h3>
-                        <p class="industry-card__text">大規模ミッションクリティカルなシステム移行・ネットワーク機器開発など、高い信頼性が必要な分野</p>
+                    <div class="detail-card fade-in" style="--delay:0.2s">
+                        <h4 class="detail-card__title">クラウド</h4>
+                        <ul class="detail-list">
+                            <li>クラウド環境の構築・運用・保守</li>
+                            <li>オンプレミスからの移行</li>
+                            <li>利用サービスは、案件ごとにご相談</li>
+                        </ul>
                     </div>
-
-                    <div class="industry-card fade-in" style="--delay:0.4s">
-                        <div class="industry-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <circle cx="18" cy="18" r="5" stroke="currentColor" stroke-width="1.8" />
-                                <path d="M18 4v6M18 26v6M4 18h6M26 18h6" stroke="currentColor" stroke-width="2.2"
-                                    stroke-linecap="round" />
-                                <path d="M9.1 9.1l4.2 4.2M22.7 22.7l4.2 4.2M26.9 9.1l-4.2 4.2M13.3 22.7l-4.2 4.2"
-                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">製造・エネルギー</h3>
-                        <p class="industry-card__text">ものづくり現場での技術支援・ロボティクス・再生可能エネルギーなど産業領域での人材紹介</p>
+                    <div class="detail-card fade-in">
+                        <h4 class="detail-card__title">ソフトウェア開発</h4>
+                        <ul class="detail-list">
+                            <li>組み込みソフトウェアの開発</li>
+                            <li>業務システム(オープン系)の開発</li>
+                            <li>テスト・品質評価</li>
+                            <li>既存システムの改修・保守</li>
+                        </ul>
                     </div>
-
-                    <div class="industry-card fade-in" style="--delay:0.5s">
-                        <div class="industry-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <rect x="4" y="4" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="14" y="4" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="24" y="4" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="4" y="14" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="14" y="14" width="8" height="8" rx="2" fill="currentColor" opacity="0.25"
-                                    stroke="currentColor" stroke-width="1.6" />
-                                <rect x="24" y="14" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="4" y="24" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="14" y="24" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                                <rect x="24" y="24" width="8" height="8" rx="2" stroke="currentColor"
-                                    stroke-width="1.6" />
-                            </svg>
-                        </div>
-                        <h3 class="industry-card__title">その他分野</h3>
-                        <p class="industry-card__text">医療・教育・流通など、あらゆる業界での技術ソリューションに対応</p>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <h4 class="detail-card__title">PM・PMO・PL支援</h4>
+                        <ul class="detail-list">
+                            <li>進捗・課題の管理</li>
+                            <li>関係者との調整</li>
+                            <li>品質管理、ドキュメント作成</li>
+                        </ul>
                     </div>
+                    <div class="detail-card fade-in" style="--delay:0.2s">
+                        <h4 class="detail-card__title">セキュリティのご相談</h4>
+                        <ul class="detail-list">
+                            <li>サーバー・ネットワークのセキュリティに関する相談</li>
+                            <li>アカウント管理、アクセス権限の見直し</li>
+                            <li>専門的な対応が必要な場合は、協業パートナーに相談</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="detail-two fade-in">
+                    <div>
+                        <h3 class="detail-subtitle">契約と体制</h3>
+                        <ul class="detail-list detail-list--plain">
+                            <li>契約形態: 準委任契約が中心です。</li>
+                            <li>担当: 代表者、または案件に合った協業パートナー(個人事業主)が担当します。</li>
+                            <li>複数の領域にまたがる案件は、協業パートナーと分担して対応します。</li>
+                        </ul>
+                        <p class="detail-note">大人数が必要な案件や、24時間365日の監視・運用は、協業パートナーとの体制を含めて、対応できるかを検討します。</p>
+                    </div>
+                    <div>
+                        <h3 class="detail-subtitle">ご相談の流れ</h3>
+                        <ol class="detail-steps">
+                            <li>業務内容・期間・必要なスキルをお知らせください</li>
+                            <li>体制とお見積りをご提示します</li>
+                            <li>準委任契約を結びます</li>
+                            <li>業務を開始します</li>
+                        </ol>
+                        <p class="detail-note">概要が固まっていない段階でも、ご相談いただけます。</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 06. 実績紹介（白） ========== -->
-        <section id="case-studies" class="case-studies-section" aria-labelledby="caseStudiesTitle">
+        <!-- ========== 対応実績（白） ========== -->
+        <section id="works" class="detail-section" aria-labelledby="worksTitle">
             <div class="container">
-                <div class="section-header section-header--center fade-in">
-                    <span class="section-overline">Case Studies</span>
-                    <h2 class="section-title" id="caseStudiesTitle">実績が、私たちの誠実さを語ります。</h2>
-                    <p class="section-subtitle">技術力だけでなく、お客様とともに積み上げた成果をご紹介します。</p>
+                <div class="section-header fade-in">
+                    <span class="section-overline">対応実績</span>
+                    <h2 class="section-title" id="worksTitle">対応案件事例</h2>
                 </div>
-
-                <div class="case-filter fade-in" role="tablist" aria-label="実績カテゴリフィルター">
-                    <button class="filter-btn filter-btn--active" data-filter="all" role="tab"
-                        aria-selected="true">すべて</button>
-                    <button class="filter-btn" data-filter="通信・IT開発" role="tab" aria-selected="false">通信・IT</button>
-                    <button class="filter-btn" data-filter="組み込み系" role="tab" aria-selected="false">組み込み</button>
-                    <button class="filter-btn" data-filter="受託開発" role="tab" aria-selected="false">受託開発</button>
-                    <button class="filter-btn" data-filter="金融・通信" role="tab" aria-selected="false">金融・通信</button>
-                    <button class="filter-btn" data-filter="SES・人材紹介" role="tab" aria-selected="false">SES</button>
+                <div class="detail-grid detail-grid--3">
+                    <div class="detail-card fade-in">
+                        <p class="detail-tag">通信インフラ関連</p>
+                        <h3 class="detail-card__title">大手通信キャリア向け コアネットワーク領域</h3>
+                        <p class="detail-text">コアネットワーク領域の設計・検証・リプレース作業に対応。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <p class="detail-tag">金融・通信・業務系</p>
+                        <h3 class="detail-card__title">業務システム移行プロジェクト</h3>
+                        <p class="detail-text">業務システムの移行プロジェクトで、移行計画の作成、データ移行、テストに対応。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.2s">
+                        <p class="detail-tag">ソフトウェア開発</p>
+                        <h3 class="detail-card__title">ソフトウェア開発</h3>
+                        <p class="detail-text">組み込みSW・Winアプリ・通信サービス関連の開発など。</p>
+                    </div>
                 </div>
-
-                <div class="case-studies-grid">
-
-                    <article class="case-card fade-in" data-category="通信・IT開発">
-                        <div class="case-card__header">
-                            <span class="case-card__badge">通信・IT開発</span>
-                            <div class="case-card__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M3 10h3l2-5 3 10 2-5h4" stroke="currentColor" stroke-width="1.8"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="case-card__body">
-                            <h3 class="case-card__title">大手通信キャリア向けコアネットワーク機器開発</h3>
-                            <p class="case-card__client">大手通信キャリア（A社）</p>
-                            <p class="case-card__desc">コアネットワーク領域の設計・検証・リプレース作業に対応。ダウンタイムゼロでの移行を実現しました。</p>
-                            <div class="case-card__results">
-                                <span class="result-pill">ダウンタイム 0時間</span>
-                                <span class="result-pill">通信速度 1.5倍向上</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="case-card fade-in" data-category="組み込み系" style="--delay:0.1s">
-                        <div class="case-card__header">
-                            <span class="case-card__badge">組み込み系</span>
-                            <div class="case-card__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <rect x="4" y="4" width="12" height="12" rx="2" stroke="currentColor"
-                                        stroke-width="1.6" />
-                                    <circle cx="10" cy="10" r="3" fill="currentColor" opacity="0.5" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="case-card__body">
-                            <h3 class="case-card__title">医療用ディスプレイ制御システム開発</h3>
-                            <p class="case-card__client">医療機器メーカー（B社）</p>
-                            <p class="case-card__desc">高精度医療ディスプレイ制御ロジックを実装。マルチディスプレイ管理とセンサー信号処理を最適化しました。</p>
-                            <div class="case-card__results">
-                                <span class="result-pill">処理速度 30%向上</span>
-                                <span class="result-pill">全国50施設導入</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="case-card fade-in" data-category="受託開発" style="--delay:0.2s">
-                        <div class="case-card__header">
-                            <span class="case-card__badge">受託開発</span>
-                            <div class="case-card__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor"
-                                        stroke-width="1.6" />
-                                    <path d="M6 9h8M6 12h5" stroke="currentColor" stroke-width="1.6"
-                                        stroke-linecap="round" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="case-card__body">
-                            <h3 class="case-card__title">ECサイト構築・運用支援</h3>
-                            <p class="case-card__client">アパレルメーカー（C社）</p>
-                            <p class="case-card__desc">既存EC基盤の改善と高速化を実施。フロントエンドUI/UX最適化・バックエンドAPI再設計に対応しました。</p>
-                            <div class="case-card__results">
-                                <span class="result-pill">読込速度 50%改善</span>
-                                <span class="result-pill">売上 25%向上</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="case-card fade-in" data-category="金融・通信" style="--delay:0.3s">
-                        <div class="case-card__header">
-                            <span class="case-card__badge">金融・通信</span>
-                            <div class="case-card__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10 2l8 5v5l-8 5-8-5V7l8-5z" stroke="currentColor" stroke-width="1.6"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="case-card__body">
-                            <h3 class="case-card__title">郵政関連システムの大規模移行プロジェクト</h3>
-                            <p class="case-card__client">郵政関連企業（D社）</p>
-                            <p class="case-card__desc">レガシーシステムからの大規模移行を実施。移行計画・データマイグレーション・テストを10ヶ月で完了しました。</p>
-                            <div class="case-card__results">
-                                <span class="result-pill">スケジュール通り完了</span>
-                                <span class="result-pill">トラブル 0件</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="case-card fade-in" data-category="SES・人材紹介" style="--delay:0.4s">
-                        <div class="case-card__header">
-                            <span class="case-card__badge">SES・人材紹介</span>
-                            <div class="case-card__icon" aria-hidden="true">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <circle cx="10" cy="7" r="3.5" stroke="currentColor" stroke-width="1.6" />
-                                    <path d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.6"
-                                        stroke-linecap="round" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="case-card__body">
-                            <h3 class="case-card__title">海外バイリンガルIT人材の日本招聘・オンボーディング</h3>
-                            <p class="case-card__client">金融機関（E社）</p>
-                            <p class="case-card__desc">AI/データ分析エンジニアの採用支援。ビザ取得・入社前研修・オンボーディングを4ヶ月で完了しました。</p>
-                            <div class="case-card__results">
-                                <span class="result-pill">3名採用成功</span>
-                                <span class="result-pill">継続雇用率 100%</span>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
+                <p class="detail-note fade-in">掲載は対応案件の一部抜粋です。取引先名は非公開としています。</p>
             </div>
         </section>
 
-        <!-- ========== 07. 選ぶ理由（黒） ========== -->
-        <section id="why-us" class="why-us-section" aria-labelledby="whyUsTitle">
+        <!-- ========== Web・アプリ受託開発（薄灰） ========== -->
+        <section id="web" class="detail-section detail-section--gray" aria-labelledby="webTitle">
             <div class="container">
-                <div class="section-header section-header--center fade-in">
-                    <span class="section-overline">Why TechAster</span>
-                    <h2 class="section-title" id="whyUsTitle">テックアスターが選ばれる<br>5つの理由</h2>
-                    <p class="section-subtitle">他社との違いは、関係が続くほど実感していただけます。</p>
+                <div class="section-header fade-in">
+                    <span class="section-overline">Web・アプリ受託開発</span>
+                    <h2 class="section-title" id="webTitle">小規模・短納期の開発も受けています。</h2>
+                    <p class="detail-lead">
+                        Webサイト、Webシステム、アプリの受託開発を行います。目的、必要な機能、ご予算、納期を伺い、その範囲で作れるものをご提案します。個人情報や決済など、高度なセキュリティ要件が中心となる案件は、受けられるかどうかを最初にお伝えします。
+                    </p>
                 </div>
-                <div class="why-us-grid">
-
-                    <div class="why-card fade-in" style="--delay:0.1s">
-                        <span class="why-card__number" aria-hidden="true">01</span>
-                        <div class="why-card__icon" aria-hidden="true">
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                <rect x="7" y="7" width="12" height="12" rx="2" stroke="currentColor"
-                                    stroke-width="1.8" />
-                                <path
-                                    d="M4 10h3M4 13h3M4 16h3M19 10h3M19 13h3M19 16h3M10 4v3M13 4v3M16 4v3M10 19v3M13 19v3M16 19v3"
-                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                                <rect x="11" y="11" width="4" height="4" rx="0.8" fill="currentColor" opacity="0.5" />
-                            </svg>
-                        </div>
-                        <h3 class="why-card__title">専門性の深さ</h3>
-                        <p class="why-card__text">組み込み・クラウド・データ領域それぞれに精通した技術チームが対応します。</p>
+                <div class="detail-two fade-in">
+                    <div>
+                        <h3 class="detail-subtitle">主なご相談内容</h3>
+                        <ul class="detail-list detail-list--plain">
+                            <li>Webシステム・業務用Webアプリの受託開発</li>
+                            <li>スマートフォンアプリなど、アプリの開発</li>
+                            <li>企業ホームページの新規制作・リニューアル</li>
+                            <li>ランディングページの制作</li>
+                            <li>ECサイトの構築・改修</li>
+                            <li>既存サイト・システムの改修、情報更新</li>
+                        </ul>
                     </div>
-
-                    <div class="why-card fade-in" style="--delay:0.2s">
-                        <span class="why-card__number" aria-hidden="true">02</span>
-                        <div class="why-card__icon" aria-hidden="true">
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                <path d="M16 2L6 13h7l-3 11 13-15h-8l4-7z" fill="currentColor" stroke="currentColor"
-                                    stroke-width="0.5" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="why-card__title">柔軟な対応力</h3>
-                        <p class="why-card__text">変化する要件にも迅速に適応できる、小回りの利く体制を整えています。</p>
+                    <div>
+                        <h3 class="detail-subtitle">ご依頼の流れ</h3>
+                        <ol class="detail-steps">
+                            <li>目的・要件・ご予算・納期を伺います</li>
+                            <li>開発範囲とお見積りをご提示します</li>
+                            <li>開発・テストを行います</li>
+                            <li>内容を確認いただき、納品・公開します</li>
+                        </ol>
                     </div>
-
-                    <div class="why-card fade-in" style="--delay:0.3s">
-                        <span class="why-card__number" aria-hidden="true">03</span>
-                        <div class="why-card__icon" aria-hidden="true">
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                <path d="M3 13c0 5.5 4.5 10 10 10s10-4.5 10-10S18.5 3 13 3" stroke="currentColor"
-                                    stroke-width="1.8" stroke-linecap="round" />
-                                <path d="M3 5v8h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="why-card__title">長期パートナーシップ</h3>
-                        <p class="why-card__text">導入から運用・改善まで、継続的に価値を届ける伴走支援を行います。</p>
-                    </div>
-
-                    <div class="why-card fade-in" style="--delay:0.4s">
-                        <span class="why-card__number" aria-hidden="true">04</span>
-                        <div class="why-card__icon" aria-hidden="true">
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                <path d="M13 2L3 7v6c0 5.8 4.3 11.2 10 12.6 5.7-1.4 10-6.8 10-12.6V7L13 2z"
-                                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                                <path d="M9 13l3.5 3.5L20 9" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="why-card__title">品質保証</h3>
-                        <p class="why-card__text">テスト設計・品質管理を重視し、リリース後の安定稼働を支えます。</p>
-                    </div>
-
-                    <div class="why-card fade-in" style="--delay:0.5s">
-                        <span class="why-card__number" aria-hidden="true">05</span>
-                        <div class="why-card__icon" aria-hidden="true">
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                                <path d="M5 13C5 8.6 8.6 5 13 5s8 3.6 8 8" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" fill="none" />
-                                <rect x="2" y="12" width="4" height="7" rx="2" stroke="currentColor" stroke-width="1.8"
-                                    fill="none" />
-                                <rect x="20" y="12" width="4" height="7" rx="2" stroke="currentColor" stroke-width="1.8"
-                                    fill="none" />
-                                <path d="M24 19c0 2.8-2.2 5-5 5h-4" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" fill="none" />
-                                <circle cx="14" cy="24" r="1.5" fill="currentColor" />
-                            </svg>
-                        </div>
-                        <h3 class="why-card__title">充実したサポート</h3>
-                        <p class="why-card__text">保守・運用・教育まで包含した一貫したサポートを提供します。</p>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ========== CTA バナー（黒・赤ボーダー） ========== -->
+        <!-- ========== AI活用支援（黒） ========== -->
+        <section id="ai" class="detail-section detail-section--dark" aria-labelledby="aiTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-overline">AI活用支援</span>
+                    <h2 class="section-title" id="aiTitle">AIを業務で使うための検証と相談に対応します。</h2>
+                    <p class="detail-lead">
+                        現場でAIツールを業務に使っており、仕様書やソースコードからのテスト設計など、実務に近い形で検証しています。また、AIサービスを提供するベンチャー企業から、情報を得られる環境があります。AI関連の案件には、協力・挑戦する姿勢で取り組みます。
+                    </p>
+                </div>
+                <h3 class="detail-subtitle fade-in">取り組んでいること</h3>
+                <div class="detail-grid detail-grid--3">
+                    <div class="detail-card fade-in">
+                        <h4 class="detail-card__title">AIツールの業務活用</h4>
+                        <p class="detail-text">日常業務やIT関連業務で、AIツールをどう使うかを試しています。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <h4 class="detail-card__title">テスト設計での活用</h4>
+                        <p class="detail-text">仕様書やソースコードから、テスト観点の抽出やテストケース作成を試しています。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.2s">
+                        <h4 class="detail-card__title">業務への適用の相談</h4>
+                        <p class="detail-text">対象業務と使える資料を伺い、AIが役立つ範囲を一緒に整理します。</p>
+                    </div>
+                </div>
+                <div class="detail-consult fade-in">
+                    <h3 class="detail-subtitle">ご相談について</h3>
+                    <p class="detail-text">AIで業務を効率化したい、テスト設計で試したい、AI関連の案件に協力してほしいなど、課題が整理できていない段階でもご相談ください。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 大切にしていること（薄灰） ========== -->
+        <section id="policy" class="detail-section detail-section--gray" aria-labelledby="policyTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-overline">私たちが大切にしていること</span>
+                    <h2 class="section-title" id="policyTitle">まずは、積極的に検討します。</h2>
+                    <p class="detail-lead">
+                        対応範囲と条件は、最初に明確にします。約束したことは、守ります。
+                    </p>
+                </div>
+                <div class="detail-grid detail-grid--2">
+                    <div class="detail-card fade-in">
+                        <h3 class="detail-card__title">窓口は代表者です</h3>
+                        <p class="detail-text">ご相談は、代表者が直接うかがいます。案件の内容に合わせて、協業パートナーと分担します。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <h3 class="detail-card__title">中心となる分野</h3>
+                        <p class="detail-text">通信・ITインフラ、組み込み・業務システムの開発、小規模なWeb・アプリ開発が中心です。それ以外の分野も、対応できるかどうかを検討します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 採用情報（白） ========== -->
+        <section id="recruit" class="detail-section" aria-labelledby="recruitTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-overline">採用情報</span>
+                    <h2 class="section-title" id="recruitTitle">一緒に成長する仲間を募集します。</h2>
+                    <p class="detail-lead">
+                        現在は、案件ごとに、契約社員または業務委託でご参画いただく形が中心です。正社員は、お互いの状況を見ながら相談します。募集人数や時期は決めておらず、案件の状況に合わせてご連絡します。すぐのご参画が難しい場合も、まずはご経歴をお送りください。
+                    </p>
+                </div>
+
+                <h3 class="detail-subtitle fade-in">募集している方</h3>
+                <div class="detail-grid detail-grid--2">
+                    <div class="detail-card fade-in">
+                        <h4 class="detail-card__title">インフラ関連の技術者</h4>
+                        <p class="detail-text">サーバー、ネットワーク、通信、運用・保守・監視の経験がある方。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <h4 class="detail-card__title">AI関連の経験者</h4>
+                        <p class="detail-text">AIツールの業務活用や、AIに関わる業務の経験がある方。</p>
+                    </div>
+                    <div class="detail-card fade-in">
+                        <h4 class="detail-card__title">組み込み・オープン系などの開発経験者</h4>
+                        <p class="detail-text">組み込みソフトウェア、業務システム、オープン系システムの開発やテストの経験がある方。</p>
+                    </div>
+                    <div class="detail-card fade-in" style="--delay:0.1s">
+                        <h4 class="detail-card__title">意欲のある方</h4>
+                        <p class="detail-text">新しい分野にも前向きに取り組み、一緒に会社を育てる気持ちのある方。</p>
+                    </div>
+                </div>
+
+                <div class="detail-two fade-in">
+                    <div>
+                        <h3 class="detail-subtitle">歓迎する方</h3>
+                        <ul class="detail-list detail-list--plain">
+                            <li>これまでの経験を活かして、再就職や新しい環境での活躍を考えている方(年齢は問いません)</li>
+                            <li>外国籍の技術者の方(日本での就労に必要な在留資格をお持ちの方)</li>
+                            <li>専門分野の経験を、さらに広げたい方</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="detail-subtitle">ご応募の流れ</h3>
+                        <ol class="detail-steps">
+                            <li>下のボタンから、メールを作成します(お使いのメールソフトが起動します)</li>
+                            <li>経験分野、ご希望、ご経歴を記入し、履歴書・職務経歴書があれば添付して送信します</li>
+                            <li>不足している情報は、担当からメールで確認します</li>
+                            <li>面談を行います(オンライン面接にも対応しています)</li>
+                            <li>案件の状況に合わせて、参画の時期や条件を相談します</li>
+                        </ol>
+                        <p style="margin-top: 1.5rem;"><a href="mailto:info@techaster.com?subject=%E3%80%90%E6%8E%A1%E7%94%A8%E3%83%BB%E3%81%94%E7%B5%8C%E6%AD%B4%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87%E3%80%91&amp;body=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%86%E3%83%83%E3%82%AF%E3%82%A2%E3%82%B9%E3%82%BF%E3%83%BC%20%E6%8E%A1%E7%94%A8%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E6%A7%98%0A%0A%E4%B8%8B%E8%A8%98%E3%81%AE%E3%81%A8%E3%81%8A%E3%82%8A%E3%80%81%E3%81%94%E7%B5%8C%E6%AD%B4%E3%83%BB%E3%81%94%E5%B8%8C%E6%9C%9B%E3%82%92%E3%81%8A%E9%80%81%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%0A(%E5%B1%A5%E6%AD%B4%E6%9B%B8%E3%83%BB%E8%81%B7%E5%8B%99%E7%B5%8C%E6%AD%B4%E6%9B%B8%E3%81%8C%E3%81%82%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AF%E3%80%81%E3%81%93%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%E3%81%AB%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84)%0A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%3A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%3A%0A%E2%96%A0%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7(%E4%BB%BB%E6%84%8F)%3A%0A%E2%96%A0%E4%B8%BB%E3%81%AA%E7%B5%8C%E9%A8%93%E5%88%86%E9%87%8E(%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%20%2F%20%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%20%2F%20AI%E9%96%A2%E9%80%A3%20%2F%20%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%20%2F%20%E6%A5%AD%E5%8B%99%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E7%B3%BB%20%2F%20Web%E3%83%BB%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%20%2F%20PM%E3%83%BBPMO%E3%83%BBPL%20%2F%20%E3%81%9D%E3%81%AE%E4%BB%96)%3A%0A%E2%96%A0%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E5%83%8D%E3%81%8D%E6%96%B9(%E5%A5%91%E7%B4%84%E7%A4%BE%E5%93%A1%20%2F%20%E6%A5%AD%E5%8B%99%E5%A7%94%E8%A8%97%20%2F%20%E6%AD%A3%E7%A4%BE%E5%93%A1%20%2F%20%E6%9C%AA%E5%AE%9A%E3%83%BB%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84)%3A%0A%E2%96%A0%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E5%8B%A4%E5%8B%99%E5%9C%B0%E3%83%BB%E5%83%8D%E3%81%8D%E6%96%B9(%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%81%AA%E3%81%A9)%3A%0A%E2%96%A0%E3%81%93%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%AE%E3%81%94%E7%B5%8C%E6%AD%B4(%E5%B1%A5%E6%AD%B4%E6%9B%B8%E3%82%92%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF%E3%80%81200%E6%96%87%E5%AD%97%E4%BB%A5%E4%B8%8A%E3%81%A7%E3%81%94%E8%A8%98%E5%85%A5%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84)%3A%0A%0A" class="btn btn--dark">経歴・ご希望をメールで送る</a></p>
+                        <p class="detail-note">ボタンでメールソフトが起動しない場合は、info@techaster.com 宛に、ご経歴とご希望をお送りください。履歴書を添付しない場合は、ご経歴を200文字以上でご記入ください。</p>
+                    </div>
+                </div>
+
+                <div class="detail-grid detail-grid--2 fade-in" style="margin-top: 4rem;">
+                    <div class="detail-card">
+                        <h3 class="detail-card__title">雇用形態</h3>
+                        <p class="detail-text">契約社員、業務委託、正社員から、ご希望やご事情に応じて相談できます。</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3 class="detail-card__title">勤務地・働き方</h3>
+                        <p class="detail-text">完全リモートを含め、案件の内容に応じて相談できます。</p>
+                    </div>
+                </div>
+                <p class="detail-lead fade-in" style="margin-top: 2rem;">
+                    <span class="nb">「経験に自信はあるが、</span><span class="nb">今の条件で合うか分からない」</span><span class="nb">「まずは話を聞いてみたい」</span><span class="nb">という段階でも構いません。</span><span class="nb">ご経歴やご希望、</span><span class="nb">ご不安な点を、</span><span class="nb">お気軽にお聞かせください。</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== 会社概要（薄灰） ========== -->
+        <section id="company" class="detail-section detail-section--gray" aria-labelledby="companyTitle">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title" id="companyTitle">会社概要</h2>
+                </div>
+                <dl class="company-list fade-in">
+                    <div><dt>会社名</dt><dd>株式会社テックアスター</dd></div>
+                    <div><dt>設立</dt><dd>2017年</dd></div>
+                    <div><dt>資本金</dt><dd>480万円</dd></div>
+                    <div><dt>代表者</dt><dd>潘龍 鉄成</dd></div>
+                    <div><dt>体制</dt><dd>代表者のほか、協業パートナー(個人事業主)数名と連携して事業を行っています。</dd></div>
+                    <div><dt>所在地</dt><dd>〒220-0004 神奈川県横浜市西区北幸二丁目10番48号 むつみビル3階</dd></div>
+                    <div><dt>電話番号</dt><dd><a href="tel:050-1808-8785">050-1808-8785</a></dd></div>
+                    <div><dt>メールアドレス</dt><dd><a href="mailto:info@techaster.com">info@techaster.com</a></dd></div>
+                    <div><dt>営業時間</dt><dd>平日 9:00〜18:00(電話・メールの対応時間。メールは時間外もお送りいただけます)</dd></div>
+                    <div><dt>事業内容</dt><dd>
+                        <ul class="detail-list detail-list--plain">
+                            <li>SES・IT技術支援</li>
+                            <li>Web・アプリ受託開発</li>
+                            <li>AI活用支援</li>
+                        </ul></dd></div>
+                    <div><dt>取引銀行</dt><dd>三菱UFJ銀行</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ========== CTA バナー（黒） ========== -->
         <section class="cta-banner" aria-labelledby="ctaBannerTitle">
             <div class="container">
                 <div class="cta-banner__inner fade-in">
                     <div class="cta-banner__text">
-                        <h2 class="cta-banner__title" id="ctaBannerTitle">まず、課題を<br>聞かせてください。</h2>
-                        <p class="cta-banner__subtitle">売り込みではありません。貴社の状況を丁寧にヒアリングし、最適なアプローチをご提案します。</p>
+                        <h2 class="cta-banner__title" id="ctaBannerTitle">まずは、<br>ご相談ください。</h2>
+                        <p class="cta-banner__subtitle">案件の概要やご希望の時期をお知らせください。内容を確認し、ご連絡します。</p>
                     </div>
                     <div class="cta-banner__actions">
-                        <a href="#contact" class="btn btn--strike">今すぐ相談する</a>
+                        <a href="#contact" class="btn btn--strike">お問い合わせ</a>
                         <a href="tel:050-1808-8785" class="cta-phone">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                                 <path
@@ -763,18 +481,18 @@
             </div>
         </section>
 
-        <!-- ========== 08. お問い合わせ（薄灰） ========== -->
+        <!-- ========== お問い合わせ（薄灰） ========== -->
         <section id="contact" class="contact-section" aria-labelledby="contactTitle">
             <div class="container">
                 <div class="contact-grid">
 
                     <div class="contact-info fade-in">
                         <div class="section-header">
-                            <span class="section-overline">Contact</span>
-                            <h2 class="section-title" id="contactTitle">一歩踏み出す勇気に、<br>私たちが応えます。</h2>
+                            <h2 class="section-title" id="contactTitle">お問い合わせ</h2>
                         </div>
                         <p class="contact-info__lead">
-                            どんな小さな相談でも構いません。AI開発・SES・受託開発に関してお気軽にお問い合わせください。専門チームが誠実にご対応いたします。
+                            SES・IT技術支援、Web・アプリ受託開発、AI活用などのご相談を受け付けています。セキュリティに関するご相談も、SES・IT技術支援として承ります。<br><br>
+                            案件の概要、ご希望の技術領域、開始時期、ご予算など、決まっている範囲でお知らせください。内容を確認し、ご連絡します。
                         </p>
                         <div class="contact-info__items">
                             <div class="contact-info-item">
@@ -818,10 +536,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contact-response">
-                            <div class="contact-response__icon" aria-hidden="true">⚡</div>
-                            <p class="contact-response__text">通常<strong>1営業日以内</strong>にご回答いたします</p>
-                        </div>
                     </div>
 
                     <div class="contact-form-wrap fade-in" style="--delay:0.2s">
@@ -833,7 +547,7 @@
                                     <label for="company-name" class="form-label">企業名 <span class="form-required"
                                             aria-label="必須">*</span></label>
                                     <input type="text" id="company-name" name="company_name" class="form-input" required
-                                        aria-required="true" placeholder="株式会社TechAster">
+                                        aria-required="true" placeholder="株式会社○○">
                                 </div>
                                 <div class="form-group">
                                     <label for="contact-name" class="form-label">ご担当者名 <span class="form-required"
@@ -858,14 +572,16 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="service-type" class="form-label">ご関心のあるサービス <span class="form-required"
+                                <label for="service-type" class="form-label">ご相談内容 <span class="form-required"
                                         aria-label="必須">*</span></label>
                                 <select id="service-type" name="service_type" class="form-select" required
                                     aria-required="true">
                                     <option value="">選択してください</option>
-                                    <option value="ai-support">AI開発支援業務</option>
-                                    <option value="ses">SES業務</option>
-                                    <option value="development">受託開発業務</option>
+                                    <option value="ses">SES・IT技術支援(セキュリティのご相談を含む)</option>
+                                    <option value="web">Web・アプリ受託開発</option>
+                                    <option value="ai">AI活用支援</option>
+                                    <option value="recruit">採用・ご経歴のご相談</option>
+                                    <option value="partner">協業のご相談</option>
                                     <option value="other">その他</option>
                                 </select>
                             </div>
@@ -874,28 +590,22 @@
                                 <label for="message" class="form-label">お問い合わせ内容 <span class="form-required"
                                         aria-label="必須">*</span></label>
                                 <textarea id="message" name="message" class="form-textarea" rows="5" required
-                                    aria-required="true" placeholder="ご相談内容をご記入ください"></textarea>
+                                    aria-required="true" placeholder="案件の概要、ご希望の技術領域、開始時期、ご予算など、決まっている範囲でご記入ください"></textarea>
                             </div>
 
                             <div class="form-group form-group--checkbox">
                                 <input type="checkbox" id="privacy-agree" name="privacy_agree" required
                                     aria-required="true">
                                 <label for="privacy-agree" class="form-label-checkbox">
-                                    <a href="#privacy" class="link">プライバシーポリシー</a>に同意します
+                                    <a href="privacy.html" class="link" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します
                                 </label>
                             </div>
 
-                            <!-- ハニーポット：人間には見えないボット検知フィールド -->
+                            <!-- ハニーポット：ボット検知用 -->
                             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"
                                 aria-hidden="true">
 
-                            <button type="submit" class="btn btn--dark btn--full">
-                                送信する
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                                    <path d="M2 8l11-5-5 11-1.5-4.5L2 8z" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <button type="submit" class="btn btn--dark btn--full">送信する</button>
                         </form>
                         <div id="form-message" class="form-message" role="alert" aria-live="polite" hidden></div>
                     </div>
@@ -911,45 +621,30 @@
         <div class="footer__top">
             <div class="container footer__grid">
                 <div class="footer__brand">
-                    <a href="#home" class="footer__logo" aria-label="TechAster トップへ">
-                        <img class="logo-image logo-image--footer" src="assets/icons/techaster_horizontal_black-bg.png"
-                            alt="TechAster logo">
+                    <a href="#home" class="footer__logo" aria-label="株式会社テックアスター トップへ">
+                        <img class="logo-image logo-image--footer" src="assets/icons/techaster_horizontal_for-dark-bg_transparent.png"
+                            alt="TECHASTER">
                     </a>
-                    <p class="footer__tagline">AIの「A」は人の形をしている。人とAIが一体となって、貴社の成果を前進させます。</p>
-                    <div class="footer__social" aria-label="ソーシャルメディア">
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                                <rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor"
-                                    stroke-width="1.5" />
-                                <path d="M5 8v5M5 5v.5M8 13V9.5C8 8.7 8.7 8 9.5 8h0c.8 0 1.5.7 1.5 1.5V13M8 8v5"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter/X">
-                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                                <path d="M2 2h5l3 4.5L14 2h2L11 8l5 8h-5l-3-4.5L4 16H2l5-8L2 2z" fill="currentColor" />
-                            </svg>
-                        </a>
-                    </div>
+                    <p class="footer__tagline">通信・インフラの運用から、アプリ開発、AI活用まで。</p>
                 </div>
 
                 <div class="footer__nav-group">
                     <h4 class="footer__nav-title">サービス</h4>
                     <ul class="footer__nav-list">
-                        <li><a href="#ai-services">AI関連サービス</a></li>
-                        <li><a href="#services">AI開発支援</a></li>
-                        <li><a href="#services">SES業務</a></li>
-                        <li><a href="#services">受託開発</a></li>
+                        <li><a href="#ses">SES・IT技術支援</a></li>
+                        <li><a href="#web">Web・アプリ受託開発</a></li>
+                        <li><a href="#ai">AI活用支援</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__nav-group">
                     <h4 class="footer__nav-title">会社情報</h4>
                     <ul class="footer__nav-list">
-                        <li><a href="#about">弊社特徴</a></li>
-                        <li><a href="#industries">対応業界</a></li>
-                        <li><a href="#case-studies">実績紹介</a></li>
-                        <li><a href="#why-us">選ぶ理由</a></li>
+                        <li><a href="#works">対応案件事例</a></li>
+                        <li><a href="#policy">私たちが大切にしていること</a></li>
+                        <li><a href="#recruit">採用情報</a></li>
+                        <li><a href="#company">会社概要</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
 
@@ -958,34 +653,23 @@
                     <address class="footer__contact-info">
                         <p><a href="tel:050-1808-8785">050-1808-8785</a></p>
                         <p><a href="mailto:info@techaster.com">info@techaster.com</a></p>
-                        <p>営業共通：<a href="mailto:sales@techaster.com">sales@techaster.com</a></p>
                         <p><a href="https://www.techaster.com/">www.techaster.com</a></p>
                         <p>〒220-0004<br>神奈川県横浜市西区北幸二丁目10番48号　むつみビル3階</p>
                         <p class="footer__hours">平日 9:00〜18:00</p>
                     </address>
-                    <a href="#contact" class="btn btn--primary"
-                        style="margin-top:1rem; font-size:11px; padding:10px 18px;">無料相談する</a>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
             <div class="container footer__bottom-inner">
-                <p class="footer__copyright">© 2026 TechAster Inc. All rights reserved.</p>
+                <p class="footer__copyright">© 2026 株式会社テックアスター All rights reserved.</p>
                 <div class="footer__legal">
-                    <a href="#privacy">プライバシーポリシー</a>
-                    <a href="#terms">利用規約</a>
+                    <a href="privacy.html">プライバシーポリシー</a>
+                    <a href="terms.html">利用規約</a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- フローティングCTAボタン -->
-    <a href="#contact" class="floating-cta" id="floatingCta" aria-label="お問い合わせ">
-        <svg width="18" height="18" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-            <path d="M2 3h18a1 1 0 011 1v12a1 1 0 01-1 1H6l-4 4V4a1 1 0 011-1z" fill="currentColor" />
-        </svg>
-        <span>相談する</span>
-    </a>
 
     <script src="script.js"></script>
 </body>

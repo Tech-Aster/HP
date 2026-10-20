@@ -137,16 +137,6 @@ address {
 }
 
 /* ========== 3. スクロール進行バー ========== */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background: var(--color-strike);
-    z-index: 200;
-    transition: width 0.1s linear;
-}
 
 /* ========== 4. コンテナ ========== */
 .container {
@@ -164,9 +154,6 @@ address {
     text-align: center;
 }
 
-.section-header--center .section-subtitle {
-    margin: 0 auto;
-}
 
 .section-overline {
     display: block;
@@ -188,14 +175,6 @@ address {
     margin-bottom: var(--sp-4);
 }
 
-.section-subtitle {
-    font-family: var(--font-jp);
-    font-size: 1rem;
-    line-height: 1.9;
-    color: inherit;
-    opacity: 0.65;
-    max-width: 560px;
-}
 
 /* ========== 6. ボタン ========== */
 .btn {
@@ -271,16 +250,7 @@ address {
 }
 
 /* 明るい背景 Outline Dark */
-.btn--outline-dark {
-    background: transparent;
-    color: var(--color-black);
-    border-color: var(--color-black);
-}
 
-.btn--outline-dark:hover {
-    background: var(--color-black);
-    color: var(--color-white);
-}
 
 .btn--full {
     width: 100%;
@@ -368,33 +338,10 @@ address {
     display: block;
 }
 
-.logo-mark {
-    flex-shrink: 0;
-}
 
-.logo-text {
-    font-family: var(--font-ui);
-    font-size: 1.3125rem;
-    letter-spacing: 0.02em;
-    line-height: 1;
-}
 
-.logo-text__tech {
-    color: inherit;
-    font-weight: 500;
-}
 
-.logo-text__sep {
-    margin: 0 3px;
-    opacity: 0.4;
-    font-weight: 400;
-}
 
-.logo-text__aster {
-    color: var(--color-strike);
-    font-weight: 800;
-    letter-spacing: 0.01em;
-}
 
 .navbar__menu {
     display: flex;
@@ -583,7 +530,7 @@ address {
     line-height: 1.95;
     color: rgba(250, 250, 250, 0.62);
     margin-bottom: var(--sp-10);
-    max-width: 480px;
+    max-width: none;
 }
 
 .hero-section__cta {
@@ -593,78 +540,16 @@ address {
 }
 
 /* 右カラム：エディトリアル数値ブロック */
-.hero-section__trust {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-}
 
-.trust-item {
-    padding: var(--sp-8) var(--sp-10);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.trust-item:last-child {
-    border-bottom: none;
-}
 
-.trust-num-wrap {
-    display: flex;
-    align-items: baseline;
-    gap: var(--sp-1);
-    line-height: 1;
-    margin-bottom: var(--sp-2);
-}
 
-.trust-num {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 5.5vw, 5rem);
-    font-weight: 400;
-    color: var(--color-white);
-    line-height: 1;
-}
 
-.trust-suffix {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    color: var(--color-voltage);
-    font-weight: 400;
-    line-height: 1;
-}
 
-.trust-label {
-    font-family: var(--font-ui);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(250, 250, 250, 0.4);
-}
 
 /* スクロールインジケーター */
-.hero-section__scroll {
-    position: absolute;
-    bottom: var(--sp-8);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
 
-.scroll-indicator {
-    width: 24px;
-    height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    padding-top: 7px;
-}
 
-.scroll-dot {
-    width: 3px;
-    height: 7px;
-    background: var(--color-white);
-    animation: scrollDot 2s ease-in-out infinite;
-}
 
 @keyframes scrollDot {
     0% {
@@ -679,306 +564,49 @@ address {
 }
 
 /* ========== 10. Stats Section（白） ========== */
-.stats-section {
-    background: var(--color-white);
-    padding: var(--sp-16) 0;
-    border-bottom: 1px solid var(--color-border-subtle);
-}
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
 
-.stat-item {
-    padding: var(--sp-8) var(--sp-6);
-    border-right: 1px solid var(--color-border-subtle);
-    text-align: center;
-}
 
-.stat-item:last-child {
-    border-right: none;
-}
 
-.stat-item__num {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    color: var(--color-black);
-    line-height: 1;
-    margin-bottom: var(--sp-3);
-}
 
-.stat-suffix {
-    color: var(--color-strike);
-}
 
-.stat-item__label {
-    font-family: var(--font-ui);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-secondary);
-}
 
-.stats-note {
-    margin-top: var(--sp-6);
-    text-align: center;
-    font-family: var(--font-ui);
-    font-size: 0.72rem;
-    color: var(--color-text-secondary);
-    letter-spacing: 0.02em;
-}
 
 /* ========== 11. AI Services Section（黒） ========== */
-.ai-services-section {
-    background: var(--color-black);
-    padding: var(--sp-24) 0;
-    color: var(--color-white);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
 
-.ai-services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.ai-card {
-    padding: var(--sp-8) var(--sp-6);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background var(--dur-normal);
-    position: relative;
-}
 
-.ai-card:last-child {
-    border-right: none;
-}
 
-.ai-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--color-strike);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--dur-normal) var(--ease-out);
-}
 
-.ai-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-}
 
-.ai-card:hover::before {
-    transform: scaleX(1);
-}
 
-.ai-card__num {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 3rem;
-    color: rgba(255, 255, 255, 0.05);
-    line-height: 1;
-    margin-bottom: var(--sp-4);
-    user-select: none;
-}
 
-.ai-card__icon {
-    color: var(--color-voltage);
-    margin-bottom: var(--sp-5);
-}
 
-.ai-card__title {
-    font-family: var(--font-jp);
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--color-white);
-    margin-bottom: var(--sp-3);
-    line-height: 1.4;
-}
 
-.ai-card__desc {
-    font-family: var(--font-jp);
-    font-size: 0.875rem;
-    color: rgba(250, 250, 250, 0.58);
-    line-height: 1.85;
-    margin-bottom: var(--sp-5);
-}
 
-.ai-card__list {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: var(--sp-4);
-    margin-bottom: var(--sp-6);
-}
 
-.ai-card__list li {
-    font-family: var(--font-jp);
-    font-size: 0.8125rem;
-    color: rgba(250, 250, 250, 0.48);
-    padding: var(--sp-2) 0 var(--sp-2) var(--sp-4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
 
-.ai-card__list li:last-child {
-    border-bottom: none;
-}
 
-.ai-card__list li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    top: var(--sp-2);
-    color: var(--color-strike);
-    font-size: 11px;
-}
 
-.ai-card__link {
-    font-family: var(--font-ui);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-strike);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--sp-2);
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
-    transition: gap var(--dur-fast), border-color var(--dur-fast);
-}
 
-.ai-card__link:hover {
-    gap: var(--sp-3);
-    border-bottom-color: var(--color-strike);
-}
 
 /* ========== 12. About Section（白） ========== */
-.about-section {
-    background: var(--color-white);
-    padding: var(--sp-24) 0;
-    color: var(--color-black);
-}
 
-.about-section__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--sp-16);
-    align-items: center;
-}
 
 /* 左：エディトリアルビジュアルブロック（黒背景） */
-.about-editorial {
-    background: var(--color-black);
-    color: var(--color-white);
-    padding: var(--sp-10);
-}
 
-.about-editorial__overline {
-    display: block;
-    font-family: var(--font-ui);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-strike);
-    margin-bottom: var(--sp-6);
-}
 
-.about-editorial__quote {
-    font-family: var(--font-jp);
-    font-size: clamp(1.5rem, 3vw, 2.125rem);
-    font-weight: 900;
-    line-height: 1.5;
-    border-left: 4px solid var(--color-strike);
-    padding-left: var(--sp-6);
-    margin-bottom: var(--sp-10);
-    letter-spacing: -0.01em;
-}
 
-.about-editorial__stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--sp-4);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--sp-6);
-}
 
-.ae-stat__num {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 1.75rem;
-    color: var(--color-white);
-    line-height: 1;
-    margin-bottom: var(--sp-2);
-}
 
-.ae-stat__label {
-    font-family: var(--font-ui);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(250, 250, 250, 0.38);
-}
 
 /* 右：テキストコンテンツ */
-.about-lead {
-    font-family: var(--font-jp);
-    font-size: 1.0625rem;
-    line-height: 1.95;
-    color: var(--color-text-secondary);
-    margin-bottom: var(--sp-10);
-}
 
-.about-strengths {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--color-border-subtle);
-    margin-bottom: var(--sp-10);
-}
 
-.strength-item {
-    display: flex;
-    gap: var(--sp-5);
-    align-items: flex-start;
-    padding: var(--sp-5) 0;
-    border-bottom: 1px solid var(--color-border-subtle);
-}
 
-.strength-item__icon {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--color-border-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--color-black);
-}
 
-.strength-item__body {
-    flex: 1;
-}
 
-.strength-item__title {
-    font-family: var(--font-jp);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-black);
-    margin-bottom: var(--sp-1);
-}
 
-.strength-item__text {
-    font-family: var(--font-jp);
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-}
 
 /* ========== 13. Services Section（薄灰） ========== */
 .services-section {
@@ -1029,16 +657,6 @@ address {
     user-select: none;
 }
 
-.service-card__icon {
-    width: 44px;
-    height: 44px;
-    border: 2px solid var(--color-border-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-black);
-    margin-bottom: var(--sp-5);
-}
 
 .service-card__title {
     font-family: var(--font-jp);
@@ -1106,286 +724,47 @@ address {
 }
 
 /* ========== 14. Industries Section（黒） ========== */
-.industries-section {
-    background: var(--color-black);
-    padding: var(--sp-24) 0;
-    color: var(--color-white);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
 
-.industries-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.industry-card {
-    padding: var(--sp-8) var(--sp-5);
-    text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background var(--dur-normal);
-}
 
-.industry-card:last-child {
-    border-right: none;
-}
 
-.industry-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-}
 
-.industry-card:hover .industry-card__icon {
-    color: var(--color-voltage);
-}
 
-.industry-card__icon {
-    color: rgba(255, 255, 255, 0.35);
-    margin: 0 auto var(--sp-5);
-    transition: color var(--dur-normal);
-}
 
-.industry-card__title {
-    font-family: var(--font-jp);
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: var(--color-white);
-    margin-bottom: var(--sp-3);
-}
 
-.industry-card__text {
-    font-family: var(--font-jp);
-    font-size: 0.8125rem;
-    color: rgba(250, 250, 250, 0.42);
-    line-height: 1.8;
-}
 
 /* ========== 15. Case Studies Section（白） ========== */
-.case-studies-section {
-    background: var(--color-white);
-    padding: var(--sp-24) 0;
-    color: var(--color-black);
-}
 
-.case-filter {
-    display: flex;
-    gap: var(--sp-2);
-    flex-wrap: wrap;
-    margin-bottom: var(--sp-10);
-}
 
-.filter-btn {
-    font-family: var(--font-ui);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-text-secondary);
-    background: transparent;
-    border: 2px solid var(--color-border-medium);
-    padding: 6px 14px;
-    transition: all var(--dur-normal);
-}
 
-.filter-btn:hover,
-.filter-btn--active {
-    background: var(--color-black);
-    color: var(--color-white);
-    border-color: var(--color-black);
-}
 
-.case-studies-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid var(--color-border-subtle);
-}
 
-.case-card {
-    background: var(--color-white);
-    border-right: 1px solid var(--color-border-subtle);
-    border-bottom: 1px solid var(--color-border-subtle);
-    overflow: hidden;
-    transition: background var(--dur-normal);
-}
 
-.case-card:nth-child(3n) {
-    border-right: none;
-}
 
-.case-card:hover {
-    background: var(--color-surface);
-}
 
-.case-card.hidden {
-    display: none;
-}
 
-.case-card__header {
-    background: var(--color-surface);
-    padding: var(--sp-5) var(--sp-6);
-    border-bottom: 1px solid var(--color-border-subtle);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.case-card__badge {
-    font-family: var(--font-ui);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-black);
-    border: 2px solid var(--color-border-medium);
-    padding: 3px 10px;
-}
 
-.case-card__icon {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--color-border-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-black);
-}
 
-.case-card__body {
-    padding: var(--sp-6);
-}
 
-.case-card__title {
-    font-family: var(--font-jp);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-black);
-    margin-bottom: var(--sp-2);
-    line-height: 1.5;
-}
 
-.case-card__client {
-    font-family: var(--font-ui);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-text-tertiary);
-    margin-bottom: var(--sp-4);
-}
 
-.case-card__desc {
-    font-family: var(--font-jp);
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-    margin-bottom: var(--sp-5);
-}
 
-.case-card__results {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--sp-2);
-    border-top: 1px solid var(--color-border-subtle);
-    padding-top: var(--sp-4);
-}
 
-.result-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--sp-1);
-    font-family: var(--font-ui);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--color-success);
-    border: 2px solid var(--color-success);
-    padding: 3px 10px;
-}
 
 /* ========== 16. Why Us Section（黒） ========== */
-.why-us-section {
-    background: var(--color-black);
-    padding: var(--sp-24) 0;
-    color: var(--color-white);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
 
-.why-us-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.why-card {
-    padding: var(--sp-10) var(--sp-5);
-    text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background var(--dur-normal);
-    position: relative;
-}
 
-.why-card:last-child {
-    border-right: none;
-}
 
-.why-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-}
 
-.why-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 3px;
-    background: var(--color-strike);
-    transition: width var(--dur-normal) var(--ease-out);
-}
 
-.why-card:hover::after {
-    width: 60%;
-}
 
-.why-card__number {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 3.5rem;
-    color: rgba(255, 255, 255, 0.05);
-    line-height: 1;
-    margin-bottom: var(--sp-4);
-    user-select: none;
-    transition: color var(--dur-normal);
-}
 
-.why-card:hover .why-card__number {
-    color: rgba(255, 255, 255, 0.1);
-}
 
-.why-card__icon {
-    color: rgba(255, 255, 255, 0.3);
-    margin: 0 auto var(--sp-4);
-    transition: color var(--dur-normal);
-}
 
-.why-card:hover .why-card__icon {
-    color: var(--color-voltage);
-}
 
-.why-card__title {
-    font-family: var(--font-jp);
-    font-size: 0.9375rem;
-    font-weight: 700;
-    color: var(--color-white);
-    margin-bottom: var(--sp-3);
-}
 
-.why-card__text {
-    font-family: var(--font-jp);
-    font-size: 0.8125rem;
-    color: rgba(250, 250, 250, 0.42);
-    line-height: 1.8;
-}
 
 /* ========== 17. CTA バナー（黒・赤ボーダー） ========== */
 .cta-banner {
@@ -1416,7 +795,7 @@ address {
     font-size: 0.9375rem;
     color: rgba(250, 250, 250, 0.58);
     line-height: 1.9;
-    max-width: 480px;
+    max-width: none;
 }
 
 .cta-banner__actions {
@@ -1515,27 +894,9 @@ a.contact-info-item__value:hover {
     color: var(--color-strike);
 }
 
-.contact-response {
-    display: flex;
-    align-items: center;
-    gap: var(--sp-3);
-    border: 2px solid var(--color-border-medium);
-    padding: var(--sp-4) var(--sp-5);
-}
 
-.contact-response__icon {
-    font-size: 1.25rem;
-}
 
-.contact-response__text {
-    font-family: var(--font-jp);
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-}
 
-.contact-response__text strong {
-    color: var(--color-success);
-}
 
 /* フォーム */
 .contact-form-wrap {
@@ -1690,9 +1051,6 @@ a.contact-info-item__value:hover {
     height: 64px;
 }
 
-.footer__logo .logo-text {
-    color: var(--color-white);
-}
 
 .footer__tagline {
     font-family: var(--font-jp);
@@ -1702,26 +1060,8 @@ a.contact-info-item__value:hover {
     margin-bottom: var(--sp-6);
 }
 
-.footer__social {
-    display: flex;
-    gap: var(--sp-2);
-}
 
-.social-link {
-    width: 36px;
-    height: 36px;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(250, 250, 250, 0.38);
-    transition: border-color var(--dur-normal), color var(--dur-normal);
-}
 
-.social-link:hover {
-    border-color: var(--color-white);
-    color: var(--color-white);
-}
 
 .footer__nav-title {
     font-family: var(--font-ui);
@@ -1810,95 +1150,22 @@ a.contact-info-item__value:hover {
 }
 
 /* ========== 20. フローティングCTA ========== */
-.floating-cta {
-    position: fixed;
-    bottom: var(--sp-8);
-    right: var(--sp-8);
-    display: flex;
-    align-items: center;
-    gap: var(--sp-2);
-    background: var(--color-black);
-    color: var(--color-white);
-    font-family: var(--font-ui);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: var(--sp-3) var(--sp-5);
-    border: 2px solid var(--color-black);
-    z-index: 90;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all var(--dur-normal) var(--ease-out);
-    pointer-events: none;
-}
 
-.floating-cta.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
 
-.floating-cta:hover {
-    background: var(--color-strike);
-    border-color: var(--color-strike);
-    color: var(--color-white);
-}
 
 /* ========== 21. レスポンシブ ========== */
 @media (max-width: 1100px) {
-    .ai-services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .ai-card:nth-child(2) {
-        border-right: none;
-    }
 
-    .ai-card:nth-child(3) {
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .ai-card:nth-child(4) {
-        border-right: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .industries-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    .industry-card:nth-child(3) {
-        border-right: none;
-    }
 
-    .industry-card:nth-child(4),
-    .industry-card:nth-child(5) {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .industry-card:nth-child(5) {
-        border-right: none;
-    }
 
-    .why-us-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    .why-card:nth-child(3) {
-        border-right: none;
-    }
 
-    .why-card:nth-child(4) {
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .why-card:nth-child(5) {
-        border-right: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
     .footer__grid {
         grid-template-columns: 1fr 1fr;
@@ -1912,34 +1179,10 @@ a.contact-info-item__value:hover {
         gap: var(--sp-10);
     }
 
-    .hero-section__trust {
-        flex-direction: row;
-        flex-wrap: wrap;
-        border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 0;
-    }
 
-    .trust-item {
-        flex: 1 1 30%;
-        padding: var(--sp-5) var(--sp-4);
-        border-bottom: none;
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-        text-align: center;
-    }
 
-    .trust-item:last-child {
-        border-right: none;
-    }
 
-    .trust-num-wrap {
-        justify-content: center;
-    }
 
-    .about-section__grid {
-        grid-template-columns: 1fr;
-        gap: var(--sp-10);
-    }
 
     .services-grid {
         grid-template-columns: 1fr;
@@ -1954,17 +1197,8 @@ a.contact-info-item__value:hover {
         border-bottom: none;
     }
 
-    .case-studies-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .case-card:nth-child(2n) {
-        border-right: none;
-    }
 
-    .case-card:nth-child(odd) {
-        border-right: 1px solid var(--color-border-subtle);
-    }
 
     .contact-grid {
         grid-template-columns: 1fr;
@@ -2033,91 +1267,25 @@ a.contact-info-item__value:hover {
         font-size: clamp(2rem, 9vw, 3rem);
     }
 
-    .hero-section__trust {
-        flex-direction: column;
-    }
 
-    .trust-item {
-        flex: unset;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        text-align: left;
-    }
 
-    .trust-item:last-child {
-        border-bottom: none;
-    }
 
-    .trust-num-wrap {
-        justify-content: flex-start;
-    }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .stat-item:nth-child(2n) {
-        border-right: none;
-    }
 
-    .stat-item:nth-child(n+3) {
-        border-top: 1px solid var(--color-border-subtle);
-    }
 
-    .ai-services-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .ai-card {
-        border-right: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .ai-card:first-child {
-        border-top: none;
-    }
 
-    .industries-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .industry-card:nth-child(2n) {
-        border-right: none;
-    }
 
-    .industry-card:nth-child(n+3) {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .industry-card:nth-child(5) {
-        grid-column: 1 / -1;
-        border-right: none;
-    }
 
-    .case-studies-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .case-card {
-        border-right: none !important;
-    }
 
-    .why-us-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .why-card:nth-child(2n) {
-        border-right: none;
-    }
 
-    .why-card:nth-child(n+3) {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
-    .why-card:nth-child(5) {
-        grid-column: 1 / -1;
-        border-right: none;
-    }
 
     .form-row {
         grid-template-columns: 1fr;
@@ -2144,22 +1312,379 @@ a.contact-info-item__value:hover {
         justify-content: center;
     }
 
-    .about-editorial__quote {
-        font-size: 1.375rem;
+
+
+
+}
+/* =====================================================
+   追加：詳細セクション・会社概要・ヒーロー右カラム
+   ===================================================== */
+.hero-scope {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: var(--sp-8);
+    color: var(--color-white);
+}
+
+.hero-scope__label {
+    font-family: var(--font-jp);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-strike);
+    margin-bottom: var(--sp-4);
+}
+
+.hero-scope__list li a {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: baseline;
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: var(--font-jp);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-white);
+    transition: color var(--dur-fast);
+}
+
+.hero-scope__list li a:hover {
+    color: var(--color-strike);
+}
+
+.hero-scope__list li a span {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.detail-section {
+    padding: var(--sp-24) 0;
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.detail-section--gray {
+    background: #F5F5F5;
+}
+
+.detail-section--dark {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.detail-section .section-title {
+    max-width: none;
+}
+
+.detail-lead {
+    font-family: var(--font-jp);
+    font-size: 1rem;
+    line-height: 2;
+    max-width: none;
+    color: var(--color-text-secondary);
+}
+
+.detail-section--dark .detail-lead,
+.detail-section--dark .detail-text {
+    color: rgba(250, 250, 250, 0.7);
+}
+
+.detail-subtitle {
+    font-family: var(--font-jp);
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: var(--sp-5);
+    padding-left: var(--sp-4);
+    border-left: 4px solid var(--color-strike);
+}
+
+.detail-grid {
+    display: grid;
+    gap: var(--sp-6);
+    margin-bottom: var(--sp-16);
+}
+
+.detail-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.detail-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 0;
+}
+
+.detail-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border-subtle);
+    padding: var(--sp-8);
+}
+
+.detail-section--dark .detail-card {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.detail-card__title {
+    font-family: var(--font-jp);
+    font-size: 1.0625rem;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: var(--sp-4);
+}
+
+.detail-text {
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    line-height: 1.95;
+    color: var(--color-text-secondary);
+}
+
+.detail-list li {
+    font-family: var(--font-jp);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    padding: var(--sp-2) 0 var(--sp-2) var(--sp-4);
+    border-bottom: 1px solid var(--color-border-subtle);
+    position: relative;
+}
+
+.detail-list li:last-child {
+    border-bottom: none;
+}
+
+.detail-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--color-strike);
+    font-weight: 700;
+}
+
+.detail-list--plain li {
+    font-size: 0.9375rem;
+}
+
+.detail-note {
+    margin-top: var(--sp-5);
+    font-family: var(--font-jp);
+    font-size: 0.875rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+}
+
+.detail-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-16);
+}
+
+.detail-steps {
+    list-style: none;
+    counter-reset: step;
+}
+
+.detail-steps li {
+    counter-increment: step;
+    display: flex;
+    gap: var(--sp-4);
+    align-items: baseline;
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.detail-steps li::before {
+    content: counter(step);
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    color: var(--color-strike);
+    min-width: 1.25rem;
+}
+
+.detail-consult {
+    max-width: none;
+}
+
+.company-list {
+    border-top: 2px solid var(--color-black);
+    max-width: none;
+}
+
+.company-list > div {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: var(--sp-6);
+    padding: var(--sp-5) 0;
+    border-bottom: 1px solid var(--color-border-medium);
+}
+
+.company-list dt {
+    font-family: var(--font-jp);
+    font-weight: 700;
+    font-size: 0.9375rem;
+}
+
+.company-list dd {
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+}
+
+.company-list dd a:hover {
+    color: var(--color-strike);
+}
+
+@media (max-width: 900px) {
+    .detail-grid--3,
+    .detail-grid--2,
+    .detail-two {
+        grid-template-columns: 1fr;
     }
 
-    .about-editorial__stats {
-        grid-template-columns: repeat(3, 1fr);
+    .detail-two {
+        gap: var(--sp-10);
     }
 
-    .floating-cta span {
-        display: none;
+    .detail-section {
+        padding: var(--sp-16) 0;
     }
 
-    .floating-cta {
-        padding: var(--sp-3);
-        width: 50px;
-        height: 50px;
-        justify-content: center;
+    .company-list > div {
+        grid-template-columns: 1fr;
+        gap: var(--sp-2);
     }
+}
+
+/* ヒーロー調整（新構成用） */
+.hero-section__inner {
+    grid-template-columns: 1.25fr 0.75fr;
+}
+
+.hero-section__title {
+    font-size: clamp(2rem, 3.6vw, 2.75rem);
+}
+
+.hero-section__subtitle {
+    max-width: none;
+}
+
+@media (max-width: 900px) {
+    .hero-section__inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* プライバシーポリシー・利用規約ページ */
+.legal-page {
+    padding: 140px 0 var(--sp-20);
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.legal-page__inner {
+    max-width: none;
+}
+
+.legal-page__title {
+    font-family: var(--font-jp);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 900;
+    margin-bottom: var(--sp-8);
+    padding-bottom: var(--sp-4);
+    border-bottom: 3px solid var(--color-strike);
+}
+
+.legal-page h2 {
+    font-family: var(--font-jp);
+    font-size: 1.125rem;
+    font-weight: 900;
+    margin: var(--sp-10) 0 var(--sp-3);
+}
+
+.legal-page p,
+.legal-page li {
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    line-height: 2;
+    color: var(--color-text-secondary);
+}
+
+.legal-page ul {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+
+.legal-page a {
+    text-decoration: underline;
+}
+
+/* 応募ページ */
+
+
+
+
+
+
+
+
+#applyConfirm .company-list > div {
+    grid-template-columns: 160px 1fr;
+}
+
+
+/* 日本語の改行位置を文節単位にする(「ませ/ん」のような途中改行を避ける) */
+body {
+    word-break: auto-phrase;
+    overflow-wrap: anywhere;
+    line-break: strict;
+}
+
+p,
+li,
+dd,
+.section-title,
+.detail-card__title,
+.detail-subtitle {
+    text-wrap: pretty;
+}
+
+.nb {
+    display: inline-block;
+}
+
+/* hidden属性を常に優先する */
+[hidden] {
+    display: none !important;
+}
+
+/* 動きを減らす設定のユーザーにはアニメーションを使わない */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+.detail-tag {
+    font-family: var(--font-jp);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-strike);
+    margin-bottom: var(--sp-2);
+}
+
+.legal-page__date {
+    margin-top: var(--sp-10);
+    font-size: 0.875rem;
 }
