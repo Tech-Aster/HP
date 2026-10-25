@@ -820,6 +820,12 @@ address {
     color: var(--color-white);
 }
 
+.cta-phone__icon {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1;
+}
+
 /* ========== 18. Contact Section（薄灰） ========== */
 .contact-section {
     background: var(--color-surface);
@@ -870,6 +876,12 @@ address {
     justify-content: center;
     flex-shrink: 0;
     color: var(--color-black);
+}
+
+.contact-info-item__phone-icon {
+    font-family: sans-serif;
+    font-size: 24px;
+    line-height: 1;
 }
 
 .contact-info-item__label {
@@ -1051,7 +1063,6 @@ a.contact-info-item__value:hover {
     height: 64px;
 }
 
-
 .footer__tagline {
     font-family: var(--font-jp);
     font-size: 0.875rem;
@@ -1106,6 +1117,11 @@ a.contact-info-item__value:hover {
 
 .footer__contact-info a {
     transition: color var(--dur-fast);
+}
+
+.footer__meeting-url a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 .footer__contact-info a:hover {
