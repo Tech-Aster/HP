@@ -46,8 +46,8 @@
       border-bottom: .12cqw solid var(--red);
     }
     .identity { display: flex; align-items: center; gap: 1cqw; font-size: 1.08cqw; font-weight: 700; white-space: nowrap; }
-    .identity img { display: block; width: 10.2cqw; height: auto; }
-    .identity-name { padding-left: 1cqw; border-left: .1cqw solid #999; }
+    .identity img { display: block; width: 12.24cqw; height: auto; }
+    .identity-name { padding-left: 1cqw; border-left: .1cqw solid #999; transform: translateY(.3cqw); }
     .document-label { color: #686a6d; font-size: .78cqw; white-space: nowrap; }
     .slide-main { position: absolute; inset: 5.2cqw 0 6.1cqw; padding: 1.65cqw 3.75cqw 1.2cqw; }
     .slide-title {
@@ -72,8 +72,9 @@
       color: #fff;
       background: var(--black);
     }
-    .footer-brand img { display: block; width: 8.6cqw; height: auto; }
-    .footer-tagline { margin: .35cqw 0 0; color: #bfc1c4; font-size: .62cqw; letter-spacing: .01em; }
+    .footer-brand { display: flex; align-items: center; gap: 1.2cqw; }
+    .footer-brand img { display: block; width: 10.32cqw; height: auto; }
+    .footer-tagline { margin: 0; color: #bfc1c4; font-size: .62cqw; letter-spacing: .01em; transform: translateY(.32cqw); }
     .footer-meta { align-self: flex-end; color: #bfc1c4; font-size: .65cqw; text-align: right; line-height: 1.45; }
     .footer-page { color: #fff; font-size: .9cqw; font-weight: 700; }
 
@@ -89,14 +90,13 @@
       line-height: 1.25;
       letter-spacing: .015em;
     }
-    .cover-subtitle { margin: 1.55cqw 0 0 2.15cqw; color: #64666a; font-size: 1.55cqw; }
-
     .company-table, .technology-table, .experience-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 1.34cqw;
+      font-size: 1.2cqw;
       line-height: 1.55;
     }
+    .slide-main--inset > :not(.slide-title) { width: 92%; margin-inline: auto; }
     .company-table th, .technology-table th, .experience-table th {
       background: var(--pale);
       font-weight: 700;
@@ -106,14 +106,21 @@
     .company-table th { width: 18.8%; }
     .technology-table th, .technology-table td { padding: .82cqw 1.05cqw; border-bottom: .1cqw solid var(--rule); }
     .technology-table th { width: 19%; white-space: nowrap; }
-    .experience-table { font-size: 1.08cqw; line-height: 1.42; }
-    .experience-table th, .experience-table td { padding: .58cqw .95cqw; border-bottom: .1cqw solid var(--rule); }
-    .experience-table thead th { padding-block: .72cqw; }
-    .experience-table thead th:first-child { width: 19.5%; }
+    .technology-table .category-cell { width: 19%; vertical-align: middle; }
+    .technology-table--domains { table-layout: fixed; font-size: .95cqw; line-height: 1.3; }
+    .technology-table--domains th, .technology-table--domains td { padding: .38cqw .75cqw; }
+    .technology-table--domains thead th,
+    .technology-table--domains tbody th { font-size: 1.08em; font-weight: 700; }
+    .ai-table { table-layout: fixed; }
+    .experience-table { table-layout: fixed; font-size: .95cqw; line-height: 1.3; }
+    .experience-table th, .experience-table td { padding: .38cqw .75cqw; border-bottom: .1cqw solid var(--rule); }
+    .experience-table thead th { padding-block: .72cqw; font-size: 1.08em; font-weight: 700; }
+    .experience-table thead th:nth-child(2) { white-space: nowrap; }
     .experience-table tbody th { vertical-align: middle; }
     .experience-table td { vertical-align: middle; }
-    .experience-list { margin: 0; padding-left: 1.25cqw; }
-    .experience-list li { padding-left: .1cqw; }
+    .section-lead { margin: -.55cqw 0 1.05cqw; color: #4c4e52; font-size: 1.2cqw; line-height: 1.5; }
+    .expected-effect { margin: 1.05cqw 0 0; padding: .85cqw 1.05cqw; border-left: .35cqw solid var(--red); background: var(--pale); font-size: 1.2cqw; line-height: 1.5; }
+    .contact-bar { line-height: 1.65; }
 
     .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.35cqw; }
     .info-card {
@@ -124,9 +131,19 @@
       background: var(--pale);
     }
     .info-card h3 { margin: 0 0 .75cqw; font-size: 1.62cqw; font-weight: 700; line-height: 1.45; }
-    .info-card p { margin: 0; color: #4c4e52; font-size: 1.28cqw; line-height: 1.75; }
-    .small-note { margin: 1.3cqw 0 0; color: #77797c; font-size: .95cqw; }
+    .info-card p { margin: 0; color: #4c4e52; font-size: 1.2cqw; line-height: 1.75; }
+    .info-card .card-highlight { display: flex; align-items: flex-start; gap: .55cqw; margin-top: .9cqw; padding-top: .75cqw; border-top: .12cqw solid var(--red); color: var(--black); font-weight: 700; }
+    .info-card .card-highlight::before { content: ""; flex: 0 0 1.05cqw; height: .72cqw; margin-top: .38cqw; background: var(--red); clip-path: polygon(0 38%, 66% 38%, 66% 0, 100% 50%, 66% 100%, 66% 62%, 0 62%); }
+    .small-note { margin: 1.3cqw 0 0; color: #77797c; font-size: 1.2cqw; }
+    .domains-notes { color: var(--red); font-size: 1cqw; font-weight: 700; line-height: 1.4; }
+    .domains-notes::before { content: "●"; margin-right: .45cqw; color: var(--red); }
     .contact-bar { margin-top: 1.25cqw; padding: 1.2cqw 1.7cqw; border-left: .52cqw solid var(--red); background: var(--pale); font-size: 1.42cqw; }
+    .closing-slogan { width: 92%; margin: 2.4cqw auto 1.8cqw; color: var(--red); font-size: 2.1cqw; font-weight: 800; text-align: center; }
+    .closing-panel { width: 92%; margin-inline: auto; padding: 1.5cqw 2cqw; background: var(--pale); }
+    .closing-panel p { position: relative; margin: 0; padding-left: 1.45cqw; color: #34373b; font-size: 1.45cqw; font-weight: 600; line-height: 1.65; }
+    .closing-panel p + p { margin-top: 1cqw; }
+    .closing-panel p::before { position: absolute; left: 0; color: var(--red); content: "●"; }
+    .closing-contact { position: absolute; inset: auto 0 1.8cqw; margin: 0; text-align: center; }
     .contact-email { margin: 1.4cqw 0 0; color: var(--red); font-size: 1.55cqw; font-weight: 700; }
     .contact-email a { color: inherit; text-decoration: none; }
 
@@ -158,15 +175,14 @@
         <div class="cover-copy">
           <p class="cover-kicker">COMPANY PROFILE</p>
           <h1 class="cover-title">株式会社テックアスター<br>会社説明資料</h1>
-          <p class="cover-subtitle">技術と価値の融合で、未来を創る</p>
         </div>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">1 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">1 / 8</span></div>
       </footer>
     </section>
 
@@ -178,7 +194,7 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
+      <div class="slide-main slide-main--inset">
         <h2 class="slide-title">会社概要</h2>
         <table class="company-table">
           <tbody>
@@ -186,17 +202,17 @@
             <tr><th scope="row">設立</th><td>2017年11月</td></tr>
             <tr><th scope="row">代表者</th><td>潘龍 鉄成</td></tr>
             <tr><th scope="row">資本金</th><td>480万円</td></tr>
-            <tr><th scope="row">所在地</th><td>〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階</td></tr>
-            <tr><th scope="row">体制</th><td>代表を窓口に、案件に応じて協業先と連携</td></tr>
+            <tr><th scope="row">所在地</th><td>〒220-0004 神奈川県横浜市西区北幸二丁目10番48号 むつみビル3階</td></tr>
+            <tr><th scope="row">体制</th><td>代表者を窓口とし、案件の内容に応じて協業先と連携して事業を行っています。</td></tr>
           </tbody>
         </table>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">2 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">2 / 8</span></div>
       </footer>
     </section>
 
@@ -208,29 +224,32 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
+      <div class="slide-main slide-main--inset">
         <h2 class="slide-title">事業内容：3つの柱</h2>
         <div class="card-grid">
           <article class="info-card">
-            <h3>インフラ・SW関連SES</h3>
-            <p>Linux/Unix（AIX）/Winサーバー、転送装置（バックボーン・ルーター/PTN）・L2/L3ネットワーク、AWS/Azure/GCP、VMware等の設計・構築・運用保守。PM/PMO支援、脆弱性対応、セキュリティ改善まで。</p>
+            <h3>ITプロジェクト支援</h3>
+            <p>準委任契約により、お客様の現場で技術者が業務を担当します。案件の要件に合う技術者を選び、体制をご提案します。</p>
+            <p class="card-highlight">必要な技術者・体制をご提案し、継続的な業務遂行と品質向上を支援します。</p>
           </article>
           <article class="info-card">
-            <h3>ソフトウェア受託開発</h3>
-            <p>Webサービス・業務アプリ、組み込み、スマートフォンアプリの構築・改修、企業サイト・LP制作。要件定義からリリース・実運用まで。</p>
+            <h3>SW受託開発・共同研究</h3>
+            <p>案件の内容に応じて協力会社とも連携し、要件定義からリリース・運用まで対応します。</p>
+            <p class="card-highlight">小規模開発から技術検証、研究テーマの企画・推進まで、積極的に対応します。</p>
           </article>
           <article class="info-card">
             <h3>AI活用支援</h3>
-            <p>AIツールの業務活用を支援。ドキュメント生成、情報整理・要点抽出、データ分類・整理による効率化・自動化を提案します。</p>
+            <p>業務の課題を伺い、業務効率化に向けて、AIサービスの業務への取り入れ方を提案します。</p>
+            <p class="card-highlight">DXからAXへの変革に向け、AI活用の提案・導入から定着・安定運用まで支援します。</p>
           </article>
         </div>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">3 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">3 / 8</span></div>
       </footer>
     </section>
 
@@ -242,25 +261,33 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
-        <h2 class="slide-title">対応技術</h2>
-        <table class="technology-table">
+      <div class="slide-main slide-main--inset">
+        <h2 class="slide-title">ITプロジェクト支援（準委任契約）</h2>
+        <table class="technology-table technology-table--domains">
+          <colgroup><col style="width: 17%"><col style="width: 83%"></colgroup>
+          <thead>
+            <tr><th scope="col">領域</th><th scope="col">支援内容</th></tr>
+          </thead>
           <tbody>
-            <tr><th scope="row">サーバー・OS</th><td>Linux/Unix（AIX）/Winの設計・構築・運用、OS/ミドルウェアの脆弱性対応</td></tr>
-            <tr><th scope="row">ネットワーク</th><td>転送装置（バックボーン・ルーター/PTN）・L2/L3の設計・構築・更改、通信インフラ関連</td></tr>
-            <tr><th scope="row">クラウド・仮想化</th><td>AWS/Azure/GCPの構築・移行・運用、オンプレからの移行、VMware等の仮想化基盤</td></tr>
-            <tr><th scope="row">ソフトウェア開発</th><td>組み込み、オープン系・汎用系、Webサービス・業務アプリ、スマートフォンアプリ</td></tr>
-            <tr><th scope="row">セキュリティ</th><td>アクセス制御・権限管理、IAM設計、ログ監視、設定の改善提案</td></tr>
-            <tr><th scope="row">プロジェクト管理</th><td>WBS作成、リスク管理、ベンダーコントロール（ITインフラ・開発領域に特化）</td></tr>
+            <tr><th class="category-cell" scope="rowgroup" rowspan="5">インフラ関連</th><td><strong>サーバー</strong>｜Linux/UNIX（AIXを含む）/Windowsの設計・構築・運用</td></tr>
+            <tr><td><strong>ネットワーク</strong>｜転送装置（ルーター/PTN）、L2/L3ネットワークの設計・構築・更改、運用・保守</td></tr>
+            <tr><td><strong>ストレージ</strong>｜ストレージ基盤の設計・構築・運用</td></tr>
+            <tr><td><strong>クラウド仮想化基盤</strong>｜AWS/Azure/GCP、VMwareの構築・移行・運用</td></tr>
+            <tr><td><strong>セキュリティ</strong>｜サイバーセキュリティ対策、脆弱性診断・SOC及びCSIRT支援</td></tr>
+            <tr><th class="category-cell" scope="rowgroup" rowspan="4">ソフトウェア開発</th><td><strong>対応工程</strong>｜上流設計から開発・テスト・リリースまで（要件定義から導入・リリース・保守運用）</td></tr>
+            <tr><td><strong>技術・開発領域</strong>｜多様な業務・技術領域に対応（業務システム、Web・アプリケーション、通信・ネットワーク、組み込みシステムなど）</td></tr>
+            <tr><td><strong>プロジェクトマネジメント</strong>｜PM・PMOによるプロジェクト推進支援（計画策定、進捗・課題・リスク・品質・コスト管理、関係者調整など）</td></tr>
+            <tr><td><strong>研究開発・技術検証</strong>｜新技術の調査・検証から共同研究まで（データ分析などの技術調査、実証検証、プロトタイプ開発など）</td></tr>
           </tbody>
         </table>
+        <p class="small-note domains-notes">語学力 × 技術力 × 実務経験を兼ね備えた技術者・専門人材の提案にも対応します。</p>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">4 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">4 / 8</span></div>
       </footer>
     </section>
 
@@ -272,58 +299,44 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
+      <div class="slide-main slide-main--inset">
         <h2 class="slide-title">従事実績</h2>
         <table class="experience-table">
+          <colgroup><col style="width: 20%"><col style="width: 30%"><col style="width: 50%"></colgroup>
           <thead>
-            <tr><th scope="col">領域</th><th scope="col">従事案件（担当範囲）</th></tr>
+            <tr><th scope="col">対応領域</th><th scope="col">対応業務・工程</th><th scope="col">主な対応事例・技術</th></tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">通信基盤</th>
-              <td><ul class="experience-list">
-                <li>3G/LTE/5G通信モジュールの改修・試験（基本設計〜総合試験、進捗管理）</li>
-                <li>MPLS網（転送装置）の運用・保守、約9,000台の機器アップグレード支援</li>
-                <li>WCDMA RNC・ISDN交換機の開発・評価、運用保守</li>
-              </ul></td>
+              <th scope="row">通信ネットワーク基盤</th>
+              <td>ネットワーク運用・保守、設備更改、機器アップグレード、移行支援</td>
+              <td>MPLSネットワークの運用・保守、約9,000台規模の通信機器アップグレード</td>
             </tr>
             <tr>
-              <th scope="row">金融・業務システム</th>
-              <td><ul class="experience-list">
-                <li>銀行基盤のSWIFT-ISO対応、ESB機能開発（WBS・進捗管理、UT〜UAT、移行対応）</li>
-                <li>データ連携システムの移行（課題抽出、リハーサル推進、テスト計画・手順書作成）</li>
-              </ul></td>
+              <th scope="row">組み込みソフトウェア・機器制御</th>
+              <td>基本設計、開発、試験、進捗管理、PL業務</td>
+              <td>決済端末の通信モジュール、医療用モニターの制御アプリケーション</td>
             </tr>
             <tr>
-              <th scope="row">組み込み・端末</th>
-              <td><ul class="experience-list">
-                <li>業務用カメラ向けリモートコントロール端末の開発（C++、AI活用、CI/CD）</li>
-                <li>クレジットカード決済端末の通信モジュール設計・実装</li>
-                <li>医療用液晶モニターの制御アプリ開発（PL）</li>
-              </ul></td>
+              <th scope="row">通信ソフトウェア・プロトコル</th>
+              <td>ソフトウェア設計・実装、接続制御、通信試験・評価</td>
+              <td>3G／PHS／Wi-Fi接続ツール、VPN接続機器、IPsec・KINK認証モジュール</td>
             </tr>
             <tr>
-              <th scope="row">通信アプリ・R&amp;D</th>
-              <td><ul class="experience-list">
-                <li>3G/PHS/Wi-Fi接続ツール開発</li>
-                <li>VPN接続機器（ブリッジ版・ルーター版）開発</li>
-                <li>IPSec・KINK認証モジュール開発</li>
-                <li>ホームゲートウェイ実験ソフト開発</li>
-              </ul></td>
-            </tr>
-            <tr>
-              <th scope="row">Webサービス</th>
-              <td>Webサービス・業務アプリ、スマートフォンアプリの開発（要件定義からリリース・実運用まで）</td>
+              <th scope="row">金融システム・データ連携</th>
+              <td>課題分析、テスト計画・設計、移行リハーサル、単体試験～受入試験</td>
+              <td>銀行システム基盤、データ連携システムの移行支援</td>
             </tr>
           </tbody>
         </table>
+        <p class="small-note domains-notes">多様なプロジェクトでの参画実績と専門技術を活かし、お客様のニーズに応じた技術者・支援体制をご提案します。</p>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">5 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">5 / 8</span></div>
       </footer>
     </section>
 
@@ -335,34 +348,34 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
-        <h2 class="slide-title">人材ネットワーク</h2>
+      <div class="slide-main slide-main--inset">
+        <h2 class="slide-title">人材ネットワークと提案力</h2>
         <div class="card-grid">
           <article class="info-card">
-            <h3>個人事業主ネットワーク</h3>
-            <p>専門性の高い個人事業主と継続的につながり、案件ごとに必要なスキルを持つ人材を柔軟にアサインできます。</p>
+            <h3>独立系IT技術者ネットワーク</h3>
+            <p>専門性や実務経験を持つ個人事業主のネットワークを活用し、紹介などを通じて、案件要件に適した技術者をご提案します。</p>
           </article>
           <article class="info-card">
             <h3>協業IT企業ネットワーク</h3>
-            <p>協業IT企業と連携し、大人数での体制やシフト制での稼働など、当社単独では対応が難しい規模の案件にも対応します。</p>
+            <p>協業IT企業との連携により、多様な技術・経験を持つ人材の確保やチーム編成を支援します。（複数名体制や長期案件など）</p>
           </article>
           <article class="info-card">
-            <h3>他分野・他技術に対応</h3>
-            <p>インフラ、開発、セキュリティ、AI活用など、分野をまたぐ案件にも、必要な人材を組み合わせて対応します。</p>
+            <h3>人材選定・提案力</h3>
+            <p>人材開発・人材募集の経験を活かし、技術スキル・業務経験・語学力・稼働条件などを確認したうえで、案件に適した人材を選定・提案します。</p>
           </article>
         </div>
-        <p class="small-note">※人材は案件要件に合わせて選定し、稼働条件・スキルを事前に確認のうえでご提案します。</p>
+        <p class="small-note domains-notes">案件の規模や要件に応じて、適切な技術者・専門人材を選定し、ご提案します。</p>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">6 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">6 / 8</span></div>
       </footer>
     </section>
 
-    <section class="slide" aria-label="7ページ目 柔軟で機動的な体制">
+    <section class="slide" aria-label="7ページ目 AI活用支援">
       <header class="slide-header">
         <div class="identity">
           <img src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="TECHASTER">
@@ -370,33 +383,33 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
-        <h2 class="slide-title">柔軟で機動的な体制</h2>
-        <div class="card-grid">
-          <article class="info-card">
-            <h3>柔軟な対応力</h3>
-            <p>小規模案件や短納期の案件にも対応します。要件確認からお見積り、納品まで簡潔に進めます。</p>
-          </article>
-          <article class="info-card">
-            <h3>幅広い技術領域</h3>
-            <p>オンプレミスからクラウドへの移行、組み込み、AI活用まで。WBS作成・リスク管理・ベンダーコントロールなどのPM支援も可能です。</p>
-          </article>
-          <article class="info-card">
-            <h3>機動力ある体制</h3>
-            <p>案件の規模や内容に応じて協業先と連携します。大人数での体制やシフト制での稼働もご相談ください。</p>
-          </article>
-        </div>
+      <div class="slide-main slide-main--inset">
+        <h2 class="slide-title">AI活用支援</h2>
+        <p class="section-lead">生成AIやAIエージェントなどの技術を活用し、業務プロセスの見直しから情報活用、業務効率化・自動化まで、企業の課題に応じたAI導入・活用を支援します。</p>
+        <table class="technology-table ai-table">
+          <colgroup><col style="width: 18%"><col style="width: 82%"></colgroup>
+          <thead>
+            <tr><th scope="col">領域</th><th scope="col">主な支援内容</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">業務最適化</th><td>業務分析、業務フローの可視化・改善</td></tr>
+            <tr><th scope="row">情報活用</th><td>情報検索、ナレッジ共有、案件履歴・情報管理</td></tr>
+            <tr><th scope="row">業務効率化</th><td>生成AIによる資料作成、要約、データ整理</td></tr>
+            <tr><th scope="row">自動化・高度化</th><td>AIエージェント、タスク管理、業務自動化</td></tr>
+          </tbody>
+        </table>
+        <p class="small-note domains-notes">支援プロセス｜課題整理・テーマ選定 → PoC・技術検証 → 導入・活用支援 → 効果検証・継続改善</p>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">7 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">7 / 8</span></div>
       </footer>
     </section>
 
-    <section class="slide" aria-label="8ページ目 今後の方針">
+    <section class="slide" aria-label="8ページ目 お客様へのご支援">
       <header class="slide-header">
         <div class="identity">
           <img src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="TECHASTER">
@@ -404,31 +417,21 @@
         </div>
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
-      <div class="slide-main">
-        <h2 class="slide-title">今後の方針</h2>
-        <div class="card-grid">
-          <article class="info-card">
-            <h3>案件の獲得強化</h3>
-            <p>既存のお取引先との関係を深めつつ、新規案件の獲得に注力します。</p>
-          </article>
-          <article class="info-card">
-            <h3>上流工程へ注力</h3>
-            <p>要件定義・設計など上流工程の案件に軸足を移し、提案力を高めます。</p>
-          </article>
-          <article class="info-card">
-            <h3>インフラ案件をメインに</h3>
-            <p>サーバー・ネットワーク・クラウドを中心に、設計から運用まで一貫して担います。</p>
-          </article>
+      <div class="slide-main slide-main--inset">
+        <h2 class="slide-title">技術で、お客様のビジネスを前へ。</h2>
+        <p class="closing-slogan">人と技術をつなぎ、次の価値へ。</p>
+        <div class="closing-panel">
+          <p>インフラ領域を強みとして、ITエンジニアリングとプロジェクト支援に注力します。</p>
+          <p>ソフトウェア開発やAI・AXの活用にも取り組み、お客様の課題解決とビジネスの成長を支援します。</p>
         </div>
-        <div class="contact-bar"><strong>AI関連サポート業務：</strong>ドキュメント生成・情報整理・データ分類など、AIツールの業務活用を支援します。</div>
-        <p class="contact-email">お問い合わせ：<a href="mailto:info@techaster.com">info@techaster.com</a></p>
+        <p class="contact-email closing-contact">お問い合わせ：<a href="mailto:info@techaster.com">info@techaster.com</a></p>
       </div>
       <footer class="slide-footer">
         <div class="footer-brand">
           <img src="../assets/icons/techaster_horizontal_for-dark-bg_transparent.png" alt="TECHASTER">
-          <p class="footer-tagline">インフラ関連業務から、Webサービス・アプリ開発、AI活用まで。</p>
+          <p class="footer-tagline">人と技術をつなぎ、次の価値へ。</p>
         </div>
-        <div class="footer-meta">2026年11月3日<br><span class="footer-page">8 / 8</span></div>
+        <div class="footer-meta">2026年11月<br><span class="footer-page">8 / 8</span></div>
       </footer>
     </section>
   </main>
