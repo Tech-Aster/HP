@@ -487,7 +487,7 @@ address {
 .hero-section__overline {
     display: block;
     font-family: var(--font-ui);
-    font-size: 11px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1045,6 +1045,13 @@ a.contact-info-item__value:hover {
     gap: var(--sp-12);
 }
 
+.footer__brand {
+    display: flex;
+    width: 240px;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer__logo {
     display: flex;
     align-items: center;
@@ -1066,9 +1073,11 @@ a.contact-info-item__value:hover {
 .footer__tagline {
     font-family: var(--font-jp);
     font-size: 0.875rem;
-    color: rgba(250, 250, 250, 0.48);
+    color: var(--color-white);
     line-height: 1.9;
     margin-bottom: var(--sp-6);
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -1568,6 +1577,7 @@ a.contact-info-item__value:hover {
 
 .detail-consult {
     max-width: none;
+    margin-top: var(--sp-10);
 }
 
 .company-list {
