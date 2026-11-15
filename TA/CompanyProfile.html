@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="株式会社テックアスターの会社説明資料です。会社概要、事業内容、対応技術、従事実績をご紹介します。">
+  <meta name="description" content="株式会社テックアスターの会社説明資料です。会社概要、事業内容、対応技術、対応実績をご紹介します。">
   <title>株式会社テックアスター 会社説明資料</title>
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/icons/favicon.png">
   <style>
     :root {
       font-family: Arial, "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
@@ -112,15 +114,16 @@
     .technology-table--domains th, .technology-table--domains td { padding: 0 .75cqw; }
     .technology-table--domains thead th,
     .technology-table--domains tbody th { font-size: 1.08em; font-weight: 700; }
-    .technology-table--domains tr,
-    .experience-table tr { height: 2.5em; }
+    .technology-table--domains tr { height: 2.5em; }
+    .experience-table tr { height: 3em; }
     .ai-table { table-layout: fixed; }
-    .experience-table { table-layout: fixed; font-size: .95cqw; line-height: 1.2; }
-    .experience-table th, .experience-table td { padding: 0 .75cqw; border-bottom: .1cqw solid var(--rule); }
+    .experience-table { table-layout: fixed; font-size: .78cqw; line-height: 1.25; }
+    .experience-table th, .experience-table td { padding: .35cqw .55cqw; border-bottom: .1cqw solid var(--rule); }
     .experience-table thead th { font-size: 1.08em; font-weight: 700; }
-    .experience-table thead th:nth-child(2) { white-space: nowrap; }
-    .experience-table tbody th { vertical-align: middle; }
+    .experience-table tbody th { vertical-align: middle; white-space: nowrap; }
     .experience-table td { vertical-align: middle; }
+    .experience-list { margin: 0; padding-left: 1.1em; }
+    .experience-list li { margin: 0; padding: 0; }
     .section-lead { margin: -.55cqw 0 1.05cqw; color: #4c4e52; font-size: 1.2cqw; line-height: 1.5; }
     .expected-effect { margin: 1.05cqw 0 0; padding: .85cqw 1.05cqw; border-left: .35cqw solid var(--red); background: var(--pale); font-size: 1.2cqw; line-height: 1.5; }
     .contact-bar { line-height: 1.65; }
@@ -294,7 +297,7 @@
       </footer>
     </section>
 
-    <section class="slide" aria-label="5ページ目 従事実績">
+    <section class="slide" aria-label="5ページ目 対応実績">
       <header class="slide-header">
         <div class="identity">
           <img src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="TECHASTER">
@@ -303,32 +306,32 @@
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
       <div class="slide-main slide-main--inset">
-        <h2 class="slide-title">従事実績</h2>
+        <h2 class="slide-title">対応実績</h2>
         <table class="experience-table">
-          <colgroup><col style="width: 20%"><col style="width: 30%"><col style="width: 50%"></colgroup>
+          <colgroup><col style="width: 24%"><col style="width: 46%"><col style="width: 30%"></colgroup>
           <thead>
             <tr><th scope="col">対応領域</th><th scope="col">対応業務・工程</th><th scope="col">主な対応事例・技術</th></tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">通信ネットワーク基盤</th>
-              <td>ネットワーク運用・保守、設備更改、機器アップグレード、移行支援</td>
-              <td>MPLSネットワークの運用・保守、約9,000台規模の通信機器アップグレード</td>
+              <th scope="row">通信インフラ関連の開発・運用・保守</th>
+              <td><ul class="experience-list"><li>現行設備・システムの調査、仕様確認</li><li>運用・保守、障害調査・対応</li><li>バージョンアップ、機能更新に伴う技術支援</li><li>サーバー・ソフトウェアの仕様変更、機能改修</li><li>動作試験、接続試験、性能・品質検証</li></ul></td>
+              <td>通信キャリア向け伝送ネットワーク機器（PTN等）、コアネットワーク関連サーバー・システム</td>
+            </tr>
+            <tr>
+              <th scope="row">業務システム更改・移行</th>
+              <td><ul class="experience-list"><li>現行システムの調査、課題・影響分析</li><li>更改方針、移行方式の検討</li><li>移行計画、スケジュールの策定</li><li>要件・仕様の整理、各種仕様書・手順書の作成</li><li>関係部署、ベンダーとの調整</li><li>テスト計画・設計、移行リハーサル</li><li>移行データの整合性検証、移行後の確認</li></ul></td>
+              <td>銀行システム、データ連携基盤の更改・移行プロジェクト</td>
+            </tr>
+            <tr>
+              <th scope="row">通信ソフトウェア・プロトコル対応</th>
+              <td><ul class="experience-list"><li>通信接続ツールの仕様調整、要件整理</li><li>ソフトウェアの設計、開発・機能改修</li><li>VPN接続機器のソフトウェア開発</li><li>認証・セキュリティ関連機能の設計・実装</li><li>通信プロトコルの実装、動作検証</li><li>接続試験、障害解析・検証</li></ul></td>
+              <td>3G／PHS／Wi-Fi対応通信接続ツール、VPN機器、IPsec・KINK等</td>
             </tr>
             <tr>
               <th scope="row">組み込みソフトウェア・機器制御</th>
-              <td>基本設計、開発、試験、進捗管理、PL業務</td>
-              <td>決済端末の通信モジュール、医療用モニターの制御アプリケーション</td>
-            </tr>
-            <tr>
-              <th scope="row">通信ソフトウェア・プロトコル</th>
-              <td>ソフトウェア設計・実装、接続制御、通信試験・評価</td>
-              <td>3G／PHS／Wi-Fi接続ツール、VPN接続機器、IPsec・KINK認証モジュール</td>
-            </tr>
-            <tr>
-              <th scope="row">金融システム・データ連携</th>
-              <td>課題分析、テスト計画・設計、移行リハーサル、単体試験～受入試験</td>
-              <td>銀行システム基盤、データ連携システムの移行支援</td>
+              <td><ul class="experience-list"><li>機器仕様、動作要件の確認</li><li>ソフトウェアの設計、開発・改修</li><li>通信モジュール、制御機能の実装</li><li>機器との連携、動作制御</li><li>単体・結合試験、動作確認・検証</li><li>不具合調査、改修</li></ul></td>
+              <td>決済端末向け通信モジュール、医療用モニターの制御アプリケーション</td>
             </tr>
           </tbody>
         </table>
@@ -343,7 +346,7 @@
       </footer>
     </section>
 
-    <section class="slide" aria-label="6ページ目 人材ネットワーク">
+    <section class="slide" aria-label="6ページ目 IT技術者・協力会社ネットワーク">
       <header class="slide-header">
         <div class="identity">
           <img src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="TECHASTER">
@@ -352,15 +355,15 @@
         <span class="document-label">会社説明資料 | 2026年11月</span>
       </header>
       <div class="slide-main slide-main--inset">
-        <h2 class="slide-title">人材ネットワークと提案力</h2>
+        <h2 class="slide-title">IT技術者・協力会社ネットワークと提案力</h2>
         <div class="card-grid">
           <article class="info-card">
-            <h3>独立系IT技術者ネットワーク</h3>
-            <p>専門性や実務経験を持つ個人事業主のネットワークを活用し、紹介などを通じて、案件要件に適した技術者をご提案します。</p>
+            <h3>IT技術者ネットワーク</h3>
+            <p>専門性や実務経験を持つIT技術者とのネットワークを活用し、案件要件に適した技術者をご提案します。</p>
           </article>
           <article class="info-card">
-            <h3>協業IT企業ネットワーク</h3>
-            <p>協業IT企業との連携により、多様な技術・経験を持つ人材の確保やチーム編成を支援します。（複数名体制や長期案件など）</p>
+            <h3>協力会社ネットワーク</h3>
+            <p>協力会社との連携により、多様な技術・経験を持つ人材の確保やチーム編成を支援します。（複数名体制や長期案件など）</p>
           </article>
           <article class="info-card">
             <h3>人材選定・提案力</h3>

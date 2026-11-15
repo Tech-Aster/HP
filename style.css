@@ -175,6 +175,10 @@ address {
     margin-bottom: var(--sp-4);
 }
 
+.services-section .section-header {
+    margin-bottom: 1.875rem;
+}
+
 
 /* ========== 6. ボタン ========== */
 .btn {
@@ -623,9 +627,11 @@ address {
 
 .service-card {
     background: var(--color-white);
-    padding: var(--sp-10) var(--sp-8);
+    padding: calc(1.5 * 1.25rem + 4px) var(--sp-8) var(--sp-10);
     border-right: 1px solid var(--color-border-subtle);
     position: relative;
+    display: flex;
+    flex-direction: column;
     transition: background var(--dur-normal);
 }
 
@@ -648,12 +654,14 @@ address {
 }
 
 .service-card__num {
+    position: absolute;
+    top: var(--sp-2);
+    right: var(--sp-8);
     display: block;
     font-family: var(--font-display);
-    font-size: 4rem;
+    font-size: 2rem;
     color: var(--color-surface-raised);
     line-height: 1;
-    margin-bottom: var(--sp-4);
     user-select: none;
 }
 
@@ -667,18 +675,11 @@ address {
     line-height: 1.4;
 }
 
-.service-card__desc {
-    font-family: var(--font-jp);
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-    line-height: 1.9;
-    margin-bottom: var(--sp-6);
-}
-
 .service-card__list {
     border-top: 1px solid var(--color-border-subtle);
     padding-top: var(--sp-5);
     margin-bottom: var(--sp-8);
+    flex: 1;
 }
 
 .service-card__list li {
@@ -703,23 +704,33 @@ address {
 }
 
 .service-card__link {
+    align-self: flex-start;
     font-family: var(--font-ui);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: var(--color-strike);
     display: inline-flex;
     align-items: center;
     gap: var(--sp-2);
-    border-bottom: 2px solid var(--color-black);
-    padding-bottom: 2px;
-    transition: color var(--dur-fast), border-color var(--dur-fast), gap var(--dur-fast);
+    position: relative;
+    padding-bottom: 4px;
+    transition: color var(--dur-fast), gap var(--dur-fast);
+}
+
+.service-card__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transition: width var(--dur-fast);
 }
 
 .service-card__link:hover {
-    color: var(--color-strike);
-    border-color: var(--color-strike);
     gap: var(--sp-3);
 }
 
@@ -1438,6 +1449,22 @@ a.contact-info-item__value:hover {
     margin-bottom: 0;
 }
 
+.works-grid {
+    margin-bottom: var(--sp-6);
+}
+
+.works-grid .detail-card {
+    border-top: 3px solid var(--color-strike);
+    background: linear-gradient(135deg, var(--color-white), #FAFAFA);
+    padding: var(--sp-8);
+}
+
+.works-grid .detail-tag {
+    display: inline-block;
+    padding: var(--sp-1) var(--sp-3);
+    background: #FEF2F2;
+}
+
 .detail-card {
     background: var(--color-white);
     border: 1px solid var(--color-border-subtle);
@@ -1637,7 +1664,23 @@ a.contact-info-item__value:hover {
 }
 
 .hero-section__title {
-    font-size: clamp(2rem, 3.6vw, 2.75rem);
+    font-size: clamp(1.125rem, 2.4vw, 1.875rem);
+    white-space: nowrap;
+}
+
+.hero-section__title .title-line {
+    display: inline;
+}
+
+@media (max-width: 900px) {
+    .hero-section__title {
+        font-size: clamp(1.5rem, 5vw, 2.4rem);
+        white-space: normal;
+    }
+
+    .hero-section__title .title-line {
+        display: block;
+    }
 }
 
 .hero-section__subtitle {
