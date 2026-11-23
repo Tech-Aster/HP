@@ -2,6 +2,33 @@
 
 
 // ========== 1. ヘッダースクロール ==========
+function initHeroStars() {
+    const sky = document.querySelector('.hero-sky');
+    if (!sky) return;
+
+    const starCount = 18;
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('span');
+        const duration = 3 + Math.random() * 4;
+        const setRandomPosition = () => {
+            star.style.setProperty('--star-x', `${Math.random() * 96 + 2}%`);
+            star.style.setProperty('--star-y', `${Math.random() * 96 + 2}%`);
+        };
+
+        star.className = 'hero-sky__star';
+        if (i === 0 || (i > 1 && Math.random() < 0.4)) {
+            star.classList.add('hero-sky__star--four-point');
+        }
+        star.style.setProperty('--star-size', `${(2.5 + Math.random() * 4.5).toFixed(1)}px`);
+        star.style.setProperty('--star-glow', `${(5 + Math.random() * 8).toFixed(1)}px`);
+        star.style.setProperty('--twinkle-duration', `${duration.toFixed(2)}s`);
+        star.style.setProperty('--twinkle-delay', `-${(Math.random() * duration).toFixed(2)}s`);
+        setRandomPosition();
+        star.addEventListener('animationiteration', setRandomPosition);
+        sky.appendChild(star);
+    }
+}
+
 function initHeader() {
     const header = document.getElementById('header');
     if (!header) return;
@@ -188,6 +215,7 @@ function initForm() {
 
 // ========== 7. 初期化 ==========
 document.addEventListener('DOMContentLoaded', () => {
+    initHeroStars();
     initHeader();
     initActiveNav();
     initFadeIn();

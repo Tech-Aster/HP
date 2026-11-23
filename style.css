@@ -472,11 +472,55 @@ address {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 0;
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
     background-size: 64px 64px;
     pointer-events: none;
+}
+
+.hero-sky {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-sky__star {
+    position: absolute;
+    top: var(--star-y);
+    left: var(--star-x);
+    width: var(--star-size);
+    height: var(--star-size);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 210, 166, 0.85);
+    background: transparent;
+    box-shadow: 0 0 var(--star-glow) 1px rgba(255, 177, 112, 0.32);
+    opacity: 0;
+    animation: hero-star-twinkle var(--twinkle-duration) ease-in-out var(--twinkle-delay) infinite;
+}
+
+.hero-sky__star--four-point {
+    border-radius: 0;
+    border: 0;
+    background: #FFD2A6;
+    clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+}
+
+@keyframes hero-star-twinkle {
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.65);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.25);
+        box-shadow: 0 0 12px 3px rgba(255, 177, 112, 0.5);
+    }
 }
 
 .hero-section__inner {
@@ -497,6 +541,33 @@ address {
     text-transform: uppercase;
     color: var(--color-strike);
     margin-bottom: var(--sp-5);
+    text-align: center;
+}
+
+.hero-section__overline-star {
+    display: inline-block;
+    margin: 0 0.35em;
+    width: 5px;
+    height: 5px;
+    border-radius: 0;
+    background: #FFD2A6;
+    box-shadow: 0 0 6px 1px rgba(255, 177, 112, 0.8);
+    filter: drop-shadow(0 0 2px rgba(255, 177, 112, 0.85));
+    opacity: 0;
+    animation: hero-intro-star 5s ease-out forwards;
+}
+
+@keyframes hero-intro-star {
+    0%,
+    88% {
+        opacity: 0.95;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
 }
 
 .hero-section__title {
@@ -874,7 +945,7 @@ address {
     display: flex;
     align-items: flex-start;
     gap: var(--sp-4);
-    padding: var(--sp-5) 0;
+    padding: var(--sp-2) 0;
     border-bottom: 1px solid var(--color-border-subtle);
 }
 
@@ -1790,6 +1861,11 @@ dd,
         opacity: 1 !important;
         transform: none !important;
     }
+
+    .hero-sky__star {
+        opacity: 0.4;
+    }
+
 }
 
 .detail-tag {
@@ -1807,6 +1883,383 @@ dd,
 
 .detail-grid + .detail-two {
     margin-top: var(--sp-12, 3rem);
+}
+
+.recruitment-orbit {
+    position: relative;
+    width: min(100%, 520px);
+    height: 490px;
+    margin: var(--sp-4) auto 0;
+}
+
+.recruitment-orbit__node {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-4);
+    border: 2px solid var(--color-strike);
+    border-radius: 50%;
+    background: var(--color-white);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.recruitment-orbit__node--infra {
+    top: 20.41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recruitment-orbit__node--security {
+    top: 43.06%;
+    left: 20.77%;
+    transform: translate(-50%, -50%);
+}
+
+.recruitment-orbit__node--pm {
+    top: 43.06%;
+    left: 79.23%;
+    transform: translate(-50%, -50%);
+}
+
+.recruitment-orbit__node--software {
+    top: 79.39%;
+    left: 31.92%;
+    transform: translate(-50%, -50%);
+}
+
+.recruitment-orbit__node--ai {
+    top: 79.39%;
+    left: 68.08%;
+    transform: translate(-50%, -50%);
+}
+
+.recruitment-orbit__number {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--sp-2);
+    border-radius: 50%;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.recruitment-orbit__node h3 {
+    margin-bottom: var(--sp-2);
+    font-family: var(--font-jp);
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.45;
+}
+
+.recruitment-orbit__node p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-family: var(--font-jp);
+    font-size: 0.75rem;
+    line-height: 1.65;
+}
+
+.recruitment-orbit__center {
+    position: absolute;
+    z-index: 2;
+    top: 53.06%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+.recruitment-orbit__center img {
+    width: 77px;
+    height: 77px;
+    object-fit: contain;
+}
+
+.recruitment-section-header {
+    margin-bottom: 0;
+}
+
+.recruit-summary__employment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2) var(--sp-5);
+    align-items: baseline;
+    margin-top: var(--sp-2);
+    padding: var(--sp-1) 0 var(--sp-2);
+    border-top: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+    font-family: var(--font-jp);
+    line-height: 1.8;
+}
+
+.recruit-summary__employment strong {
+    color: var(--color-strike);
+}
+
+.recruitment-partner-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-8);
+    margin-top: var(--sp-12);
+    padding: var(--sp-8);
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.recruitment-partner-box__eyebrow {
+    display: block;
+    margin-bottom: var(--sp-2);
+    color: var(--color-strike);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.recruitment-partner-box h3 {
+    margin-bottom: var(--sp-2);
+    font-family: var(--font-jp);
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.recruitment-partner-box p {
+    color: rgba(250, 250, 250, 0.75);
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    line-height: 1.8;
+}
+
+.recruit-summary__actions,
+.recruitment-page__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+    margin-top: var(--sp-6);
+}
+
+.recruit-summary__note {
+    margin-top: var(--sp-5);
+}
+
+.recruitment-page {
+    min-height: 70vh;
+    padding: 4.5rem 0 var(--sp-20);
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.recruitment-page__header {
+    margin-bottom: var(--sp-12);
+}
+
+.recruitment-page__title {
+    font-family: var(--font-jp);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.5;
+    margin: var(--sp-3) 0 var(--sp-5);
+    padding-bottom: var(--sp-4);
+    border-bottom: 3px solid var(--color-strike);
+}
+
+.recruitment-page__section {
+    margin-top: var(--sp-12);
+}
+
+.recruitment-conditions,
+.recruitment-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-5);
+}
+
+.recruitment-condition,
+.recruitment-field {
+    padding: var(--sp-6);
+    border: 1px solid var(--color-border-subtle);
+    background: #fff;
+}
+
+.recruitment-condition {
+    border-top: 3px solid var(--color-strike);
+}
+
+.recruitment-condition__label {
+    display: inline-block;
+    margin-bottom: var(--sp-2);
+    padding: var(--sp-1) var(--sp-2);
+    background: #f5f5f5;
+    font-family: var(--font-jp);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+}
+
+.recruitment-condition h3,
+.recruitment-field h3 {
+    font-family: var(--font-jp);
+    font-size: 1.0625rem;
+    font-weight: 900;
+    line-height: 1.6;
+    margin-bottom: var(--sp-3);
+}
+
+.recruitment-condition p,
+.recruitment-field p,
+.recruitment-list li,
+.recruitment-email {
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+}
+
+.recruitment-condition p + p,
+.recruitment-field p + p {
+    margin-top: var(--sp-3);
+}
+
+.recruitment-condition .btn {
+    margin-top: var(--sp-5);
+}
+
+.recruitment-condition__hint {
+    margin-top: var(--sp-2);
+    font-size: 0.8125rem !important;
+}
+
+.recruitment-condition strong,
+.recruitment-field strong {
+    color: var(--color-black);
+}
+
+.recruitment-field__definition {
+    padding-top: var(--sp-3);
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.recruitment-list {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+
+.recruitment-list li {
+    padding: var(--sp-1) 0;
+}
+
+.recruitment-page__note {
+    margin-top: var(--sp-5);
+}
+
+.recruitment-page__cta {
+    justify-content: center;
+    margin-top: var(--sp-12);
+}
+
+.recruitment-steps {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.recruitment-privacy-notice {
+    margin-top: var(--sp-5);
+    padding: var(--sp-4) var(--sp-5);
+    background: #f5f5f5;
+    font-family: var(--font-jp);
+    font-size: 0.9375rem;
+    font-weight: 700;
+}
+
+.recruitment-page__cta--apply {
+    align-items: center;
+}
+
+.recruitment-email a,
+.recruitment-page a:not(.btn) {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.form-hint {
+    margin-top: var(--sp-2);
+    font-family: var(--font-jp);
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+}
+
+.form-hint a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+@media (max-width: 900px) {
+    .recruitment-orbit {
+        display: grid;
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: var(--sp-4);
+        padding: 0;
+    }
+
+    .recruitment-orbit__center {
+        position: relative;
+        top: auto;
+        left: auto;
+        grid-column: 1 / -1;
+        order: -1;
+        transform: none;
+    }
+
+    .recruitment-orbit__node {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        width: min(100%, 200px);
+        height: auto;
+        aspect-ratio: 1;
+        transform: none;
+    }
+
+    .recruitment-partner-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .recruitment-conditions,
+    .recruitment-fields,
+    .recruitment-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .recruitment-page {
+        padding-top: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .recruitment-partner-box {
+        padding: var(--sp-6);
+    }
 }
 
 /* 矢印(▷▷)で進むタイプのステップ表示 */
