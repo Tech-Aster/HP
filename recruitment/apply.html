@@ -17,7 +17,24 @@
 
 <body>
     <a class="skip-link" href="#main-content">本文へスキップ</a>
-    <main id="main-content" class="recruitment-page">
+    <header class="header header--scrolled" id="header">
+        <nav class="navbar container" role="navigation" aria-label="グローバルナビゲーション">
+            <div class="navbar__logo">
+                <a href="../index.html" class="logo-link" aria-label="株式会社テックアスター トップページへ">
+                    <img class="logo-image logo-image--light" src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="テックアスター">
+                </a>
+            </div>
+            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="ナビゲーションを開く">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul class="navbar__menu" id="primaryNav" role="list">
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="index.html">募集詳細</a></li>
+                <li><a href="../contact.html" class="nav-cta">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content" class="recruitment-page recruitment-page--apply">
         <div class="container">
             <header class="recruitment-page__header">
                 <p class="section-overline">APPLICATION</p>
@@ -46,8 +63,10 @@
                     <li>稼働開始時期・稼働日数</li>
                     <li>ご希望の勤務地・働き方</li>
                 </ul>
-                <p class="detail-text recruitment-page__note">提出書類:履歴書・職務経歴書(添付形式:PDF・Word・Excel)</p>
-                <p class="recruitment-privacy-notice">前職・取引先の機密情報は記載しないでください。</p>
+                <div class="recruitment-application-note" role="note">
+                    <p><strong>提出書類:</strong> 履歴書・職務経歴書(添付形式:PDF・Word・Excel)</p>
+                    <p>守秘義務に抵触しない範囲で、実績・技術・担当業務を具体的に記載してください。</p>
+                </div>
                 <div class="recruitment-page__cta recruitment-page__cta--apply">
                     <a href="mailto:recruit@techaster.com?subject=%E3%80%90%E5%BF%9C%E5%8B%9F%E3%80%91%E3%81%94%E7%B5%8C%E6%AD%B4%E3%83%BB%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E9%80%81%E4%BB%98" class="btn btn--dark">メールで応募する</a>
                     <p class="recruitment-email">メールアドレス: <a href="mailto:recruit@techaster.com">recruit@techaster.com</a></p>
@@ -62,10 +81,6 @@
                 </ul>
                 <p class="detail-text recruitment-page__note"><a href="../privacy.html">プライバシーポリシー</a>もあわせてご確認ください。</p>
             </section>
-
-            <div class="recruitment-page__cta">
-                <a href="index.html" class="btn btn--dark">募集の詳細へ戻る</a>
-            </div>
         </div>
     </main>
 
@@ -81,6 +96,7 @@
             </div>
         </div>
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>

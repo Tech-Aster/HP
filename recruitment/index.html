@@ -21,7 +21,24 @@
 
 <body>
     <a class="skip-link" href="#main-content">本文へスキップ</a>
-    <main id="main-content" class="recruitment-page">
+    <header class="header header--scrolled" id="header">
+        <nav class="navbar container" role="navigation" aria-label="グローバルナビゲーション">
+            <div class="navbar__logo">
+                <a href="../index.html" class="logo-link" aria-label="株式会社テックアスター トップページへ">
+                    <img class="logo-image logo-image--light" src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="テックアスター">
+                </a>
+            </div>
+            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="ナビゲーションを開く">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul class="navbar__menu" id="primaryNav" role="list">
+                <li><a href="../index.html">トップページ</a></li>
+                <li><a href="apply.html">応募方法</a></li>
+                <li><a href="../contact.html" class="nav-cta">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content" class="recruitment-page recruitment-page--with-nav">
         <div class="container">
             <header class="recruitment-page__header">
                 <p class="section-overline">RECRUITMENT &amp; PARTNERS</p>
@@ -44,7 +61,7 @@
                         <h3>協業パートナー募集</h3>
                         <p>法人・個人事業主の方と、案件の情報共有や共同対応を行います。</p>
                         <p>契約形態・商流・請求・支払いは、内容に応じて個別に相談します。</p>
-                        <a href="../index.html#contact" class="btn btn--dark">お問い合わせフォームから相談する <span aria-hidden="true">→</span></a>
+                        <a href="../contact.html" class="btn btn--dark">お問い合わせフォームから相談する <span aria-hidden="true">→</span></a>
                         <p class="recruitment-condition__hint">お問い合わせ内容で「協業のご相談」を選択してください。</p>
                     </article>
                 </div>
@@ -122,6 +139,7 @@
             </div>
         </div>
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>
