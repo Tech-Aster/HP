@@ -157,7 +157,7 @@ function initRepresentativeNetwork() {
 
 function initHeader() {
     const header = document.getElementById('header');
-    if (!header) return;
+    if (!header || header.hasAttribute('data-header-always-scrolled')) return;
     window.addEventListener('scroll', () => {
         header.classList.toggle('header--scrolled', window.scrollY > 30);
     }, { passive: true });
