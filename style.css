@@ -510,6 +510,7 @@ address {
 }
 
 @keyframes hero-star-twinkle {
+
     0%,
     100% {
         opacity: 0;
@@ -558,6 +559,7 @@ address {
 }
 
 @keyframes hero-intro-star {
+
     0%,
     88% {
         opacity: 0.95;
@@ -1440,6 +1442,7 @@ a.contact-info-item__value:hover {
 
 
 }
+
 /* =====================================================
    追加：詳細セクション・会社概要・ヒーロー右カラム
    ===================================================== */
@@ -1679,8 +1682,8 @@ a.contact-info-item__value:hover {
     padding-bottom: 0;
 }
 
-.detail-steps li > div,
-.detail-steps li > span {
+.detail-steps li>div,
+.detail-steps li>span {
     min-width: 0;
     padding-top: 0.2rem;
 }
@@ -1751,7 +1754,7 @@ a.contact-info-item__value:hover {
     max-width: none;
 }
 
-.company-list > div {
+.company-list>div {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: var(--sp-6);
@@ -1866,8 +1869,8 @@ a.contact-info-item__value:hover {
     line-break: auto;
 }
 
-.representative-greeting__copy p + p,
-.representative-origin__copy p + p {
+.representative-greeting__copy p+p,
+.representative-origin__copy p+p {
     margin-top: 0;
 }
 
@@ -1897,7 +1900,7 @@ a.contact-info-item__value:hover {
 }
 
 .representative-origin__copy,
-.representative-origin__copy p + p {
+.representative-origin__copy p+p {
     color: rgba(255, 255, 255, 0.72);
 }
 
@@ -1913,6 +1916,7 @@ a.contact-info-item__value:hover {
 }
 
 @media (max-width: 900px) {
+
     .detail-grid--3,
     .detail-grid--2,
     .detail-two {
@@ -1927,7 +1931,7 @@ a.contact-info-item__value:hover {
         padding: var(--sp-16) 0;
     }
 
-    .company-list > div {
+    .company-list>div {
         grid-template-columns: 1fr;
         gap: var(--sp-2);
     }
@@ -2050,7 +2054,7 @@ a.contact-info-item__value:hover {
 
 
 
-#applyConfirm .company-list > div {
+#applyConfirm .company-list>div {
     grid-template-columns: 160px 1fr;
 }
 
@@ -2074,6 +2078,7 @@ body {
 
 /* 動きを減らす設定のユーザーにはアニメーションを使わない */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -2106,7 +2111,7 @@ body {
     font-size: 0.875rem;
 }
 
-.detail-grid + .detail-two {
+.detail-grid+.detail-two {
     margin-top: var(--sp-12, 3rem);
 }
 
@@ -2333,7 +2338,7 @@ body {
     counter-increment: recruitment-section;
 }
 
-.recruitment-page__section > .detail-subtitle {
+.recruitment-page__section>.detail-subtitle {
     display: flex;
     align-items: center;
     gap: var(--sp-3);
@@ -2343,7 +2348,7 @@ body {
     border-bottom: 1px solid var(--color-border-medium);
 }
 
-.recruitment-page:not(.recruitment-page--apply) .recruitment-page__section > .detail-subtitle::before {
+.recruitment-page:not(.recruitment-page--apply) .recruitment-page__section>.detail-subtitle::before {
     content: counter(recruitment-section, decimal-leading-zero);
     display: inline-grid;
     width: 2.25rem;
@@ -2365,13 +2370,13 @@ body {
     background: linear-gradient(135deg, #f7f7f7, #fff 42%);
 }
 
-.recruitment-page--apply .recruitment-page__section > .detail-subtitle {
+.recruitment-page--apply .recruitment-page__section>.detail-subtitle {
     margin-bottom: var(--sp-5);
     padding: 0;
     border: 0;
 }
 
-.recruitment-page--apply .recruitment-page__section > .detail-subtitle::before {
+.recruitment-page--apply .recruitment-page__section>.detail-subtitle::before {
     content: counter(application-section, decimal-leading-zero);
     display: inline-block;
     color: var(--color-strike);
@@ -2397,6 +2402,8 @@ body {
 
 .recruitment-condition {
     position: relative;
+    display: flex;
+    flex-direction: column;
     border: 0;
     border-bottom: 1px solid var(--color-border-medium);
     border-left: 3px solid var(--color-strike);
@@ -2429,8 +2436,9 @@ body {
     gap: var(--sp-3);
     margin: calc(var(--sp-6) * -1) calc(var(--sp-6) * -1) var(--sp-5);
     padding: var(--sp-4) var(--sp-6);
-    background: var(--color-black);
-    color: var(--color-white);
+    border-bottom: 1px solid rgba(255, 95, 95, 0.24);
+    background: linear-gradient(90deg, rgba(255, 95, 95, 0.10), rgba(255, 95, 95, 0.025));
+    color: var(--color-black);
 }
 
 .recruitment-field h3::before {
@@ -2450,8 +2458,9 @@ body {
 }
 
 .recruitment-experience-label--required {
-    background: var(--color-strike);
-    color: var(--color-white);
+    border: 1px solid rgba(255, 95, 95, 0.32);
+    background: rgba(255, 95, 95, 0.10);
+    color: var(--color-black);
 }
 
 .recruitment-experience-label--preferred {
@@ -2459,7 +2468,7 @@ body {
     background: #f5f5f5;
 }
 
-.recruitment-field p > span {
+.recruitment-field p>span {
     display: block;
 }
 
@@ -2473,8 +2482,8 @@ body {
     color: var(--color-text-secondary);
 }
 
-.recruitment-condition p + p,
-.recruitment-field p + p {
+.recruitment-condition p+p,
+.recruitment-field p+p {
     margin-top: var(--sp-3);
 }
 
@@ -2482,9 +2491,31 @@ body {
     margin-top: var(--sp-5);
 }
 
-.recruitment-condition__hint {
+.recruitment-condition .btn {
+    margin-top: var(--sp-5);
+}
+
+.recruitment-condition>.btn {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.recruitment-condition__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.recruitment-condition__actions .btn {
+    align-self: flex-end;
     margin-top: var(--sp-2);
+}
+
+.recruitment-condition__hint {
+    margin: 0 0 var(--sp-2);
     font-size: 0.8125rem !important;
+    text-align: right;
 }
 
 .recruitment-condition strong,
@@ -2719,6 +2750,7 @@ body {
 }
 
 @media (max-width: 900px) {
+
     .step-cards,
     .step-flow {
         grid-template-columns: 1fr;
@@ -2736,6 +2768,7 @@ body {
     color: #111;
     padding: var(--sp-4) var(--sp-5);
 }
+
 .detail-example__label {
     font-family: var(--font-jp);
     font-size: 0.8125rem;
@@ -2743,10 +2776,12 @@ body {
     color: #111;
     margin-bottom: var(--sp-1);
 }
+
 .detail-example .detail-list li {
     color: #111;
     border-bottom: 1px dashed #ccc;
 }
+
 .detail-example .detail-list li:last-child {
     border-bottom: 1px dashed #ccc;
 }
@@ -2756,22 +2791,27 @@ body {
     padding: var(--sp-5);
     border: 1px solid #111;
 }
+
 .step-flow li:nth-child(odd) {
     background: #111;
     color: #fff;
 }
+
 .step-flow li:nth-child(odd) strong,
 .step-flow li:nth-child(odd) p {
     color: #fff;
 }
+
 .step-flow li:nth-child(even) {
     background: #fff;
     color: #111;
 }
+
 .step-flow li:nth-child(even) strong,
 .step-flow li:nth-child(even) p {
     color: #111;
 }
+
 .step-flow li strong::before {
     content: "▶";
     font-size: 1.25em;
@@ -2783,14 +2823,18 @@ body {
 @media (min-width: 901px) {
     .navbar__menu {
         gap: 0;
-        transform: translateY(7px); /* ロゴ画像内の文字(TECHASTER)の中心線に合わせる */
+        transform: translateY(7px);
+        /* ロゴ画像内の文字(TECHASTER)の中心線に合わせる */
     }
+
     .navbar__menu a {
         padding: var(--sp-2) 0.7rem;
     }
+
     .navbar__menu li:nth-child(-n+5) {
         position: relative;
     }
+
     .navbar__menu li:nth-child(-n+5)::after {
         content: "";
         position: absolute;
@@ -2801,6 +2845,7 @@ body {
         transform: translateY(-50%);
         background: rgba(230, 0, 18, 0.35);
     }
+
     .navbar__menu li:nth-child(6) {
         margin-right: var(--sp-3);
     }

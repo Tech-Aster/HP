@@ -13,7 +13,9 @@
     <link rel="canonical" href="https://www.techaster.com/recruitment/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Work+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Work+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+JP:wght@400;700;900&amp;family=Inter:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
     <link rel="apple-touch-icon" href="../assets/icons/favicon.png">
     <link rel="stylesheet" href="../style.css">
@@ -25,10 +27,12 @@
         <nav class="navbar container" role="navigation" aria-label="グローバルナビゲーション">
             <div class="navbar__logo">
                 <a href="../index.html" class="logo-link" aria-label="株式会社テックアスター トップページへ">
-                    <img class="logo-image logo-image--light" src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="テックアスター">
+                    <img class="logo-image logo-image--light"
+                        src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="テックアスター">
                 </a>
             </div>
-            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="ナビゲーションを開く">
+            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false"
+                aria-label="ナビゲーションを開く">
                 <span class="hamburger" aria-hidden="true"></span>
             </button>
             <ul class="navbar__menu" id="primaryNav" role="list">
@@ -53,47 +57,70 @@
                         <h3>人材募集</h3>
                         <p>契約社員・正社員、または業務委託(フリーランス・個人事業主・副業)として案件に参画いただきます。</p>
                         <p><strong>雇用期間・勤務地・報酬・稼働日数・支払条件:</strong> ご希望と案件に応じて個別に説明します。</p>
-                        <a href="apply.html" class="btn btn--dark">技術者の方：応募において <span aria-hidden="true">→</span></a>
+                        <a href="apply.html" class="btn btn--dark">技術者の方：応募の流れ <span aria-hidden="true">→</span></a>
                     </article>
                     <article class="recruitment-condition">
                         <span class="recruitment-condition__label">法人・個人事業主の方</span>
                         <h3>協業パートナー募集</h3>
                         <p>法人・個人事業主の方と、案件の情報共有や共同対応を行います。</p>
                         <p>契約形態・商流・請求・支払いは、内容に応じて個別に相談します。</p>
-                        <a href="../contact.html" class="btn btn--dark">お問い合わせフォームから相談する <span aria-hidden="true">→</span></a>
-                        <p class="recruitment-condition__hint">お問い合わせ内容で「協業のご相談」を選択してください。</p>
+                        <div class="recruitment-condition__actions">
+                            <p class="recruitment-condition__hint">お問い合わせ内容で「協業のご相談」を選択してください。</p>
+                            <a href="../contact.html" class="btn btn--dark">お問い合わせフォームより <span
+                                    aria-hidden="true">→</span></a>
+                        </div>
                     </article>
                 </div>
             </section>
 
             <section class="recruitment-page__section" aria-labelledby="recruitment-fields-title">
                 <h2 class="detail-subtitle" id="recruitment-fields-title">募集分野</h2>
-                <p class="detail-text recruitment-page__note">経験年数の一律基準は設けていません。各分野の必須スキル・経験は案件ごとにご案内します。</p>
+                <p class="detail-text recruitment-page__note">経験年数の一律基準は設けていません。各分野で活かせる経験やスキルは、案件ごとにご案内します。</p>
                 <div class="recruitment-fields">
                     <article class="recruitment-field">
                         <h3>インフラ</h3>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--required">必須の経験</strong><span>ネットワーク、通信、クラウド、サーバー等の設計・構築または運用の実務経験。</span></p>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--preferred">歓迎する経験</strong><span>LAN/WAN・通信キャリアネットワーク、AWS/Azure/GCP、仮想化・ストレージ、更改・移行、運用改善、障害対応。</span></p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--required">主な経験</strong><span>ネットワーク、通信、クラウド、サーバー等の設計・構築または運用の実務経験。</span>
+                        </p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--preferred">活かせる経験</strong><span>LAN/WAN・通信キャリアネットワーク、AWS/Azure/GCP、仮想化・ストレージ、更改・移行、運用改善、障害対応。</span>
+                        </p>
                     </article>
                     <article class="recruitment-field">
                         <h3>セキュリティ</h3>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--required">必須の経験</strong><span>セキュリティ対策、運用、リスク評価等いずれかの実務経験。</span></p>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--preferred">歓迎する経験</strong><span>リスク分析・アセスメント、EDR/EPP/XDR導入、SIEM・SOC・CSIRTの設計・運用、脆弱性管理、インシデント対応、運用ルール策定。</span></p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--required">主な経験</strong><span>セキュリティ対策、運用、リスク評価等いずれかの実務経験。</span>
+                        </p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--preferred">活かせる経験</strong><span>リスク分析・アセスメント、EDR/EPP/XDR導入、SIEM・SOC・CSIRTの設計・運用、脆弱性管理、インシデント対応、運用ルール策定。</span>
+                        </p>
                     </article>
                     <article class="recruitment-field">
                         <h3>PM/PMO</h3>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--required">必須の経験</strong><span>ITプロジェクトの計画・推進、管理または関係者調整の実務経験。</span></p>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--preferred">歓迎する経験</strong><span>進捗・課題・リスク管理、顧客・開発会社間の調整、要件整理・業務分析、品質・テスト管理、ベンダーコントロール。ITコンサルティングの経験も含みます。</span></p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--required">主な経験</strong><span>ITプロジェクトの計画・推進、管理または関係者調整の実務経験。</span>
+                        </p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--preferred">活かせる経験</strong><span>進捗・課題・リスク管理、顧客・開発会社間の調整、要件整理・業務分析、品質・テスト管理、ベンダーコントロール。ITコンサルティングの経験も含みます。</span>
+                        </p>
                     </article>
                     <article class="recruitment-field">
                         <h3>ソフトウェア開発</h3>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--required">必須の経験</strong><span>業務システム、Webアプリ、組み込み・制御・通信ソフト等の開発・テスト実務経験。</span></p>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--preferred">歓迎する経験</strong><span>基本設計からテストまでの経験、C/C++/Java/Pythonでの開発、システム更改・性能改善。</span></p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--required">主な経験</strong><span>業務システム、Webアプリ、組み込み・制御・通信ソフト等の開発・テスト実務経験。</span>
+                        </p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--preferred">活かせる経験</strong><span>基本設計からテストまでの経験、C/C++/Java/Pythonでの開発、システム更改・性能改善。</span>
+                        </p>
                     </article>
                     <article class="recruitment-field">
                         <h3>AI(FDE)</h3>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--required">必須の経験</strong><span>Pythonによる開発、AI・LLMの活用、PoC・技術検証、AI導入推進等のいずれかの実務経験。</span></p>
-                        <p><strong class="recruitment-experience-label recruitment-experience-label--preferred">歓迎する経験</strong><span>LLM・RAG・AIエージェントの設計・開発、MCP等の活用、業務課題の整理からAI導入までの推進。</span></p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--required">主な経験</strong><span>Pythonによる開発、AI・LLMの活用、PoC・技術検証、AI導入推進等のいずれかの実務経験。</span>
+                        </p>
+                        <p><strong
+                                class="recruitment-experience-label recruitment-experience-label--preferred">活かせる経験</strong><span>LLM・RAG・AIエージェントの設計・開発、MCP等の活用、業務課題の整理からAI導入までの推進。</span>
+                        </p>
                         <p class="recruitment-field__definition">FDEは、お客様の現場に入り、業務課題の整理からAI導入まで担当するエンジニアです。</p>
                     </article>
                 </div>
