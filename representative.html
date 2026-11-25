@@ -21,10 +21,12 @@
                     <img class="logo-image logo-image--light" src="assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="テックアスター">
                 </a>
             </div>
-            <ul class="navbar__menu" role="list">
+            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="ナビゲーションを開く">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul class="navbar__menu" id="primaryNav" role="list">
                 <li><a href="index.html">トップページ</a></li>
                 <li><a href="#company-profile">会社概要</a></li>
-                <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
@@ -100,29 +102,24 @@
                         </dd>
                     </div>
                     <div><dt>取引銀行</dt><dd>三菱UFJ銀行</dd></div>
-                    <div><dt>会社説明資料</dt><dd><a href="TA/CompanyProfile.html">人と技術をつなぎ、次の価値へ。</a></dd></div>
+                    <div><dt>会社説明資料</dt><dd><a href="TA/CompanyProfile.html" target="_blank" rel="noopener noreferrer">人と技術をつなぎ、次の価値へ。</a></dd></div>
                 </dl>
             </div>
         </section>
 
-        <section class="cta-banner" aria-labelledby="representativeCtaTitle">
-            <div class="container">
-                <div class="cta-banner__inner">
-                    <div class="cta-banner__text">
-                        <h2 class="cta-banner__title cta-banner__title--single-line" id="representativeCtaTitle">まずは、ご相談ください。</h2>
-                        <p class="cta-banner__subtitle">案件の概要やご希望の時期をお知らせください。内容を確認し、ご連絡します。</p>
-                    </div>
-                    <div class="cta-banner__actions">
-                        <a href="contact.html" class="btn btn--strike">お問い合わせ</a>
-                        <a href="tel:050-1808-8785" class="cta-phone">
-                            <span class="cta-phone__icon" aria-hidden="true">&#9742;</span>
-                            050-1808-8785
-                        </a>
-                    </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p class="footer__copyright">© 2026 株式会社テックアスター All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="privacy.html">プライバシーポリシー</a>
+                    <a href="terms.html">利用規約</a>
+                    <a href="index.html">トップページ</a>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
