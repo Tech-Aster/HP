@@ -1701,6 +1701,19 @@ a.contact-info-item__value:hover {
     font-size: 0.9375rem;
 }
 
+.web-process-line {
+    margin: var(--sp-4) 0 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--color-strike);
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-jp);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
+}
+
 .detail-note {
     margin-top: var(--sp-5);
     font-family: var(--font-jp);
@@ -1710,8 +1723,7 @@ a.contact-info-item__value:hover {
 }
 
 .detail-note::before,
-.recruitment-page__note::before,
-.recruitment-condition__hint::before {
+.recruitment-page__note::before {
     content: "※";
     display: inline-block;
     margin-right: 0.4em;
@@ -1947,10 +1959,12 @@ a.contact-info-item__value:hover {
 
 .representative-greeting-section {
     background: var(--color-white);
+    padding: var(--sp-12) 0 0;
 }
 
 .representative-company-section {
     background: #F5F5F5;
+    padding: var(--sp-12) 0 var(--sp-16);
 }
 
 .representative-about-section {
@@ -1961,9 +1975,9 @@ a.contact-info-item__value:hover {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: var(--sp-16);
-    padding: var(--sp-12) 0;
+    padding: var(--sp-6) 0;
     border-top: 2px solid var(--color-black);
-    border-bottom: 1px solid var(--color-border-medium);
+    border-bottom: 0;
 }
 
 .representative-greeting__copy,
@@ -2030,6 +2044,14 @@ a.contact-info-item__value:hover {
 
 @media (max-width: 900px) {
 
+    .representative-greeting-section {
+        padding: var(--sp-8) 0 0;
+    }
+
+    .representative-company-section {
+        padding: var(--sp-8) 0 var(--sp-12);
+    }
+
     .detail-grid--3,
     .detail-grid--2,
     .detail-two {
@@ -2056,7 +2078,7 @@ a.contact-info-item__value:hover {
     }
 
     .representative-greeting {
-        padding: var(--sp-8);
+        padding: var(--sp-5) 0;
     }
 
     .representative-origin {
@@ -2557,6 +2579,15 @@ body {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.025), transparent 40%);
 }
 
+.recruitment-condition:first-child {
+    background: linear-gradient(110deg, rgba(239, 68, 68, 0.075), rgba(239, 68, 68, 0.015) 76%);
+}
+
+.recruitment-condition:nth-child(2) {
+    border-left-color: #2563eb;
+    background: linear-gradient(110deg, rgba(37, 99, 235, 0.075), rgba(37, 99, 235, 0.015) 76%);
+}
+
 .recruitment-condition__label {
     display: inline-block;
     margin-bottom: var(--sp-2);
@@ -2659,10 +2690,14 @@ body {
     margin-top: var(--sp-2);
 }
 
-.recruitment-condition__hint {
-    margin: 0 0 var(--sp-2);
-    font-size: 0.8125rem !important;
-    text-align: right;
+.recruitment-condition:nth-child(2) .recruitment-condition__actions .btn {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.recruitment-condition:nth-child(2) .recruitment-condition__actions .btn:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
 }
 
 .recruitment-condition strong,
@@ -2731,9 +2766,32 @@ body {
 }
 
 .recruitment-page__cta--apply {
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.recruitment-page__cta--apply .btn--strike:hover,
+.recruitment-page__cta--apply .btn--strike:focus-visible {
+    background: #171717;
+    border-color: #171717;
+}
+
+.recruitment-page__cta--apply .recruitment-email {
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+.recruitment-page__cta--apply .recruitment-email a {
+    display: inline-block;
+    color: transparent;
+    transition: color 180ms ease;
+}
+
+.recruitment-page__cta--apply .recruitment-email a:hover,
+.recruitment-page__cta--apply .recruitment-email a:focus-visible {
+    color: var(--color-strike);
 }
 
 .recruitment-email a,
@@ -2754,6 +2812,10 @@ body {
 .form-hint a {
     text-decoration: underline;
     text-underline-offset: 0.2em;
+}
+
+.contact-page .form-hint a {
+    color: var(--color-strike);
 }
 
 @media (max-width: 900px) {
