@@ -26,8 +26,28 @@
             </button>
             <ul class="navbar__menu" id="primaryNav" role="list">
                 <li><a href="index.html#home">ホーム</a></li>
-                <li><a href="index.html#services">サービス</a></li>
-                <li><a href="index.html#recruit">採用・協業</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="index.html#services">サービス</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="サービスメニューを開く" aria-expanded="false" aria-controls="serviceNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="serviceNavMenu" role="list">
+                        <li><a href="index.html#ses">ITプロジェクト支援</a></li>
+                        <li><a href="index.html#web">SW受託開発・共同研究</a></li>
+                        <li class="navbar__submenu-parent">
+                            <a href="index.html#ai">AI活用支援</a>
+                            <ul class="navbar__submenu-child" role="list">
+                                <li><a href="ai/index.html">- FDE支援</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="recruitment/index.html">採用・協業</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="採用・協業メニューを開く" aria-expanded="false" aria-controls="recruitNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="recruitNavMenu" role="list">
+                        <li><a href="recruitment/index.html#recruitment-fields-title">募集職種</a></li>
+                        <li><a href="recruitment/apply.html">応募・選考</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -47,7 +67,8 @@
         <section class="representative-greeting-section" aria-labelledby="greetingTitle">
             <div class="container representative-greeting">
                 <div class="representative-greeting__lead">
-                    <h2 class="detail-subtitle" id="greetingTitle">代表挨拶</h2>
+                    <span class="section-overline">ごあいさつ</span>
+                    <h2 class="section-title" id="greetingTitle">代表挨拶</h2>
                 </div>
                 <div class="representative-greeting__copy">
                     <p>この度は、株式会社テックアスターのホームページをご覧いただき、誠にありがとうございます。</p>
@@ -57,16 +78,17 @@
                     <p>こうした経験を通じて大切にしてきたのは、技術は目的ではなく、お客様の課題を解決するための手段であるという考え方です。お客様との対話を重ね、現場の実情を理解したうえで、実行可能で持続性のある解決策を見つけることを重視しています。</p>
                     <p>事業活動においては、法令・契約の遵守、情報セキュリティ、個人情報保護を徹底し、誠実で責任ある対応を通じて、取引先との信頼関係を築いてまいります。</p>
                     <p>これからも、専門性や経験の異なる方々との協力を大切にし、お客様とともに考え、技術と人をつなぎながら、新たな価値を創造してまいります。</p>
-                    <p class="representative-greeting__signature"><span>株式会社テックアスター<br>代表取締役　潘龍 鉄成</span></p>
+                    <p class="representative-greeting__signature"><span class="representative-signature__company">株式会社テックアスター</span><span class="representative-signature__role">代表取締役</span><span class="representative-signature__name">潘龍 鉄成</span></p>
+                    <figure class="representative-greeting__image"><img src="assets/icons/Img-hp1.jpg" alt=""></figure>
                 </div>
             </div>
         </section>
 
 
         <section id="company-profile" class="representative-company-section" aria-labelledby="companyProfileTitle">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-overline">COMPANY</span>
+            <div class="container representative-company">
+                <div class="section-header representative-company__heading">
+                    <span class="section-overline">企業情報</span>
                     <h2 class="section-title" id="companyProfileTitle">会社概要</h2>
                 </div>
                 <dl class="company-list">

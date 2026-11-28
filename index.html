@@ -57,11 +57,23 @@
                     <ul class="navbar__submenu" id="serviceNavMenu" role="list">
                         <li><a href="#ses">ITプロジェクト支援</a></li>
                         <li><a href="#web">SW受託開発・共同研究</a></li>
-                        <li><a href="#ai">AI活用支援</a></li>
+                        <li class="navbar__submenu-parent">
+                            <a href="#ai">AI活用支援</a>
+                            <ul class="navbar__submenu-child" role="list">
+                                <li><a href="ai/index.html">- FDE支援</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="#works">実績</a></li>
-                <li><a href="#recruit">採用・協業</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="recruitment/index.html">採用・協業</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="採用・協業メニューを開く" aria-expanded="false" aria-controls="recruitNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="recruitNavMenu" role="list">
+                        <li><a href="recruitment/index.html#recruitment-fields-title">募集職種</a></li>
+                        <li><a href="recruitment/apply.html">応募・選考</a></li>
+                    </ul>
+                </li>
                 <li><a href="representative.html">会社紹介</a></li>
                 <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
             </ul>
@@ -103,7 +115,7 @@
 
         <!-- ========== サービス概要（白） ========== -->
         <section id="services" class="services-section" aria-labelledby="servicesTitle">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-header section-header--center fade-in">
                     <span class="section-overline">サービス</span>
                     <h2 class="section-title" id="servicesTitle">支援分野</h2>
@@ -150,12 +162,12 @@
 
         <!-- ========== SES・IT技術支援（薄灰） ========== -->
         <section id="ses" class="detail-section detail-section--gray" aria-labelledby="sesTitle">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-header fade-in">
                     <span class="section-overline">ITプロジェクト支援</span>
                     <h2 class="section-title" id="sesTitle">インフラ、開発、PM/PMOの現場を支援します。</h2>
-                    <p class="detail-lead">契約形態は、準委任契約を中心に対応します。</p>
                 </div>
+                <p class="ses-contract-note">ー 契約形態は準委任契約を中心に対応 ー</p>
 
                 <h3 class="detail-subtitle fade-in">主な対応業務</h3>
                 <div class="detail-grid detail-grid--2">
@@ -258,7 +270,7 @@
 
         <!-- ========== 対応実績（白） ========== -->
         <section id="works" class="detail-section" aria-labelledby="worksTitle">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-header fade-in">
                     <span class="section-overline">対応実績</span>
                     <h2 class="section-title" id="worksTitle">対応案件事例</h2>
@@ -291,7 +303,7 @@
 
         <!-- ========== SW受託開発・共同研究（薄灰） ========== -->
         <section id="web" class="detail-section detail-section--gray" aria-labelledby="webTitle">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-header fade-in">
                     <span class="section-overline">SW受託開発・共同研究</span>
                     <h2 class="section-title" id="webTitle">小規模開発から技術検証、研究テーマの推進まで。</h2>
@@ -318,7 +330,7 @@
 
         <!-- ========== AI活用支援（黒） ========== -->
         <section id="ai" class="detail-section detail-section--dark" aria-labelledby="aiTitle">
-            <div class="container">
+            <div class="container container--wide">
                 <div class="section-header fade-in">
                     <span class="section-overline">AI活用支援</span>
                     <h2 class="section-title" id="aiTitle">企業の課題に応じたAI導入・活用を支援します。</h2>
@@ -360,55 +372,7 @@
             </div>
         </section>
 
-        <!-- ========== 採用・協業情報（白） ========== -->
-        <section id="recruit" class="detail-section" aria-labelledby="recruitTitle">
-            <div class="container">
-                <div class="section-header recruitment-section-header">
-                    <span class="section-overline">採用・協業情報</span>
-                    <h2 class="section-title" id="recruitTitle">人材・協業のご相談は、案件に応じて承ります。</h2>
-                    <p class="detail-lead">
-                        インフラ、セキュリティ、PM/PMO、ソフトウェア開発、AI(FDE)の技術者と、協業パートナーを募集しています。応募・協業のご相談は全国から可能です。
-                    </p>
-                </div>
 
-                <div class="recruitment-orbit" role="group" aria-label="テックアスターを中心とした5つの募集分野">
-                    <article class="recruitment-orbit__node recruitment-orbit__node--infra">
-                        <span class="recruitment-orbit__number">01</span>
-                        <h3>インフラ</h3>
-                        <p>ネットワーク・通信・サーバー・クラウド</p>
-                    </article>
-                    <article class="recruitment-orbit__node recruitment-orbit__node--security">
-                        <span class="recruitment-orbit__number">02</span>
-                        <h3>セキュリティ</h3>
-                        <p>SOC/CSIRT、EDR/XDR、脆弱性対策</p>
-                    </article>
-                    <article class="recruitment-orbit__node recruitment-orbit__node--pm">
-                        <span class="recruitment-orbit__number">03</span>
-                        <h3>PM/PMO</h3>
-                        <p>計画・進捗・課題管理、ベンダー調整</p>
-                    </article>
-                    <article class="recruitment-orbit__node recruitment-orbit__node--software">
-                        <span class="recruitment-orbit__number">04</span>
-                        <h3>ソフトウェア開発</h3>
-                        <p>業務システム、Web・アプリ、組み込み</p>
-                    </article>
-                    <article class="recruitment-orbit__node recruitment-orbit__node--ai">
-                        <span class="recruitment-orbit__number">05</span>
-                        <h3>AI(FDE)</h3>
-                        <p>Python・LLM・RAG・AIエージェントで業務課題を解決</p>
-                    </article>
-                </div>
-
-                <div class="recruitment-link-box">
-                    <div>
-                        <span class="recruitment-link-box__eyebrow">RECRUITMENT &amp; PARTNERS</span>
-                        <h3>案件に応じた人材・協業のご相談</h3>
-                        <p class="recruitment-link-box__note">※ 上記以外の分野も、まずはご相談ください。</p>
-                    </div>
-                    <a href="./recruitment/index.html" class="btn btn--outline-dark">募集の詳細を見る <span aria-hidden="true">→</span></a>
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -429,8 +393,12 @@
                     <ul class="footer__nav-list">
                         <li><a href="#ses">ITプロジェクト支援</a></li>
                         <li><a href="#web">SW受託開発・共同研究</a></li>
-                        <li><a href="#ai">AI活用支援</a></li>
-                        <li><a href="ai/index.html">FDE支援</a></li>
+                        <li class="footer__nav-item--parent">
+                            <a href="#ai">AI活用支援</a>
+                            <ul class="footer__nav-sublist">
+                                <li><a href="ai/index.html">- FDE支援</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
@@ -438,7 +406,7 @@
                     <h4 class="footer__nav-title">会社案内</h4>
                     <ul class="footer__nav-list">
                         <li><a href="#works">対応案件事例</a></li>
-                        <li><a href="#recruit">採用・協業情報</a></li>
+                        <li><a href="recruitment/index.html">採用・協業情報</a></li>
                         <li><a href="representative.html">会社概要</a></li>
                     </ul>
                 </div>

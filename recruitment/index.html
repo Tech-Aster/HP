@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="株式会社テックアスターの人材・協業パートナー募集。インフラ、セキュリティ、PM/PMO、ソフトウェア開発、AI(FDE)の募集分野をご案内します。">
+    <meta name="description" content="株式会社テックアスターの人材・協業パートナー募集。インフラ、セキュリティ、PM/PMO、ソフトウェア開発、AI(FDE)、その他のIT分野の募集をご案内します。">
     <meta property="og:title" content="人材・協業パートナー募集 | 株式会社テックアスター">
-    <meta property="og:description" content="インフラ、セキュリティ、PM/PMO、ソフトウェア開発、AI(FDE)の募集分野や働き方をご案内します。">
+    <meta property="og:description" content="インフラ、セキュリティ、PM/PMO、ソフトウェア開発、AI(FDE)、その他のIT分野の募集や働き方をご案内します。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.techaster.com/recruitment/">
-    <title>人材・協業パートナー募集 | RECRUITMENT &amp; PARTNERS | 株式会社テックアスター</title>
+    <title>人材・協業パートナー募集 | 株式会社テックアスター</title>
     <link rel="canonical" href="https://www.techaster.com/recruitment/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +37,28 @@
             </button>
             <ul class="navbar__menu" id="primaryNav" role="list">
                 <li><a href="../index.html#home">ホーム</a></li>
-                <li><a href="../index.html#services">サービス</a></li>
-                <li><a href="../index.html#recruit">採用・協業</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="../index.html#services">サービス</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="サービスメニューを開く" aria-expanded="false" aria-controls="serviceNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="serviceNavMenu" role="list">
+                        <li><a href="../index.html#ses">ITプロジェクト支援</a></li>
+                        <li><a href="../index.html#web">SW受託開発・共同研究</a></li>
+                        <li class="navbar__submenu-parent">
+                            <a href="../index.html#ai">AI活用支援</a>
+                            <ul class="navbar__submenu-child" role="list">
+                                <li><a href="../ai/index.html">- FDE支援</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="index.html">採用・協業</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="採用・協業メニューを開く" aria-expanded="false" aria-controls="recruitNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="recruitNavMenu" role="list">
+                        <li><a href="#recruitment-fields-title" aria-current="page">募集職種</a></li>
+                        <li><a href="apply.html">応募・選考</a></li>
+                    </ul>
+                </li>
                 <li><a href="../contact.html" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -46,7 +66,7 @@
     <main id="main-content" class="recruitment-page recruitment-page--with-nav">
         <div class="container">
             <header class="recruitment-page__header">
-                <p class="section-overline">RECRUITMENT &amp; PARTNERS</p>
+                <p class="section-overline">人材・協業募集</p>
                 <h1 class="recruitment-page__title">人材・協業パートナー募集</h1>
                 <p class="detail-lead">当社は、代表者を窓口に、案件に応じて協業先と連携して事業を行う小規模な会社です。案件ごとに、経験と専門性が合う方に参画いただきます。</p>
             </header>
@@ -58,7 +78,7 @@
                         <span class="recruitment-condition__label">技術者の方</span>
                         <h3>人材募集</h3>
                         <p>契約社員・正社員、または業務委託(フリーランス・個人事業主・副業)として案件に参画いただきます。</p>
-                        <p><strong>雇用期間・勤務地・報酬・稼働日数・支払条件:</strong> ご希望と案件に応じて、面談で個別にお伝えします。</p>
+                        <p><strong>契約形態・担当業務・勤務地・報酬・稼働日数など:</strong> ご希望を伺ったうえで、面談時に個別にご説明します。</p>
                         <a href="apply.html" class="btn btn--dark">応募方法・選考の流れ <span aria-hidden="true">→</span></a>
                     </article>
                     <article class="recruitment-condition">
@@ -77,7 +97,37 @@
 
             <section class="recruitment-page__section" aria-labelledby="recruitment-fields-title">
                 <h2 class="detail-subtitle" id="recruitment-fields-title">募集分野</h2>
-                <p class="detail-text recruitment-page__note">経験年数の一律基準は設けていません。各分野で活かせる経験やスキルは、案件ごとにご案内します。</p>
+                <p class="detail-text recruitment-page__note">インフラ、セキュリティ、PM/PMO、ソフトウェア開発、AI(FDE)のほか、その他のIT分野も対象です。経験年数の一律基準は設けず、経験やスキルを案件ごとに確認します。</p>
+                <div class="recruitment-orbit" role="group" aria-label="テックアスターを中心とした5つの募集分野">
+                    <article class="recruitment-orbit__node recruitment-orbit__node--infra">
+                        <span class="recruitment-orbit__number">01</span>
+                        <h3>インフラ</h3>
+                        <p>ネットワーク・通信・サーバー・クラウド</p>
+                    </article>
+                    <article class="recruitment-orbit__node recruitment-orbit__node--security">
+                        <span class="recruitment-orbit__number">02</span>
+                        <h3>セキュリティ</h3>
+                        <p>SOC/CSIRT、EDR/XDR、脆弱性対策</p>
+                    </article>
+                    <article class="recruitment-orbit__node recruitment-orbit__node--pm">
+                        <span class="recruitment-orbit__number">03</span>
+                        <h3>PM/PMO</h3>
+                        <p>計画・進捗・課題管理、ベンダー調整</p>
+                    </article>
+                    <article class="recruitment-orbit__node recruitment-orbit__node--software">
+                        <span class="recruitment-orbit__number">04</span>
+                        <h3>ソフトウェア開発</h3>
+                        <p>業務システム、Web・アプリ、組み込み</p>
+                    </article>
+                    <article class="recruitment-orbit__node recruitment-orbit__node--ai">
+                        <span class="recruitment-orbit__number">05</span>
+                        <h3>AI(FDE)</h3>
+                        <p>Python・LLM・RAG・AIエージェントで業務課題を解決</p>
+                    </article>
+                    <div class="recruitment-orbit__center" aria-hidden="true">
+                        <img src="../assets/icons/favicon.png" alt="">
+                    </div>
+                </div>
                 <div class="recruitment-fields">
                     <article class="recruitment-field">
                         <h3>インフラ</h3>
@@ -123,35 +173,43 @@
                         <p><strong
                                 class="recruitment-experience-label recruitment-experience-label--preferred">活かせる分野</strong><span>LLM・RAG・AIエージェントの設計・開発、MCP等の活用、業務課題の整理からAI導入までの推進。</span>
                         </p>
-                        <p class="recruitment-field__definition">FDEは、お客様の現場に入り、業務課題の整理からAI導入まで担当するエンジニアです。</p>
+                        <p class="recruitment-field__definition">※ FDEは、お客様の現場に入り、業務課題の整理からAI導入まで担当するエンジニアです。</p>
+                    </article>
+                    <article class="recruitment-field recruitment-field--other">
+                        <h3>その他技術者</h3>
+                        <p><strong class="recruitment-experience-label recruitment-experience-label--required">求める経験</strong><span>その他のIT分野での実務経験（例：データベース、テスト・品質保証、運用監視・ヘルプデスク、データ分析、システム企画・要件定義）</span></p>
+                        <p><strong class="recruitment-experience-label recruitment-experience-label--preferred">活かせる分野</strong><span>分野や技術は問いません。これまでの経験や取り組んだ内容をお知らせください。面談では、ご経験や希望する働き方を伺い、仕事内容や役割をご説明します。</span></p>
                     </article>
                 </div>
             </section>
 
             <section class="recruitment-page__section" aria-labelledby="recruitment-welcome-title">
                 <h2 class="detail-subtitle" id="recruitment-welcome-title">歓迎する方</h2>
-                <ul class="recruitment-list">
-                    <li>専門分野の経験を活かして、案件に参画したい方</li>
-                    <li>上流工程や新しい技術領域に挑戦したい方</li>
-                    <li>再就職やキャリアの再スタートを考えている方</li>
-                    <li>日本語・英語・中国語などの語学力を活かしたい方</li>
-                    <li>業務委託(フリーランス・副業)として案件に参画したい方</li>
-                    <li>外国籍の方は、日本での就労に必要な在留資格をお持ちの方</li>
-                </ul>
-                <p class="detail-text recruitment-page__note">経験年数や年齢ではなく、専門性と実務経験を重視します。</p>
+                <div class="recruitment-welcome">
+                    <div>
+                        <ul class="recruitment-list">
+                            <li>専門分野の経験を活かして、案件に参画したい方</li>
+                            <li>上流工程や新しい技術領域に挑戦したい方</li>
+                            <li>再就職やキャリアの再スタートを考えている方</li>
+                            <li>日本語・英語・中国語などの語学力を活かしたい方</li>
+                            <li>業務委託(フリーランス・副業)として案件に参画したい方</li>
+                            <li>外国籍の方は、日本での就労に必要な在留資格をお持ちの方</li>
+                        </ul>
+                        <p class="detail-text recruitment-page__note">経験年数や年齢ではなく、専門性と実務経験を重視します。</p>
+                    </div>
+                    <div class="recruitment-welcome__action">
+                        <a href="apply.html" class="btn btn--strike recruitment-welcome__button">応募方法・選考の流れ <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
             </section>
 
             <section class="recruitment-page__section" aria-labelledby="recruitment-workstyle-title">
                 <h2 class="detail-subtitle" id="recruitment-workstyle-title">働き方</h2>
                 <ul class="recruitment-list">
-                    <li>全国から応募できます。リモート可否は案件ごとに異なり、応募時のご希望と照らして相談します。</li>
-                    <li>案件がすぐにない場合は、状況をお伝えします。</li>
+                    <li>関東以外にお住まいの方も応募できます。リモート可否は案件ごとに異なるため、ご希望を伺い案件に応じて相談します。</li>
                 </ul>
             </section>
 
-            <div class="recruitment-page__cta">
-                <a href="apply.html" class="btn btn--dark">応募方法・選考の流れ <span aria-hidden="true">→</span></a>
-            </div>
         </div>
     </main>
 

@@ -27,8 +27,28 @@
             </button>
             <ul class="navbar__menu" id="primaryNav" role="list">
                 <li><a href="index.html#home">ホーム</a></li>
-                <li><a href="index.html#services">サービス</a></li>
-                <li><a href="index.html#recruit">採用・協業</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="index.html#services">サービス</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="サービスメニューを開く" aria-expanded="false" aria-controls="serviceNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="serviceNavMenu" role="list">
+                        <li><a href="index.html#ses">ITプロジェクト支援</a></li>
+                        <li><a href="index.html#web">SW受託開発・共同研究</a></li>
+                        <li class="navbar__submenu-parent">
+                            <a href="index.html#ai">AI活用支援</a>
+                            <ul class="navbar__submenu-child" role="list">
+                                <li><a href="ai/index.html">- FDE支援</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="recruitment/index.html">採用・協業</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="採用・協業メニューを開く" aria-expanded="false" aria-controls="recruitNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="recruitNavMenu" role="list">
+                        <li><a href="recruitment/index.html#recruitment-fields-title">募集職種</a></li>
+                        <li><a href="recruitment/apply.html">応募・選考</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -40,10 +60,11 @@
                 <div class="contact-grid">
                     <div class="contact-info fade-in">
                         <div class="section-header">
-                            <span class="section-overline">CONTACT</span>
+                            <span class="section-overline">ご相談窓口</span>
                             <h1 class="section-title" id="contactTitle">お問い合わせ</h1>
+                            <img class="contact-info__image" src="assets/icons/Img-hp2.jpg" alt="" aria-hidden="true">
                         </div>
-                        <p class="contact-info__lead">ITプロジェクト支援、SW受託開発・共同研究、AI活用支援、人材募集、協業についてのご相談を受け付けています。ご相談内容やご希望の時期は、決まっている範囲でお知らせください。内容が固まっていなくても、ご連絡いただけます。確認のうえ、ご連絡します。</p>
+                        <p class="contact-info__lead">ITプロジェクト支援、SW受託開発・共同研究、AI活用支援、人材募集、協業についてのご相談を受け付けています。<br>ご相談内容やご希望の時期は、決まっている範囲でお知らせください。</p>
                         <div class="contact-info__items">
                             <div class="contact-info-item">
                                 <div class="contact-info-item__icon" aria-hidden="true">

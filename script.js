@@ -301,27 +301,28 @@ function initMobileNav() {
 }
 
 function initAIDropdown() {
-    const dropdown = document.querySelector('.navbar__dropdown');
-    const toggle = dropdown?.querySelector('.navbar__dropdown-toggle');
-    if (!dropdown || !toggle) return;
+    document.querySelectorAll('.navbar__dropdown').forEach(dropdown => {
+        const toggle = dropdown.querySelector('.navbar__dropdown-toggle');
+        if (!toggle) return;
 
-    toggle.addEventListener('click', () => {
-        const open = dropdown.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', String(open));
-    });
+        toggle.addEventListener('click', () => {
+            const open = dropdown.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', String(open));
+        });
 
-    dropdown.addEventListener('keydown', event => {
-        if (event.key === 'Escape') {
-            dropdown.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.focus();
-        }
-    });
+        dropdown.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                dropdown.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.focus();
+            }
+        });
 
-    dropdown.querySelectorAll('.navbar__submenu a').forEach(link => {
-        link.addEventListener('click', () => {
-            dropdown.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
+        dropdown.querySelectorAll('.navbar__submenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                dropdown.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
         });
     });
 }
@@ -337,7 +338,8 @@ function initSmoothScroll() {
         const target = document.getElementById(id);
         if (!target) return;
         e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - OFFSET;
+        const targetOffset = id === 'recruitment-fields-title' ? 128 : OFFSET;
+        const top = target.getBoundingClientRect().top + window.scrollY - targetOffset;
         window.scrollTo({ top, behavior: 'smooth' });
         target.setAttribute('tabindex', '-1');
         target.focus({ preventScroll: true });

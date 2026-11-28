@@ -17,87 +17,84 @@
     <link rel="stylesheet" href="../style.css">
     <style>
         .ai-business-page {
-            --ai-ink: #071321;
-            --ai-panel: #0c1c2e;
-            --ai-line: #24384d;
-            --ai-cyan: #43d9ff;
-            --ai-blue: #557cff;
-            --ai-muted: #aab9ca;
+            --ai-ink: #22272b;
+            --ai-panel: #fff;
+            --ai-line: #d7dade;
+            --ai-cyan: #d9233c;
+            --ai-blue: #5c6871;
+            --ai-muted: #65717a;
             overflow: hidden;
         }
-        .ai-business-page .container { max-width: 1240px; }
-        .ai-business-page .detail-section { padding: clamp(3.25rem, 6vw, 5.5rem) 0; }
-        .ai-business-page .section-header { margin-bottom: 2rem; }
-        .ai-business-page .section-title { font-size: clamp(1.65rem, 2.8vw, 2.35rem); line-height: 1.4; }
+        .ai-business-page .container { max-width: 1280px; }
+        .ai-business-page .detail-section { padding: clamp(3rem, 4.5vw, 4.25rem) 0; }
+        .ai-business-page .section-header { margin-bottom: 1.5rem; }
+        .ai-business-page .section-title { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.35; }
         .ai-page-hero {
             position: relative;
-            isolation: isolate;
-            min-height: 570px;
-            padding: 7.2rem 0 4.25rem;
+            display: flex;
+            min-height: 820px;
+            align-items: center;
+            padding: 7rem 0 5rem;
             color: #fff;
-            background: radial-gradient(ellipse at 78% 48%, rgba(42, 99, 170, .26), transparent 42%), linear-gradient(125deg, #06101c, #0b1b2d 62%, #081422);
+            background: var(--ai-ink);
         }
-        .ai-page-hero::before {
-            position: absolute; z-index: -1; inset: 0; content: "";
-            background-image: linear-gradient(rgba(115, 155, 196, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(115, 155, 196, .06) 1px, transparent 1px);
-            background-size: 54px 54px;
-            mask-image: linear-gradient(90deg, transparent, #000 48%, #000);
-        }
-        .ai-page-hero__layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(330px, .85fr); align-items: center; gap: clamp(2.5rem, 6vw, 6rem); }
-        .ai-page-hero .section-overline { display: inline-flex; align-items: center; gap: .65rem; margin-bottom: 1.35rem; color: var(--ai-cyan); font: 800 .76rem var(--font-ui); letter-spacing: .2em; }
-        .ai-page-hero .section-overline::before { width: 1.7rem; height: 2px; background: var(--ai-cyan); content: ""; }
-        .ai-page-hero h1 { max-width: 720px; margin: 0 0 1.4rem; font-size: clamp(2.25rem, 4.4vw, 3.55rem); line-height: 1.2; font-weight: 900; letter-spacing: -.04em; }
-        .ai-page-hero h1 span { color: var(--ai-cyan); white-space: nowrap; }
-        .ai-page-hero__copy > p { max-width: 690px; margin: 0; color: #c4d0dd; font-size: clamp(1rem, 1.25vw, 1.12rem); line-height: 2; }
+        .ai-page-hero__layout { display: grid; width: 100%; grid-template-columns: minmax(0, 1.05fr) minmax(380px, .85fr); align-items: center; gap: clamp(3rem, 7vw, 7rem); }
+        .ai-page-hero .section-overline { display: none; }
+        .ai-page-hero h1 { max-width: 760px; margin: 0 0 2rem; font-size: clamp(2.8rem, 5vw, 4.35rem); line-height: 1.22; font-weight: 900; letter-spacing: -.045em; }
+        .ai-page-hero h1 span { color: #ff7a89; white-space: nowrap; }
+        .ai-page-hero__copy > p { max-width: 740px; margin: 0; color: #d3d7da; font-size: clamp(1.05rem, 1.35vw, 1.2rem); line-height: 2; }
         .ai-page-hero__action { display: flex; justify-content: flex-end; margin-top: 2rem; }
-        .ai-page-hero__action .btn { border-color: var(--ai-cyan); background: var(--ai-cyan); color: #04111d; }
-        .ai-page-hero__action .btn:hover { border-color: #fff; background: #fff; }
-        .ai-hero-visual { position: relative; padding: 1.4rem; border: 1px solid rgba(140, 186, 226, .28); background: rgba(3, 12, 22, .5); box-shadow: 0 24px 80px rgba(0, 0, 0, .24); }
-        .ai-hero-visual__top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid rgba(140, 186, 226, .18); color: #93a9be; font: 700 .68rem var(--font-ui); letter-spacing: .13em; }
-        .ai-hero-visual__status { display: inline-flex; align-items: center; gap: .45rem; color: var(--ai-cyan); letter-spacing: .08em; }
-        .ai-hero-visual__status::before { width: .4rem; height: .4rem; border-radius: 50%; background: currentColor; box-shadow: 0 0 12px currentColor; content: ""; }
-        .ai-hero-visual__steps { display: grid; gap: .65rem; margin: 1rem 0; }
-        .ai-hero-visual__step { display: grid; grid-template-columns: 2.4rem 1fr auto; align-items: center; gap: .8rem; min-height: 3.35rem; padding: .65rem .75rem; border: 1px solid rgba(140, 186, 226, .15); background: rgba(255, 255, 255, .035); }
-        .ai-hero-visual__step b { color: var(--ai-cyan); font: 800 .72rem var(--font-ui); }
-        .ai-hero-visual__step strong { color: #f4f8fc; font-size: .88rem; }
-        .ai-hero-visual__step small { color: #8298ad; font: 600 .65rem var(--font-ui); letter-spacing: .06em; }
-        .ai-hero-visual__foot { display: flex; justify-content: space-between; color: #8ea4b9; font: 600 .66rem var(--font-ui); letter-spacing: .08em; }
-        .ai-section-header { margin-bottom: 1.75rem !important; }
-        .ai-section-header .section-overline { display: block; margin-bottom: .55rem; color: #2573b9; font: 800 .72rem var(--font-ui); letter-spacing: .18em; }
-        .ai-section-heading { display: flex; align-items: baseline; gap: 1rem; margin-bottom: .55rem; }
-        .ai-section-heading::before { flex: 0 0 auto; color: #2586c5; content: attr(data-index); font: 800 .82rem var(--font-ui); letter-spacing: .08em; }
+        .ai-page-hero__action .btn { border-color: var(--ai-cyan); background: var(--ai-cyan); color: #fff; }
+        .ai-page-hero__action .btn:hover { border-color: #fff; background: #fff; color: var(--ai-ink); }
+        .ai-hero-visual { position: relative; padding: 1.5rem; border: 1px solid #cbd0d3; border-top: 4px solid var(--ai-cyan); background: #fff; box-shadow: 0 20px 50px rgba(24, 31, 36, .09); }
+        .ai-hero-visual__top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #e0e3e5; color: #515d64; font: 700 .82rem var(--font-jp); letter-spacing: .06em; }
+        .ai-hero-visual__status { display: inline-flex; align-items: center; gap: .45rem; color: var(--ai-cyan); letter-spacing: .04em; }
+        .ai-hero-visual__status::before { width: .45rem; height: .45rem; border-radius: 50%; background: currentColor; content: ""; }
+        .ai-hero-visual__steps { display: grid; gap: .65rem; margin: 1.15rem 0; }
+        .ai-hero-visual__step { display: grid; grid-template-columns: 2.7rem minmax(0, 1fr) auto; align-items: center; gap: .8rem; min-height: 4.15rem; padding: .75rem .9rem; border: 1px solid #e1e4e6; background: #f7f8f8; }
+        .ai-hero-visual__step b { color: var(--ai-cyan); font: 800 .86rem var(--font-ui); }
+        .ai-hero-visual__step strong { color: #202529; font-size: 1.05rem; }
+        .ai-hero-visual__step small { color: #69757d; font: 600 .78rem var(--font-jp); letter-spacing: .02em; }
+        .ai-hero-visual__foot { display: flex; justify-content: space-between; color: #59636a; font: 600 .8rem var(--font-jp); letter-spacing: .04em; }
+        .ai-section-header { margin-bottom: 1.5rem !important; }
+        .ai-section-header .section-overline { display: block; margin-bottom: .65rem; color: var(--ai-cyan); font: 800 1.08rem var(--font-jp); letter-spacing: .04em; }
+        .ai-section-heading { display: flex; align-items: baseline; gap: 1rem; margin-bottom: .65rem; }
+        .ai-section-heading::before { flex: 0 0 auto; color: var(--ai-cyan); content: attr(data-index); font: 800 .9rem var(--font-ui); letter-spacing: .08em; }
         .ai-section-heading .section-title { margin: 0; }
-        .ai-page-copy { max-width: 900px; margin: .65rem 0 0; color: #4f6073; font-size: 1rem; line-height: 1.9; }
-        .ai-section--dark { position: relative; background: var(--ai-ink); color: #fff; }
-        .ai-section--dark .section-overline, .ai-section--dark .ai-section-heading::before { color: var(--ai-cyan); }
-        .ai-section--dark .ai-page-copy { color: #b7c6d6; }
+        .ai-page-copy { width: 100%; max-width: none; margin: .65rem 0 0; color: #555f65; font-size: 1.05rem; line-height: 1.9; }
+        .ai-section--flow { background: #f2f3f4; color: #202529; }
+        .ai-section--flow .section-overline, .ai-section--flow .ai-section-heading::before { color: var(--ai-cyan); }
+        .ai-section--flow .ai-page-copy { color: #555f65; }
+        .ai-section--soft { background: #eff1f2; color: #1b2023; }
+        .ai-section--soft .ai-section-header .section-overline, .ai-section--soft .ai-section-heading::before { color: var(--ai-cyan); }
         .ai-page-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .75rem; counter-reset: flow; }
-        .ai-page-flow article { position: relative; min-height: 190px; padding: 1.2rem 1.05rem; border: 1px solid #20354b; background: linear-gradient(155deg, #102238, #0b1929); }
-        .ai-page-flow article:not(:last-child)::after { position: absolute; z-index: 1; top: 1.75rem; right: -.55rem; width: 1rem; height: 1rem; border-top: 1px solid var(--ai-cyan); border-right: 1px solid var(--ai-cyan); background: var(--ai-ink); content: ""; transform: rotate(45deg); }
-        .ai-page-flow article::before { display: block; margin-bottom: 1.05rem; counter-increment: flow; content: "STEP 0" counter(flow); color: var(--ai-cyan); font: 800 .7rem var(--font-ui); letter-spacing: .12em; }
-        .ai-page-flow h3 { margin-bottom: .6rem; color: #f5f8fc; font-size: .98rem; line-height: 1.55; }
-        .ai-page-flow p { margin: 0; color: #a9b9ca; font-size: .83rem; line-height: 1.8; }
-        .ai-page-statement { position: relative; width: 100%; margin-top: 1.75rem; padding: 1.4rem 1.65rem; border: 1px solid #b8dff0; background: linear-gradient(100deg, #eaf8fc, #f5faff); }
-        .ai-page-statement span { display: block; margin-bottom: .4rem; color: #087ca6; font: 800 .68rem var(--font-ui); letter-spacing: .18em; }
-        .ai-page-statement p { margin: 0; color: #2b4357; font-size: 1rem; line-height: 1.9; }
-        .ai-page-statement strong { color: #071321; }
-        .ai-page-cards .detail-card { border: 1px solid #d7e1ea; border-top: 3px solid #3a8ec4; box-shadow: 0 8px 26px rgba(17, 43, 68, .045); }
-        .ai-page-cards .detail-card__title { color: #10283e; }
-        .ai-page-cards--roles .detail-card:nth-child(1) { border-top-color: #37c5e8; }
-        .ai-page-cards--roles .detail-card:nth-child(2) { border-top-color: #6682ff; }
-        .ai-page-cards--roles .detail-card:nth-child(3) { border-top-color: #e1a647; }
-        .ai-section--dark .ai-page-cards .detail-card { border-color: #233a51; background: #0d1e30; }
-        .ai-section--dark .ai-page-cards .detail-card__title { color: #f4f8fc; }
-        .ai-section--dark .ai-page-cards .detail-text { color: #b7c6d6; }
-        .ai-section--dark .detail-list li { color: #bfcede; border-color: #1e3348; }
-        .ai-page-cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 0; padding: 1.65rem 1.8rem; border: 1px solid #21415d; background: linear-gradient(120deg, #0b1b2d, #102b43); color: #fff; }
-        .ai-page-cta .section-overline { color: var(--ai-cyan); font: 800 .7rem var(--font-ui); letter-spacing: .16em; }
-        .ai-page-cta h3 { margin: .45rem 0; color: #fff; }
-        .ai-page-cta p { margin: 0; color: #b7c6d6; }
+        .ai-page-flow article { position: relative; min-height: 185px; padding: 1.15rem 1rem; border: 1px solid #d7dade; background: #fff; }
+        .ai-page-flow article:not(:last-child)::after { position: absolute; z-index: 1; top: 1.9rem; right: -.55rem; width: 1rem; height: 1rem; border-top: 1px solid #c5c9cc; border-right: 1px solid #c5c9cc; background: #f2f3f4; content: ""; transform: rotate(45deg); }
+        .ai-page-flow article::before { display: block; margin-bottom: 1rem; counter-increment: flow; content: "工程 0" counter(flow); color: var(--ai-cyan); font: 800 .8rem var(--font-jp); letter-spacing: .04em; }
+        .ai-page-flow h3 { margin-bottom: .65rem; color: #252b2f; font-size: 1.08rem; line-height: 1.55; }
+        .ai-page-flow p { margin: 0; color: #59636a; font-size: 1rem; line-height: 1.75; }
+        .ai-page-statement { position: relative; width: 100%; margin-top: 1.4rem; padding: 1.25rem 1.5rem; border: 1px solid #d7dade; border-left: 4px solid var(--ai-cyan); background: #f2f3f4; }
+        .ai-page-statement span { display: block; margin-bottom: .5rem; color: var(--ai-cyan); font: 800 1.02rem var(--font-jp); letter-spacing: .04em; }
+        .ai-page-statement p { margin: 0; color: #333b40; font-size: 1.05rem; line-height: 1.85; }
+        .ai-page-statement strong { color: #171a1d; }
+        .ai-page-cards .detail-card { border: 1px solid #d7dade; border-top: 3px solid var(--ai-cyan); box-shadow: 0 8px 24px rgba(24, 31, 36, .045); }
+        .ai-page-cards { gap: 1rem; margin-bottom: 0; }
+        .ai-page-cards .detail-card { padding: 1.45rem; }
+        .ai-page-cards .detail-card__title { color: #252b2f; font-size: 1.1rem; }
+        .ai-page-cards .detail-text { font-size: 1rem; line-height: 1.8; }
+        .ai-page-cards--roles .detail-card:nth-child(1), .ai-page-cards--roles .detail-card:nth-child(2), .ai-page-cards--roles .detail-card:nth-child(3) { border-top-color: var(--ai-cyan); }
+        .ai-section--soft .ai-page-cards .detail-card { border-color: #d7dade; background: #fff; }
+        .ai-section--soft .ai-page-cards .detail-card__title { color: #252b2f; }
+        .ai-section--soft .detail-list li { color: #465057; border-color: #d8dcdf; }
+        .ai-page-cta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 0; padding: 1.4rem 1.6rem; border: 1px solid #d7dade; border-left: 4px solid var(--ai-cyan); background: #f0f1f2; color: #202529; }
+        .ai-page-cta .section-overline { color: var(--ai-cyan); font: 800 1.05rem var(--font-jp); letter-spacing: .04em; }
+        .ai-page-cta h3 { margin: .45rem 0; color: #171a1d; font-size: 1.3rem; }
+        .ai-page-cta p { margin: 0; color: #515d64; font-size: 1rem; }
         .ai-page-cta .btn { flex: 0 0 auto; }
-        @media (max-width: 1000px) { .ai-page-hero__layout { grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); gap: 2rem; } .ai-page-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ai-page-flow article:nth-child(3)::after { display: none; } }
-        @media (max-width: 760px) { .ai-page-hero { min-height: 0; padding: 6rem 0 3rem; } .ai-page-hero__layout { grid-template-columns: 1fr; } .ai-hero-visual { max-width: 540px; width: 100%; margin-inline: auto; } .ai-page-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ai-page-flow article:nth-child(3)::after { display: block; } .ai-page-flow article:nth-child(even)::after { display: none; } .ai-page-cta { align-items: flex-start; flex-direction: column; } }
-        @media (max-width: 520px) { .ai-page-hero h1 { font-size: clamp(1.75rem, 8.5vw, 2.6rem); } .ai-page-flow { grid-template-columns: 1fr; } .ai-page-flow article { min-height: 0; } .ai-page-flow article::after { display: none !important; } .ai-page-hero__action { margin-top: 1.4rem; } .ai-page-statement { padding: 1rem 1.1rem; } .ai-section-heading { align-items: flex-start; gap: .65rem; } }
+        .ai-page-cta .btn--strike:hover { border-color: #22272b; background: #22272b; color: #fff; }
+        @media (max-width: 1000px) { .ai-page-hero { min-height: 760px; } .ai-page-hero__layout { grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr); gap: 2rem; } .ai-page-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ai-page-flow article:nth-child(3)::after { display: none; } }
+        @media (max-width: 760px) { .ai-page-hero { min-height: 0; padding: 6rem 0 3rem; } .ai-page-hero__layout { grid-template-columns: 1fr; } .ai-hero-visual { max-width: 600px; width: 100%; margin-inline: auto; } .ai-page-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ai-page-flow article:nth-child(3)::after { display: block; } .ai-page-flow article:nth-child(even)::after { display: none; } .ai-page-cta { align-items: flex-start; flex-direction: column; } }
+        @media (max-width: 520px) { .ai-page-hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); } .ai-page-flow { grid-template-columns: 1fr; } .ai-page-flow article { min-height: 0; } .ai-page-flow article::after { display: none !important; } .ai-page-hero__action { margin-top: 1.5rem; } .ai-page-statement { padding: 1rem 1.1rem; } .ai-section-heading { align-items: flex-start; gap: .65rem; } .ai-hero-visual__step { grid-template-columns: 2rem minmax(0,1fr); } .ai-hero-visual__step small { grid-column: 2; } }
     </style>
 </head>
 <body>
@@ -108,8 +105,28 @@
             <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="ナビゲーションを開く"><span class="hamburger" aria-hidden="true"></span></button>
             <ul class="navbar__menu" id="primaryNav" role="list">
                 <li><a href="../index.html#home">ホーム</a></li>
-                <li><a href="../index.html#services">サービス</a></li>
-                <li><a href="../index.html#recruit">採用・協業</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="../index.html#services">サービス</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="サービスメニューを開く" aria-expanded="false" aria-controls="serviceNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="serviceNavMenu" role="list">
+                        <li><a href="../index.html#ses">ITプロジェクト支援</a></li>
+                        <li><a href="../index.html#web">SW受託開発・共同研究</a></li>
+                        <li class="navbar__submenu-parent">
+                            <a href="../index.html#ai">AI活用支援</a>
+                            <ul class="navbar__submenu-child" role="list">
+                                <li><a href="index.html" aria-current="page">- FDE支援</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="../recruitment/index.html">採用・協業</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="採用・協業メニューを開く" aria-expanded="false" aria-controls="recruitNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="recruitNavMenu" role="list">
+                        <li><a href="../recruitment/index.html#recruitment-fields-title">募集職種</a></li>
+                        <li><a href="../recruitment/apply.html">応募・選考</a></li>
+                    </ul>
+                </li>
                 <li><a href="../contact.html" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -118,32 +135,31 @@
         <section class="ai-page-hero" aria-labelledby="aiPageTitle">
             <div class="container ai-page-hero__layout">
                 <div class="ai-page-hero__copy">
-                    <span class="section-overline">FIELD ENGINEERING / AI TRANSFORMATION</span>
                     <h1 id="aiPageTitle">AIを導入する。<br><span>業務の進め方を変える。</span></h1>
                     <p>テックアスターは、企業の業務課題を起点に、業務プロセスの見直しからAI活用の企画・開発・導入までを支援します。AIの機能を導入すること自体を目的とせず、実際の業務に定着し、ビジネス価値につながる仕組みを目指します。</p>
                     <div class="ai-page-hero__action"><a href="../contact.html" class="btn">AI活用について相談する <span aria-hidden="true">→</span></a></div>
                 </div>
                 <div class="ai-hero-visual" aria-hidden="true">
-                    <div class="ai-hero-visual__top"><span>DELIVERY MODEL</span><span class="ai-hero-visual__status">END TO END</span></div>
+                    <div class="ai-hero-visual__top"><span>支援の進め方</span><span class="ai-hero-visual__status">一貫支援</span></div>
                     <div class="ai-hero-visual__steps">
-                        <div class="ai-hero-visual__step"><b>01</b><strong>業務課題の整理</strong><small>DISCOVER</small></div>
-                        <div class="ai-hero-visual__step"><b>02</b><strong>業務プロセス再設計</strong><small>REDESIGN</small></div>
-                        <div class="ai-hero-visual__step"><b>03</b><strong>AI・システム実装</strong><small>BUILD</small></div>
-                        <div class="ai-hero-visual__step"><b>04</b><strong>現場定着・効果検証</strong><small>IMPROVE</small></div>
+                        <div class="ai-hero-visual__step"><b>01</b><strong>業務課題の整理</strong><small>課題把握</small></div>
+                        <div class="ai-hero-visual__step"><b>02</b><strong>業務プロセス再設計</strong><small>業務再設計</small></div>
+                        <div class="ai-hero-visual__step"><b>03</b><strong>AI・システム実装</strong><small>開発・実装</small></div>
+                        <div class="ai-hero-visual__step"><b>04</b><strong>現場定着・効果検証</strong><small>定着・改善</small></div>
                     </div>
-                    <div class="ai-hero-visual__foot"><span>HUMAN + AI + SYSTEM</span><span>01 — 04</span></div>
+                    <div class="ai-hero-visual__foot"><span>人・AI・システム</span><span>01 — 04</span></div>
                 </div>
             </div>
         </section>
 
-        <section id="fde-flow" class="detail-section ai-section--dark" aria-labelledby="fdeFlowTitle">
+        <section id="fde-flow" class="detail-section ai-section--flow" aria-labelledby="fdeFlowTitle">
             <div class="container">
-                <div class="section-header ai-section-header"><span class="section-overline">FDE WORKFLOW</span><div class="ai-section-heading" data-index="01"><h2 class="section-title" id="fdeFlowTitle">課題把握から、導入・改善まで進める</h2></div><p class="ai-page-copy">対話・業務分析から現場検証、本番導入後の改善まで一貫して推進。</p></div>
+                <div class="section-header ai-section-header"><span class="section-overline">FDE支援の流れ</span><div class="ai-section-heading" data-index="01"><h2 class="section-title" id="fdeFlowTitle">課題把握から、導入・改善まで進める</h2></div><p class="ai-page-copy">対話・業務分析から現場検証、本番導入後の改善まで一貫して推進。</p></div>
                 <div class="ai-page-flow">
                     <article><h3>企業との対話・課題把握</h3><p>経営目標、業務課題、目指す成果を明確化。</p></article>
                     <article><h3>業務分析・可視化</h3><p>現行業務、データ、既存システム、ボトルネックを把握。</p></article>
                     <article><h3>AI導入・業務再設計</h3><p>AI・プログラム・人の役割分担、技術構成、成功基準を設計。</p></article>
-                    <article><h3>PoC・開発・現場検証</h3><p>AI Agent、RAG、API連携などを実装・検証。</p></article>
+                    <article><h3>技術実証・開発・現場検証</h3><p>AIエージェント、RAG、API連携などを実装・検証。</p></article>
                     <article><h3>効果検証・本番導入・改善</h3><p>KPI評価、本番導入、運用改善、横展開。</p></article>
                 </div>
             </div>
@@ -151,19 +167,19 @@
 
         <section id="approach" class="detail-section" aria-labelledby="approachTitle">
             <div class="container">
-                <div class="section-header ai-section-header"><span class="section-overline">OUR APPROACH</span><div class="ai-section-heading" data-index="02"><h2 class="section-title" id="approachTitle">業務プロセスを再設計する</h2></div><p class="ai-page-copy">作業を速めるだけでなく、業務の目的と各工程の必要性を確認。「必要な業務」「AIに任せる工程」を整理し、仕事全体の進め方を最適化。</p></div>
+                <div class="section-header ai-section-header"><span class="section-overline">業務再設計の考え方</span><div class="ai-section-heading" data-index="02"><h2 class="section-title" id="approachTitle">業務プロセスを再設計する</h2></div><p class="ai-page-copy">作業を速めるだけでなく、業務の目的と各工程の必要性を確認。「必要な業務」「AIに任せる工程」を整理し、仕事全体の進め方を最適化。</p></div>
                 <div class="detail-grid detail-grid--3 ai-page-cards">
                     <article class="detail-card"><h3 class="detail-card__title">業務の目的から考える</h3><p class="detail-text">既存手順をそのまま自動化せず、業務の目的と工程ごとの必要性を確認。</p></article>
                     <article class="detail-card"><h3 class="detail-card__title">役割を整理する</h3><p class="detail-text">AI、プログラム、人の得意領域を見極め、判断や例外対応も含めて役割を分担。</p></article>
                     <article class="detail-card"><h3 class="detail-card__title">小さく始め、効果を確認する</h3><p class="detail-text">価値の高い業務からPoCを実施。効果と課題を見ながら対象範囲を拡大。</p></article>
                 </div>
-                <aside class="ai-page-statement"><span>OUR PRINCIPLE</span><p>AIを既存業務に付け足すだけではなく、AIを前提に業務のあり方を見直す。<strong>それが、テックアスターの考える実践的なAI活用です。</strong></p></aside>
+                <aside class="ai-page-statement"><span>基本方針</span><p>AIを既存業務に付け足すだけではなく、AIを前提に業務のあり方を見直す。<strong>それが、テックアスターの考える実践的なAI活用です。</strong></p></aside>
             </div>
         </section>
 
-        <section id="roles" class="detail-section ai-section--dark" aria-labelledby="rolesTitle">
+        <section id="roles" class="detail-section ai-section--soft" aria-labelledby="rolesTitle">
             <div class="container">
-                <div class="section-header ai-section-header"><span class="section-overline">HUMAN + AI + SYSTEM</span><div class="ai-section-heading" data-index="03"><h2 class="section-title" id="rolesTitle">AI・プログラム・人の役割を設計する</h2></div><p class="ai-page-copy">以下は役割分担の一例。実際の分担は、業務の性質やリスクに応じて設計。</p></div>
+                <div class="section-header ai-section-header"><span class="section-overline">人・AI・システム</span><div class="ai-section-heading" data-index="03"><h2 class="section-title" id="rolesTitle">AI・プログラム・人の役割を設計する</h2></div><p class="ai-page-copy">以下は役割分担の一例。実際の分担は、業務の性質やリスクに応じて設計。</p></div>
                 <div class="detail-grid detail-grid--3 ai-page-cards ai-page-cards--roles">
                     <article class="detail-card ai-page-role"><h3 class="detail-card__title">AIの活用（例）</h3><ul class="detail-list"><li>文章・情報の理解と要約</li><li>問い合わせ内容の分類</li><li>情報抽出・文章生成</li><li>複数ステップの実行支援</li></ul></article>
                     <article class="detail-card ai-page-role"><h3 class="detail-card__title">プログラム処理（例）</h3><ul class="detail-list"><li>金額・数量などの計算</li><li>在庫・データの照合</li><li>入力値や業務ルールの検証</li><li>業務システムとの連携・更新</li></ul></article>
@@ -174,11 +190,11 @@
 
         <section id="services" class="detail-section" aria-labelledby="aiServicesTitle">
             <div class="container">
-                <div class="section-header ai-section-header"><span class="section-overline">OUR SERVICES</span><div class="ai-section-heading" data-index="04"><h2 class="section-title" id="aiServicesTitle">現場に定着させ、成果につなげる</h2></div><p class="ai-page-copy">企業の状況や導入段階に応じ、必要な支援を組み合わせて提供。</p></div>
+                <div class="section-header ai-section-header"><span class="section-overline">主な支援内容</span><div class="ai-section-heading" data-index="04"><h2 class="section-title" id="aiServicesTitle">現場に定着させ、成果につなげる</h2></div><p class="ai-page-copy">企業の状況や導入段階に応じ、必要な支援を組み合わせて提供。</p></div>
                 <div class="detail-grid detail-grid--3 ai-page-cards">
                     <article class="detail-card"><h3 class="detail-card__title">AI業務診断</h3><p class="detail-text">業務ヒアリング、現状プロセスの可視化、課題整理、AI適用可能性の評価。</p></article>
                     <article class="detail-card"><h3 class="detail-card__title">AI導入企画・業務再設計</h3><p class="detail-text">業務フローの見直し、AI・人・システムの役割分担、導入ロードマップ・PoC計画の策定。</p></article>
-                    <article class="detail-card"><h3 class="detail-card__title">AI Agent・RAG開発</h3><p class="detail-text">LLM、RAG、AI Agent、API連携などを活用し、現場で使える仕組みを開発。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">AIエージェント・RAG開発</h3><p class="detail-text">LLM、RAG、AIエージェント、API連携などを活用し、現場で使える仕組みを開発。</p></article>
                     <article class="detail-card"><h3 class="detail-card__title">AI導入PM・FDE支援</h3><p class="detail-text">要件整理、技術検討、開発推進、関係者調整、導入・定着に向けたプロジェクト支援。</p></article>
                     <article class="detail-card"><h3 class="detail-card__title">業務システム連携</h3><p class="detail-text">既存データ・業務システムとの連携を検討し、業務フローに組み込む形で実装。</p></article>
                     <article class="detail-card"><h3 class="detail-card__title">運用・継続改善</h3><p class="detail-text">導入後の利用状況・成果を確認し、精度改善、機能追加、対象業務の拡張を支援。</p></article>
@@ -188,7 +204,7 @@
 
         <section class="detail-section detail-section--gray" aria-label="AI・FDEについてのご相談">
             <div class="container">
-                <div class="ai-page-cta"><div><span class="section-overline">AI・FDE SUPPORT</span><h3>AI導入・業務再設計について相談する。</h3><p>課題把握から現場検証、本番導入後の改善まで。FDEの支援内容をご案内。</p></div><a href="../contact.html" class="btn btn--strike">お問い合わせ <span aria-hidden="true">→</span></a></div>
+                <div class="ai-page-cta"><div><span class="section-overline">AI・FDE支援</span><h3>AI導入・業務再設計について相談する。</h3><p>課題の把握から現場での検証、本番導入後の改善まで、FDEが一貫して支援します。</p></div><a href="../contact.html" class="btn btn--strike">お問い合わせ <span aria-hidden="true">→</span></a></div>
             </div>
         </section>
     </main>
