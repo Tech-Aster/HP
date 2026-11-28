@@ -1274,12 +1274,14 @@ a.contact-info-item__value:hover {
 
 .footer__nav-title::before {
     display: inline-block;
-    width: 18px;
-    height: 2px;
-    margin: 0 var(--sp-2) 0.25em 0;
-    background: var(--color-strike);
+    width: 10px;
+    height: 10px;
+    margin: 0 .65rem 0 0;
+    background: linear-gradient(135deg, #ff7043, #f43f5e);
+    clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%);
+    filter: drop-shadow(0 0 4px rgba(244, 63, 94, .65));
     content: "";
-    vertical-align: middle;
+    vertical-align: -1px;
 }
 
 .footer__nav-list {
@@ -1870,6 +1872,21 @@ a.contact-info-item__value:hover {
     color: var(--color-strike);
 }
 
+.company-list dd .company-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    color: var(--color-black);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--color-strike);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .22em;
+    transition: color var(--dur-fast);
+}
+.company-profile-link svg { width: 1.4rem; height: 1.4rem; flex: 0 0 auto; fill: none; stroke: var(--color-strike); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.company-list dd .company-profile-link:hover { color: var(--color-strike); }
+
 /* ========== 代表・会社紹介 ========== */
 .representative-intro {
     padding: 180px 0 var(--sp-24);
@@ -1971,6 +1988,18 @@ a.contact-info-item__value:hover {
     font-weight: 700;
 }
 
+.representative-greeting__signature span {
+    display: block;
+    margin-top: var(--sp-4);
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.representative-greeting__signature {
+    font-weight: 400;
+}
+
 .representative-origin__signature {
     color: var(--color-white);
 }
@@ -1993,13 +2022,6 @@ a.contact-info-item__value:hover {
 .representative-origin__copy,
 .representative-origin__copy p+p {
     color: rgba(255, 255, 255, 0.72);
-}
-
-.representative-origin__slogan {
-    margin-top: var(--sp-5);
-    color: var(--color-white);
-    font-size: clamp(1.1667rem, 2.667vw, 1.6667rem);
-    line-height: 1.35;
 }
 
 .representative-company-section {
@@ -2047,10 +2069,6 @@ a.contact-info-item__value:hover {
         min-width: 0;
     }
 
-    .representative-origin__slogan {
-        max-width: none;
-    }
-
     .representative-intro__title {
         font-size: clamp(0.84375rem, 3.75vw, 1.3125rem);
     }
@@ -2086,7 +2104,7 @@ a.contact-info-item__value:hover {
 }
 .hero-scope__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .hero-scope__list li + li { border-left: 1px solid rgba(255, 255, 255, .16); }
-.hero-scope__list li a { display: grid; min-height: 120px; grid-template-columns: 2.7rem minmax(0, 1fr) 1rem; align-items: center; gap: 1rem; padding: 1.35rem 1.4rem 1.35rem 0; border: 0; font-size: 1rem; }
+.hero-scope__list li a { display: grid; min-height: 120px; grid-template-columns: 2.7rem minmax(0, 1fr); align-items: start; gap: 1rem; padding: 1.35rem 1.4rem 1.35rem 0; border: 0; font-size: 1rem; }
 .hero-scope__list li + li a { padding-left: 1.4rem; }
 .hero-scope__list li a:hover { background: linear-gradient(90deg, rgba(255, 255, 255, .04), transparent); }
 .hero-scope__list li a .hero-scope__icon { display: grid; width: 2.7rem; height: 2.7rem; place-items: center; border: 1px solid var(--color-strike); background: var(--color-strike); color: #fff; transition: border-color var(--dur-fast), background var(--dur-fast), color var(--dur-fast); }
@@ -2095,8 +2113,13 @@ a.contact-info-item__value:hover {
 .hero-scope__list li a .hero-scope__copy { display: grid; gap: .35rem; font-family: var(--font-jp); }
 .hero-scope__copy strong { color: #fff; font-family: var(--font-jp); font-size: clamp(1rem, 1.4vw, 1.2rem); }
 .hero-scope__copy small { color: rgba(255, 255, 255, .62); font-family: var(--font-jp); font-size: .82rem; font-weight: 400; }
-.hero-scope__list li a .hero-scope__arrow { color: rgba(255, 255, 255, .5); font-family: var(--font-en); transition: color var(--dur-fast), transform var(--dur-fast); }
-.hero-scope__list li a:hover .hero-scope__arrow { color: var(--color-strike); transform: translate(2px, -2px); }
+@media (max-width: 1000px) {
+    .hero-scope__list { grid-template-columns: 1fr; }
+    .hero-scope__list li + li { border-left: 0; border-top: 1px solid rgba(255, 255, 255, .16); }
+    .hero-scope__list li a,
+    .hero-scope__list li + li a { min-height: 84px; grid-template-columns: 2.7rem minmax(0, 1fr); align-items: center; gap: .9rem; padding: .85rem .25rem; }
+    .hero-scope__list li + li a { padding-left: .25rem; }
+}
 
 @media (max-width: 900px) {
     .hero-section__title {
@@ -2112,11 +2135,6 @@ a.contact-info-item__value:hover {
 @media (max-width: 640px) {
     .hero-section__inner { gap: 2rem; }
     .hero-section__title { font-size: clamp(1.65rem, 7.5vw, 2.55rem); }
-    .hero-scope__list { grid-template-columns: 1fr; }
-    .hero-scope__list li + li { border-left: 0; border-top: 1px solid rgba(255, 255, 255, .16); }
-    .hero-scope__list li a,
-    .hero-scope__list li + li a { min-height: 84px; grid-template-columns: 2.5rem minmax(0, 1fr) 1rem; gap: .75rem; padding: .85rem .25rem; }
-    .hero-scope__list li + li a { padding-left: .25rem; }
     .hero-scope__list li a .hero-scope__icon { width: 2.5rem; height: 2.5rem; }
     .hero-scope__copy strong { font-size: 1rem; }
     .hero-scope__copy small { font-size: .75rem; }
