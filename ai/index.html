@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="テックアスターのAI活用・業務プロセス再設計支援。課題整理からAI Agent・RAGの開発、効果検証、本番導入、運用改善まで一貫して支援します。">
+    <meta property="og:title" content="AI活用・業務プロセス再設計支援 | 株式会社テックアスター">
+    <meta property="og:description" content="企業の業務課題を起点に、AI導入・業務再設計・開発・運用改善まで支援します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.techaster.com/ai/">
+    <title>AI活用・業務プロセス再設計支援 | 株式会社テックアスター</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.techaster.com/ai/">
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .ai-business-page .container { max-width: 1380px; }
+        .ai-business-page .detail-section { padding: clamp(2.5rem, 3vw, 3.25rem) 0; }
+        .ai-business-page .section-header { margin-bottom: 1.5rem; }
+        .ai-business-page .detail-grid { margin-bottom: 0; }
+        .ai-page-hero { padding: 7rem 0 3.5rem; background: var(--color-black); color: var(--color-white); }
+        .ai-page-hero .section-overline { color: #00c2ff; }
+        .ai-page-hero__heading { display: flex; align-items: flex-start; gap: 1rem; }
+        .ai-page-hero__icon { display: grid; flex: 0 0 3rem; width: 3rem; height: 3rem; place-items: center; margin-top: .2rem; border: 1px solid rgba(0, 194, 255, .55); color: #00c2ff; }
+        .ai-page-hero__icon svg { width: 1.7rem; height: 1.7rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+        .ai-page-hero h1 { max-width: 900px; margin: 0 0 1.25rem; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.4; font-weight: 900; }
+        .ai-page-hero p { max-width: 1040px; color: #e2e7ef; font-size: clamp(1.05rem, 1.35vw, 1.2rem); line-height: 1.95; }
+        .ai-page-hero .btn { margin-top: 1.5rem; }
+        .ai-page-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; counter-reset: fde; }
+        .ai-page-flow article { position: relative; min-height: 190px; padding: 1.3rem; border: 1px solid var(--color-border-medium); border-top: 3px solid var(--color-black); background: var(--color-white); box-shadow: 0 5px 18px rgba(10, 10, 10, .045); transition: transform .2s ease, box-shadow .2s ease; }
+        .ai-page-flow article:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(10, 10, 10, .1); }
+        .ai-page-flow article::before { counter-increment: fde; content: "0" counter(fde); display: grid; width: 2rem; height: 2rem; place-items: center; margin-bottom: .8rem; border-radius: 50%; background: var(--color-black); color: var(--color-white); font: 800 .75rem var(--font-ui); }
+        .ai-page-flow h3 { margin-bottom: .75rem; font-size: 1.05rem; line-height: 1.5; }
+        .ai-page-flow p, .ai-page-copy { color: var(--color-text-secondary); }
+        .ai-page-copy { max-width: none; margin-bottom: 1.25rem; font-size: 1rem; }
+        .ai-page-statement { width: 100%; margin-top: 1.25rem; padding: 1.25rem 1.5rem; border-left: 4px solid var(--color-strike); background: #f3f4f6; }
+        .ai-page-statement span { display: block; margin-bottom: .45rem; color: var(--color-strike); font: 800 .72rem var(--font-ui); letter-spacing: .14em; }
+        .ai-page-statement p { color: #3f4652; font-size: 1rem; line-height: 1.9; }
+        .ai-page-statement strong { color: #111827; }
+        .ai-section-heading { display: flex; align-items: flex-start; gap: .85rem; margin-bottom: .65rem; }
+        .ai-section-heading .section-title { margin: 0; }
+        .ai-title-icon { display: grid; flex: 0 0 2.65rem; width: 2.65rem; height: 2.65rem; place-items: center; margin-top: .1rem; border-left: 3px solid var(--color-strike); background: var(--color-black); color: #fff; }
+        .ai-title-icon svg { width: 1.3rem; height: 1.3rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+        .ai-section-header { margin-bottom: 1.25rem !important; }
+        .ai-page-role { border-top: 3px solid var(--color-voltage); }
+        .ai-page-role:nth-child(2) { border-color: #16a085; }
+        .ai-page-role:nth-child(3) { border-color: var(--color-strike); }
+        .ai-page-cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 0; padding: 1.5rem; border: 1px solid #333; background: #0a0a0a; color: #fff; }
+        .ai-page-cta .section-overline { color: #ff5f5f; }
+        .ai-page-cta h3 { margin-bottom: .5rem; color: #fff; }
+        .ai-page-cta p { color: #e5e5e5; }
+        @media (max-width: 900px) { .ai-page-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ai-page-flow article:last-child { grid-column: 1 / -1; } }
+        @media (max-width: 600px) { .ai-page-hero { padding: 6rem 0 3rem; } .ai-page-hero__heading { gap: .65rem; } .ai-page-hero__icon { flex-basis: 2.25rem; width: 2.25rem; height: 2.25rem; } .ai-page-flow { grid-template-columns: 1fr; } .ai-page-flow article:last-child { grid-column: auto; } .ai-page-flow article { min-height: 0; } .ai-page-cta { align-items: flex-start; flex-direction: column; } .ai-page-statement { padding: 1.1rem 1.2rem; } .ai-section-heading { gap: .65rem; } .ai-title-icon { flex-basis: 2.25rem; width: 2.25rem; height: 2.25rem; } }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
+    <header class="header header--scrolled" id="header">
+        <nav class="navbar container" role="navigation" aria-label="グローバルナビゲーション">
+            <div class="navbar__logo"><a href="../index.html" class="logo-link" aria-label="株式会社テックアスター トップへ"><img class="logo-image logo-image--light" src="../assets/icons/techaster_horizontal_for-light-bg_transparent.png" alt="TECHASTER"></a></div>
+            <button class="navbar__toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="ナビゲーションを開く"><span class="hamburger" aria-hidden="true"></span></button>
+            <ul class="navbar__menu" id="primaryNav" role="list">
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="#fde-flow">基本業務フロー</a></li>
+                <li><a href="#approach">業務再設計</a></li>
+                <li><a href="#roles">役割分担</a></li>
+                <li><a href="#services">支援内容</a></li>
+                <li><a href="../contact.html" class="nav-cta">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content" class="ai-business-page">
+        <section class="ai-page-hero" aria-labelledby="aiPageTitle">
+            <div class="container">
+                <span class="section-overline">AI BUSINESS TRANSFORMATION</span>
+                <div class="ai-page-hero__heading"><span class="ai-page-hero__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.5 14 9l6.5 2-6.5 2-2 6.5L10 13l-6.5-2L10 9l2-6.5Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg></span><h1 id="aiPageTitle">AIを導入するだけでなく、<br>仕事の進め方そのものを変える。</h1></div>
+                <p>テックアスターは、企業の業務課題を起点に、業務プロセスの見直しからAI活用の企画・開発・導入までを支援します。AIの機能を導入すること自体を目的とせず、実際の業務に定着し、ビジネス価値につながる仕組みを目指します。</p>
+                <a href="../contact.html" class="btn btn--primary">AI活用について相談する <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section id="fde-flow" class="detail-section detail-section--gray" aria-labelledby="fdeFlowTitle">
+            <div class="container">
+                <div class="section-header ai-section-header"><span class="section-overline">FDE WORKFLOW</span><div class="ai-section-heading"><span class="ai-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="12" r="2.5"/><circle cx="5" cy="18" r="2.5"/><path d="M7.5 6h4a3 3 0 0 1 3 3v0a3 3 0 0 0 3 3M7.5 18h4a3 3 0 0 0 3-3v0a3 3 0 0 1 3-3"/></svg></span><h2 class="section-title" id="fdeFlowTitle">FDEの基本業務フロー</h2></div><p class="ai-page-copy">企業との対話から現場での検証、本番導入後の改善まで、課題解決を一貫して推進します。</p></div>
+                <div class="ai-page-flow">
+                    <article><h3>企業との対話・課題把握</h3><p>経営目標、業務上の問題、改善したい成果を明確化します。</p></article>
+                    <article><h3>業務分析・可視化</h3><p>現行業務、データ、既存システム、ボトルネックを調査します。</p></article>
+                    <article><h3>AI導入・業務再設計</h3><p>AI・プログラム・人間の役割分担、技術構成、成功基準を設計します。</p></article>
+                    <article><h3>PoC・開発・現場検証</h3><p>AI Agent、RAG、API連携などを実装・検証します。</p></article>
+                    <article><h3>効果検証・本番導入・改善</h3><p>KPI評価、本番導入、運用改善、横展開を進めます。</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="detail-section" aria-labelledby="approachTitle">
+            <div class="container">
+                <div class="section-header ai-section-header"><span class="section-overline">OUR APPROACH</span><div class="ai-section-heading"><span class="ai-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 14.5a7 7 0 1 1 7 0c-.9.7-1.3 1.5-1.5 2.5h-4c-.2-1-.6-1.8-1.5-2.5Z"/><path d="M12 2v2M4.9 4.9l1.4 1.4M19.1 4.9l-1.4 1.4"/></svg></span><h2 class="section-title" id="approachTitle">AI導入の本質は、業務プロセスの再設計です。</h2></div><p class="ai-page-copy">従来の作業を単に速くするだけでなく、業務の目的や各工程の必要性を確認します。「本当に必要な業務は何か」「AIに任せられる工程は何か」を整理し、仕事全体の進め方を最適化します。</p></div>
+                <div class="detail-grid detail-grid--3">
+                    <article class="detail-card"><h3 class="detail-card__title">業務の目的から考える</h3><p class="detail-text">既存の手順をそのまま自動化するのではなく、業務の最終目的と各工程の必要性を確認します。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">役割を整理する</h3><p class="detail-text">AI、プログラム、人が得意とする領域を見極め、判断や例外対応も含めた役割分担を設計します。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">小さく始め、効果を確認する</h3><p class="detail-text">価値の高い業務からPoCを実施し、効果と課題を確かめながら段階的に対象範囲を広げます。</p></article>
+                </div>
+                <aside class="ai-page-statement"><span>OUR PRINCIPLE</span><p>AIを既存業務に付け足すだけではなく、AIを前提に業務のあり方を見直す。<strong>それが、テックアスターの考える実践的なAI活用です。</strong></p></aside>
+            </div>
+        </section>
+
+        <section id="roles" class="detail-section detail-section--gray" aria-labelledby="rolesTitle">
+            <div class="container">
+                <div class="section-header ai-section-header"><span class="section-overline">HUMAN + AI + SYSTEM</span><div class="ai-section-heading"><span class="ai-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 5.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 3 4.6V20"/></svg></span><h2 class="section-title" id="rolesTitle">AI・プログラム・人、それぞれの強みを活かす。</h2></div><p class="ai-page-copy">すべてをAIに任せるのではなく、業務の性質やリスクに応じて役割を分担します。</p></div>
+                <div class="detail-grid detail-grid--3">
+                    <article class="detail-card ai-page-role"><h3 class="detail-card__title">AIが担う領域</h3><ul class="detail-list"><li>文章・情報の理解と要約</li><li>問い合わせ内容の分類</li><li>情報抽出・文章生成</li><li>複数ステップの実行支援</li></ul></article>
+                    <article class="detail-card ai-page-role"><h3 class="detail-card__title">プログラムが担う領域</h3><ul class="detail-list"><li>金額・数量などの計算</li><li>在庫・データの照合</li><li>入力値や業務ルールの検証</li><li>業務システムとの連携・更新</li></ul></article>
+                    <article class="detail-card ai-page-role"><h3 class="detail-card__title">人が担う領域</h3><ul class="detail-list"><li>重要な経営・業務判断</li><li>重要事項の承認</li><li>例外や異常発生時の対応</li><li>AIだけでは確認できない情報の判断</li></ul></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="detail-section" aria-labelledby="aiServicesTitle">
+            <div class="container">
+                <div class="section-header ai-section-header"><span class="section-overline">OUR SERVICES</span><div class="ai-section-heading"><span class="ai-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span><h2 class="section-title" id="aiServicesTitle">課題の整理から、実装・運用まで支援します。</h2></div><p class="ai-page-copy">企業の状況や導入段階に応じて、必要な支援を組み合わせて提供します。</p></div>
+                <div class="detail-grid detail-grid--3">
+                    <article class="detail-card"><h3 class="detail-card__title">AI業務診断</h3><p class="detail-text">業務ヒアリング、現状プロセスの可視化、課題の整理、AI適用可能性の評価を行います。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">AI導入企画・業務再設計</h3><p class="detail-text">業務フローの見直し、AI・人・システムの役割分担、導入ロードマップやPoC計画を策定します。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">AI Agent・RAG開発</h3><p class="detail-text">LLM、RAG、AI Agent、API連携などを活用し、実際の業務で利用できる仕組みを開発します。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">AI導入PM・FDE支援</h3><p class="detail-text">要件整理、技術検討、開発推進、関係者調整、導入・定着に向けたプロジェクト支援を行います。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">業務システム連携</h3><p class="detail-text">既存データや業務システムとの連携を検討し、業務フローに組み込める形で実装します。</p></article>
+                    <article class="detail-card"><h3 class="detail-card__title">運用・継続改善</h3><p class="detail-text">導入後の利用状況や成果を確認し、精度改善、機能追加、対象業務の拡張を支援します。</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-section detail-section--gray" aria-label="AI・FDEについてのご相談">
+            <div class="container">
+                <div class="ai-page-cta"><div><span class="section-overline">AI・FDE SUPPORT</span><h3>AI導入・業務再設計について相談する。</h3><p>課題把握から現場検証、本番導入後の改善まで、FDEの支援内容をご説明します。</p></div><a href="../contact.html" class="btn btn--strike">お問い合わせ <span aria-hidden="true">→</span></a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><div class="footer__bottom"><div class="container footer__bottom-inner"><p class="footer__copyright">© 2026 株式会社テックアスター All rights reserved.</p><div class="footer__legal"><a href="../privacy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a><a href="../index.html">ホーム</a></div></div></div></footer>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -53,9 +53,15 @@
                 <li><a href="#home">ホーム</a></li>
                 <li><a href="#ses">ITプロジェクト支援</a></li>
                 <li><a href="#web">SW受託開発・共同研究</a></li>
-                <li><a href="#ai">AI活用支援</a></li>
+                <li class="navbar__dropdown">
+                    <a class="navbar__dropdown-home" href="#ai">AI活用支援</a>
+                    <button class="navbar__dropdown-toggle" type="button" aria-label="FDE支援メニューを開く" aria-expanded="false" aria-controls="aiNavMenu"><span aria-hidden="true">⌄</span></button>
+                    <ul class="navbar__submenu" id="aiNavMenu" role="list">
+                        <li><a href="ai/index.html">FDE支援</a></li>
+                    </ul>
+                </li>
                 <li><a href="#recruit">採用・協業情報</a></li>
-                <li><a href="representative.html">代表・会社紹介</a></li>
+                <li><a href="representative.html">会社概要</a></li>
                 <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -68,31 +74,26 @@
         <section id="home" class="hero-section" aria-labelledby="heroTitle">
             <div class="hero-sky" aria-hidden="true"></div>
             <div class="container hero-section__inner">
-
                 <div class="hero-section__content fade-in">
                     <span class="hero-section__overline">
                         <span class="hero-section__overline-star hero-sky__star--four-point" aria-hidden="true"></span>
-                        株式会社テックアスター
+                        <span class="hero-section__company">株式会社テックアスター</span>
                         <span class="hero-section__overline-star hero-sky__star--four-point" aria-hidden="true"></span>
                     </span>
                     <h1 class="hero-section__title" id="heroTitle">
-                        <span class="title-line title-line--accent">インフラからソフトウェア開発、AI活用支援まで</span>
+                        <span class="title-line">人と技術をつなぎ、</span>
+                        <span class="title-line title-line--accent">次の価値をつくる。</span>
                     </h1>
                     <p class="hero-section__subtitle">
-                        ITプロジェクト支援をメインに、お客様の課題やご要望に応じて、最適な技術・体制をご提案します。
+                        インフラ、ソフトウェア開発、AI活用。お客様の課題に合わせて、最適な技術と実行体制をご提案します。
                     </p>
-                    <div class="hero-section__cta">
-                        <a href="contact.html" class="btn btn--primary">お問い合わせ</a>
-                        <a href="#services" class="btn btn--outline-white">サービスを見る</a>
-                    </div>
                 </div>
 
                 <div class="hero-scope fade-in" style="--delay:0.2s">
-                    <p class="hero-scope__label">サービス</p>
                     <ul class="hero-scope__list">
-                        <li><a href="#ses"><span>01</span>ITプロジェクト支援</a></li>
-                        <li><a href="#web"><span>02</span>SW受託開発・共同研究</a></li>
-                        <li><a href="#ai"><span>03</span>AI活用支援</a></li>
+                        <li><a href="#ses"><span class="hero-scope__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="8" rx="1"/><rect x="5" y="19" width="22" height="8" rx="1"/><path d="M9 9h.01M13 9h.01M9 23h.01M13 23h.01M19 9h4M19 23h4"/></svg></span><span class="hero-scope__copy"><strong>ITプロジェクト支援</strong><small>インフラ・開発・PM/PMO</small></span><span class="hero-scope__arrow" aria-hidden="true">↗</span></a></li>
+                        <li><a href="#web"><span class="hero-scope__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m11 9-7 7 7 7M21 9l7 7-7 7M19 6l-6 20"/></svg></span><span class="hero-scope__copy"><strong>SW受託開発・共同研究</strong><small>要件整理から開発・検証まで</small></span><span class="hero-scope__arrow" aria-hidden="true">↗</span></a></li>
+                        <li><a href="#ai"><span class="hero-scope__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="10" y="10" width="12" height="12" rx="2"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5M7 7l2 2M23 23l2 2M25 7l-2 2M9 23l-2 2M13 16h6M16 13v6"/></svg></span><span class="hero-scope__copy"><strong>AI活用支援</strong><small>業務再設計・AI導入・現場定着</small></span><span class="hero-scope__arrow" aria-hidden="true">↗</span></a></li>
                     </ul>
                 </div>
 
@@ -140,7 +141,7 @@
                             <li>AIエージェントによる自動化</li>
                             <li>コンテンツ制作</li>
                         </ul>
-                        <a href="#ai" class="service-card__link">詳しくは <span aria-hidden="true">→</span></a>
+                        <a href="ai/index.html" class="service-card__link">FDE支援 <span aria-hidden="true">→</span></a>
                     </div>
 
                 </div>
@@ -337,7 +338,7 @@
                     <span class="section-overline">AI活用支援</span>
                     <h2 class="section-title" id="aiTitle">企業の課題に応じたAI導入・活用を支援します。</h2>
                     <p class="detail-lead">
-                        生成AIやAIエージェントなどの技術を活用し、業務プロセスの見直しから情報活用、業務効率化・自動化まで支援します。
+                        AI活用支援では、導入テーマの検討や情報活用、業務効率化・自動化など、企業の課題に応じた活用方法をご提案します。現場分析から開発・検証・定着までの具体的な進め方は、<a href="ai/index.html">FDE支援ページ</a>をご覧ください。
                     </p>
                 </div>
                 <h3 class="detail-subtitle fade-in">支援内容</h3>
@@ -361,15 +362,15 @@
                 </div>
                 <div class="detail-consult fade-in">
                     <h3 class="detail-subtitle">支援プロセス</h3>
-                    <p class="detail-text">課題整理・テーマ選定 → PoC・技術検証 → 導入・活用支援 → 効果検証・継続改善</p>
-                </div>
-                <div class="ai-contact-cta fade-in">
-                    <div>
-                        <span class="ai-contact-cta__eyebrow">AI SUPPORT</span>
-                        <h3>AI活用について、まずはご相談ください。</h3>
-                        <p>業務課題やご希望を伺い、検討段階からご一緒します。</p>
+                    <div class="ai-process-row">
+                        <div class="ai-process-steps" aria-label="課題整理・テーマ選定、PoC・技術検証、導入・活用支援、効果検証・継続改善">
+                            <span>課題整理・テーマ選定</span><span aria-hidden="true">→</span>
+                            <span>PoC・技術検証</span><span aria-hidden="true">→</span>
+                            <span>導入・活用支援</span><span aria-hidden="true">→</span>
+                            <span>効果検証・継続改善</span>
+                        </div>
+                        <a href="ai/index.html">FDEの業務フローを詳しく見る <span aria-hidden="true">→</span></a>
                     </div>
-                    <a href="contact.html" class="btn btn--outline-white">お問い合わせ <span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
@@ -447,6 +448,7 @@
                         <li><a href="#ses">ITプロジェクト支援</a></li>
                         <li><a href="#web">SW受託開発・共同研究</a></li>
                         <li><a href="#ai">AI活用支援</a></li>
+                        <li><a href="ai/index.html">FDE支援</a></li>
                     </ul>
                 </div>
 
@@ -455,7 +457,7 @@
                     <ul class="footer__nav-list">
                         <li><a href="#works">対応案件事例</a></li>
                         <li><a href="#recruit">採用・協業情報</a></li>
-                        <li><a href="representative.html">代表・会社紹介</a></li>
+                        <li><a href="representative.html">会社概要</a></li>
                     </ul>
                 </div>
 

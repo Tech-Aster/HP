@@ -6,49 +6,117 @@ function initHeroStars() {
     const sky = document.querySelector('.hero-sky');
     if (!sky) return;
 
-    const starPoints = [4, 8, 10, 12];
-    const starColors = [
-        { color: '#ff7043', glow: 'rgba(255, 112, 67, 0.6)' },
-        { color: '#f43f5e', glow: 'rgba(244, 63, 94, 0.6)' },
-        { color: '#ffffff', glow: 'rgba(255, 255, 255, 0.55)' },
-        { color: '#c084fc', glow: 'rgba(192, 132, 252, 0.6)' }
+    const colors = [
+        { fill: '#ff7043', glow: 'rgba(255, 112, 67, 0.9)' },
+        { fill: '#f43f5e', glow: 'rgba(244, 63, 94, 0.9)' },
+        { fill: '#ffffff', glow: 'rgba(255, 255, 255, 0.9)' },
+        { fill: '#c084fc', glow: 'rgba(192, 132, 252, 0.9)' }
     ];
+    const shapes = [
+        { points: 4, inner: 0.16, scaleX: 0.72, scaleY: 1.5 },
+        { points: 4, inner: 0.32, scaleX: 1, scaleY: 1 },
+        { points: 5, inner: 0.42, scaleX: 1, scaleY: 1 },
+        { points: 6, inner: 0.38, scaleX: 1, scaleY: 1 },
+        { points: 8, inner: 0.5, scaleX: 1, scaleY: 1 },
+        { points: 10, inner: 0.58, scaleX: 1, scaleY: 1 }
+    ];
+    const namespace = 'http://www.w3.org/2000/svg';
+    const connectionLayer = document.createElementNS(namespace, 'svg');
+    connectionLayer.setAttribute('class', 'hero-sky__connections');
+    connectionLayer.setAttribute('viewBox', '0 0 100 100');
+    connectionLayer.setAttribute('preserveAspectRatio', 'none');
+    connectionLayer.setAttribute('aria-hidden', 'true');
+    connectionLayer.setAttribute('focusable', 'false');
+    sky.appendChild(connectionLayer);
 
-    const createStarShape = pointCount => {
+    const createStarShape = shape => {
         const vertices = [];
-        for (let i = 0; i < pointCount * 2; i++) {
-            const angle = (i * Math.PI) / pointCount - Math.PI / 2;
-            const radius = i % 2 === 0 ? 50 : 23;
-            const x = 50 + Math.cos(angle) * radius;
-            const y = 50 + Math.sin(angle) * radius;
-            vertices.push(`${x.toFixed(1)}% ${y.toFixed(1)}%`);
+        for (let i = 0; i < shape.points * 2; i++) {
+            const angle = (i * Math.PI) / shape.points - Math.PI / 2;
+            const radius = i % 2 === 0 ? 50 : 50 * shape.inner;
+            vertices.push(`${(50 + Math.cos(angle) * radius).toFixed(1)}% ${(50 + Math.sin(angle) * radius).toFixed(1)}%`);
         }
         return `polygon(${vertices.join(', ')})`;
     };
-
-    const starCount = 18;
+    const randomBetween = (min, max) => min + Math.random() * (max - min);
+    const starCount = 36;
+    const stars = [];
+    const connections = [];
+    const headerHeight = document.querySelector('.header')?.getBoundingClientRect().height || 100;
+    const minStarY = Math.min(42, Math.max(14, ((headerHeight + 20) / sky.clientHeight) * 100));
     for (let i = 0; i < starCount; i++) {
         const star = document.createElement('span');
-        const duration = 3 + Math.random() * 4;
-        const color = starColors[Math.floor(Math.random() * starColors.length)];
-        const points = starPoints[Math.floor(Math.random() * starPoints.length)];
-        const setRandomPosition = () => {
-            star.style.setProperty('--star-x', `${Math.random() * 96 + 2}%`);
-            star.style.setProperty('--star-y', `${Math.random() * 96 + 2}%`);
-        };
-
+        const shape = shapes[Math.floor(Math.random() * shapes.length)];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const radius = randomBetween(2.4, 4.2);
+        const x = randomBetween(2, 98);
+        const y = randomBetween(minStarY, 98);
         star.className = 'hero-sky__star';
-        star.style.setProperty('--star-shape', createStarShape(points));
-        star.style.setProperty('--star-color', color.color);
+        star.style.setProperty('--star-x', `${x}%`);
+        star.style.setProperty('--star-y', `${y}%`);
+        star.style.setProperty('--star-size-x', `${(radius * 2 * shape.scaleX).toFixed(2)}px`);
+        star.style.setProperty('--star-size-y', `${(radius * 2 * shape.scaleY).toFixed(2)}px`);
+        star.style.setProperty('--star-shape', createStarShape(shape));
+        star.style.setProperty('--star-color', color.fill);
         star.style.setProperty('--star-glow-color', color.glow);
-        star.style.setProperty('--star-size', `${(3.5 + Math.random() * 6.5).toFixed(1)}px`);
-        star.style.setProperty('--star-glow', `${(4 + Math.random() * 8)}px`);
-        star.style.setProperty('--twinkle-duration', `${duration.toFixed(2)}s`);
-        star.style.setProperty('--twinkle-delay', `-${(Math.random() * duration).toFixed(2)}s`);
-        setRandomPosition();
-        star.addEventListener('animationiteration', setRandomPosition);
+        star.style.filter = `drop-shadow(0 0 4px ${color.glow})`;
+        stars.push({
+            x,
+            y,
+            element: star,
+            phase: randomBetween(0, Math.PI * 2),
+            speed: randomBetween(0.65, 1.2),
+            opacity: 0
+        });
         sky.appendChild(star);
     }
+
+    const order = stars.map((_, index) => index);
+    for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+    }
+    const addConnection = (from, to) => {
+        const line = document.createElementNS(namespace, 'line');
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        line.setAttribute('x1', from.x.toFixed(2));
+        line.setAttribute('y1', from.y.toFixed(2));
+        line.setAttribute('x2', to.x.toFixed(2));
+        line.setAttribute('y2', to.y.toFixed(2));
+        line.setAttribute('stroke', color.fill);
+        line.setAttribute('stroke-width', '.375');
+        line.setAttribute('vector-effect', 'non-scaling-stroke');
+        line.setAttribute('class', 'hero-sky__connection');
+        line.style.filter = `drop-shadow(0 0 1px ${color.glow})`;
+        line.style.opacity = '0';
+        const connection = { from, to, element: line };
+        connections.push(connection);
+        connectionLayer.appendChild(line);
+    };
+    for (let i = 0; i < order.length; i++) {
+        addConnection(stars[order[i]], stars[order[(i + 1) % order.length]]);
+        if (i < order.length / 2) addConnection(stars[order[i]], stars[order[i + order.length / 2]]);
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        stars.forEach(star => { star.element.style.opacity = '0.8'; });
+        connections.forEach(connection => { connection.element.style.opacity = '0.28'; });
+        return;
+    }
+
+    const animate = timestamp => {
+        const elapsed = timestamp / 1000;
+        stars.forEach(star => {
+            const wave = (Math.sin(elapsed * star.speed + star.phase) + 1) / 2;
+            star.opacity = Math.max(0, (wave - 0.12) / 0.88);
+            star.element.style.opacity = star.opacity.toFixed(3);
+        });
+        connections.forEach(connection => {
+            connection.element.style.opacity = (Math.min(connection.from.opacity, connection.to.opacity) * 0.45).toFixed(3);
+        });
+        requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
 }
 
 function initRepresentativeNetwork() {
@@ -232,6 +300,32 @@ function initMobileNav() {
     });
 }
 
+function initAIDropdown() {
+    const dropdown = document.querySelector('.navbar__dropdown');
+    const toggle = dropdown?.querySelector('.navbar__dropdown-toggle');
+    if (!dropdown || !toggle) return;
+
+    toggle.addEventListener('click', () => {
+        const open = dropdown.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    dropdown.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            dropdown.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+        }
+    });
+
+    dropdown.querySelectorAll('.navbar__submenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            dropdown.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
 // ========== 5. スムーススクロール ==========
 function initSmoothScroll() {
     const OFFSET = 80;
@@ -347,6 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initActiveNav();
     initFadeIn();
     initMobileNav();
+    initAIDropdown();
     initSmoothScroll();
     initForm();
 });
